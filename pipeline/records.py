@@ -40,5 +40,13 @@ def final_records(con, label_config=labels.LABEL_CONFIG):
     return out
 
 
+def stored_label_config(con):
+    """The current LABEL_CONFIG if this database has results under it, else the one with the most results."""
+    counts = dict(con.execute("SELECT label_config, COUNT(*) FROM results GROUP BY label_config"))
+    if labels.LABEL_CONFIG in counts or not counts:
+        return labels.LABEL_CONFIG
+    return max(counts, key=counts.get)
+
+
 def is_complaint(rec):
     return rec["status"] == "completed" and rec["intent"] in ("complaint", "cancellation")

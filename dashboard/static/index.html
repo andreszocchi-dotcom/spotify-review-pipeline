@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spotify Review Insights</title>
+<style>
+  :root {
+    color-scheme: light;
+    --page: #f9f9f7; --surface: #fcfcfb; --ink: #0b0b0b; --ink-2: #52514e; --muted: #898781;
+    --grid: #e1e0d9; --axis: #c3c2b7; --ring: rgba(11,11,11,0.10); --accent: #2a78d6;
+    --s-usability: #2a78d6; --s-playback: #eb6834; --s-billing: #1baf7a; --s-access: #eda100;
+    --s-catalog: #e87ba4; --s-downloads: #008300; --s-support: #6250d6; --s-other: #e34948;
+    --critical: #d03b3b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      color-scheme: dark;
+      --page: #0d0d0d; --surface: #1a1a19; --ink: #f0efec; --ink-2: #c3c2b7; --muted: #898781;
+      --grid: #2c2c2a; --axis: #383835; --ring: rgba(255,255,255,0.10); --accent: #3987e5;
+      --s-usability: #3987e5; --s-playback: #d95926; --s-billing: #199e70; --s-access: #c98500;
+      --s-catalog: #d55181; --s-downloads: #008300; --s-support: #9085e9; --s-other: #e66767;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --page: #0d0d0d; --surface: #1a1a19; --ink: #f0efec; --ink-2: #c3c2b7; --muted: #898781;
+    --grid: #2c2c2a; --axis: #383835; --ring: rgba(255,255,255,0.10); --accent: #3987e5;
+    --s-usability: #3987e5; --s-playback: #d95926; --s-billing: #199e70; --s-access: #c98500;
+    --s-catalog: #d55181; --s-downloads: #008300; --s-support: #9085e9; --s-other: #e66767;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink); font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 1180px; margin: 0 auto; padding: 24px 16px 64px; }
+  header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  h1 { font-size: 22px; margin: 0; }
+  h2 { font-size: 16px; margin: 0 0 4px; }
+  .sub { color: var(--ink-2); font-size: 13px; }
+  .card { background: var(--surface); border: 1px solid var(--ring); border-radius: 10px; padding: 16px; }
+  .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin: 20px 0; }
+  .tile .v { font-size: 26px; font-weight: 600; }
+  .tile .l { color: var(--ink-2); font-size: 13px; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+  @media (max-width: 860px) { .grid2 { grid-template-columns: 1fr; } }
+  .chart { position: relative; height: 320px; margin-top: 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; }
+  th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--grid); vertical-align: top; }
+  th { color: var(--ink-2); font-weight: 600; }
+  td.num, th.num { text-align: right; }
+  tr.click { cursor: pointer; } tr.click:hover { background: color-mix(in srgb, var(--accent) 8%, transparent); }
+  tr.sel { background: color-mix(in srgb, var(--accent) 14%, transparent); }
+  .memo { line-height: 1.6; } .memo h2 { margin-top: 18px; font-size: 15px; }
+  .memo a, a { color: var(--accent); }
+  .cite { font-size: 12px; padding: 0 4px; border-radius: 4px; background: color-mix(in srgb, var(--accent) 12%, transparent); text-decoration: none; }
+  .tabs { display: flex; gap: 6px; } .tabs button, .btn { font: inherit; font-size: 13px; color: var(--ink); background: transparent;
+    border: 1px solid var(--ring); border-radius: 6px; padding: 3px 10px; cursor: pointer; }
+  .tabs button[aria-pressed="true"] { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .quote { color: var(--ink); } .meta { color: var(--muted); font-size: 12px; }
+  .ok { color: var(--ink-2); } .warn { color: var(--critical); }
+  .scroll { overflow-x: auto; }
+  .swatch { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; }
+  dialog { background: var(--surface); color: var(--ink); border: 1px solid var(--ring); border-radius: 10px; max-width: 640px; width: calc(100% - 32px); }
+  .hidden { display: none; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div>
+      <h1>Spotify Review Insights</h1>
+      <div class="sub" id="scope">Loading…</div>
+    </div>
+    <button class="btn" id="theme">Toggle theme</button>
+  </header>
+
+  <section class="tiles" id="tiles"></section>
+
+  <section class="card" style="margin-bottom:16px">
+    <h2>AI-generated recommendation</h2>
+    <div class="sub" id="memo-meta"></div>
+    <div class="memo" id="memo"></div>
+  </section>
+
+  <section class="grid2">
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:8px">
+        <div><h2>Issue ranking</h2><div class="sub">Priority score = complaint count × mean severity (severity sum)</div></div>
+        <div class="tabs" data-for="rank"><button aria-pressed="true" data-view="chart">Chart</button><button data-view="table">Table</button></div>
+      </div>
+      <div class="chart" id="rank-chart"><canvas id="rankCanvas" aria-label="Issue ranking by priority score"></canvas></div>
+      <div class="scroll hidden" id="rank-table"></div>
+    </div>
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:8px">
+        <div><h2>Complaint share by month</h2><div class="sub">Complaints + cancellations in topic ÷ all reviews that month (top 4 topics)</div></div>
+        <div class="tabs" data-for="trend"><button aria-pressed="true" data-view="chart">Chart</button><button data-view="table">Table</button></div>
+      </div>
+      <div class="chart" id="trend-chart"><canvas id="trendCanvas" aria-label="Monthly complaint share by topic"></canvas></div>
+      <div class="scroll hidden" id="trend-table"></div>
+      <div class="meta">First and last months are partial.</div>
+    </div>
+  </section>
+
+  <section class="card" style="margin-bottom:16px">
+    <h2 id="issue-title">Issue evidence</h2>
+    <div class="sub" id="issue-summary">Select an issue in the ranking to see its evidence.</div>
+    <div class="scroll" id="issue-body"></div>
+  </section>
+
+  <section class="card">
+    <h2>Run evidence</h2>
+    <div class="scroll" id="run"></div>
+  </section>
+</main>
+<dialog id="dlg"><div id="dlg-body"></div><p><button class="btn" onclick="dlg.close()">Close</button></p></dialog>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.6/purify.min.js"></script>
+<script>
+const $ = (id) => document.getElementById(id);
+const fmt = (n) => Number(n).toLocaleString();
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const css = (v) => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const topicColor = (t) => css(`--s-${t}`) || css("--accent");
+const api = (p) => fetch(p).then(r => { if (!r.ok) throw new Error(p + " " + r.status); return r.json(); });
+let charts = [], state = {};
+
+try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch {}
+$("theme").onclick = () => {
+  const dark = document.documentElement.dataset.theme
+    ? document.documentElement.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+  document.documentElement.dataset.theme = dark ? "light" : "dark";
+  try { localStorage.setItem("theme", document.documentElement.dataset.theme); } catch {}
+  drawCharts();
+};
+document.querySelectorAll(".tabs").forEach(tabs => tabs.addEventListener("click", e => {
+  const view = e.target.dataset.view; if (!view) return;
+  tabs.querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", b === e.target));
+  $(`${tabs.dataset.for}-chart`).classList.toggle("hidden", view !== "chart");
+  $(`${tabs.dataset.for}-table`).classList.toggle("hidden", view !== "table");
+}));
+
+function tiles(s) {
+  const st = s.status, done = st.completed || 0, total = (st.completed || 0) + (st.quarantined || 0);
+  const comp = (s.intents.complaint || 0) + (s.intents.cancellation || 0);
+  const items = [
+    [fmt(total), "source reviews accounted for"],
+    [fmt(done), `classified (${(100 * done / total).toFixed(2)}%)`],
+    [fmt(st.quarantined || 0), "quarantined (" + s.quarantine_reasons.map(r => `${r.reason}: ${fmt(r.n)}`).join(", ") + ")"],
+    [fmt(comp), "complaints + cancellations"],
+    [fmt(s.intents.cancellation || 0), "stated cancellation intent (not observed churn)"],
+    [fmt(s.cache_reused), "exact-duplicate texts reusing a saved result"],
+  ];
+  $("tiles").innerHTML = items.map(([v, l]) => `<div class="card tile"><div class="v">${v}</div><div class="l">${esc(l)}</div></div>`).join("");
+  $("scope").textContent = `Input SHA-256 ${s.run.input_sha256?.slice(0, 12)}… · labels ${s.run.label_config} · run ${s.run.run_id || "n/a"}`;
+}
+
+function memo(m) {
+  let html = DOMPurify.sanitize(marked.parse(m.markdown));
+  html = html.replace(/\[([A-Za-z0-9_.\-]+(?:\s*,\s*[A-Za-z0-9_.\-]+)*)\]/g, (all, ids) =>
+    ids.split(/\s*,\s*/).map(id => `<a href="#" class="cite" data-claim="${esc(id)}">${esc(id)}</a>`).join(" "));
+  html = html.replace(/\b([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\b/g,
+    (id) => `<a href="#" data-review="${id}">${id.slice(0, 8)}…</a>`);
+  $("memo").innerHTML = html;
+  const c = m.checks;
+  $("memo-meta").innerHTML = `Model config <code>${esc(m.config)}</code> · recommends <b>${esc(m.recommended_issue_id)}</b> · ` +
+    `code checks: ${c.unknown_ids.length ? `<span class="warn">unknown IDs ${esc(c.unknown_ids.join(", "))}</span>` : `<span class="ok">all cited IDs supplied</span>`}, ` +
+    `${c.unsupported_numbers.length ? `<span class="warn">numbers to inspect: ${esc(c.unsupported_numbers.join(", "))}</span>` : `<span class="ok">every number matches a saved calculation</span>`}. Click a citation to see its value.`;
+  state.claims = Object.fromEntries([...m.claims.map(c => [c.claim_id, `${c.issue_id} ${c.metric} = ${c.value}`]),
+                                     ...m.facts.map(f => [f.fact_id, `${f.fact_id} = ${f.value}`])]);
+}
+
+document.addEventListener("click", async (e) => {
+  const a = e.target.closest("a[data-claim], a[data-review]"); if (!a) return;
+  e.preventDefault();
+  if (a.dataset.review) return showReview(a.dataset.review);
+  const id = a.dataset.claim;
+  if (/^ISS-[A-Z]+$/.test(id)) return selectIssue(id);
+  $("dlg-body").innerHTML = `<h2>${esc(id)}</h2><p>${esc(state.claims[id] || "Not a saved claim or fact.")}</p>
+    <p class="meta">Source: claims.csv / memo facts computed by code from the saved records.</p>`;
+  $("dlg").showModal();
+});
+
+async function showReview(id) {
+  const r = await api(`/api/reviews/${id}`);
+  $("dlg-body").innerHTML = `<h2>Review ${esc(id)}</h2><p class="quote">“${esc(r.evidence_quote)}”</p>
+    <p class="meta">${esc(r.topic)} · ${esc(r.intent)} · severity ${esc(r.severity)} · sentiment ${esc(r.sentiment)} ·
+    ${esc(r.review_rating)}★ · ${esc(r.review_timestamp)} · issue ${esc(r.issue_id || "—")}${r.cache_source_id ? " · cached from " + esc(r.cache_source_id) : ""}</p>`;
+  $("dlg").showModal();
+}
+
+function rankTable(rows) {
+  $("rank-table").innerHTML = `<table><thead><tr><th>#</th><th>Issue</th><th class="num">Complaints</th><th class="num">Severity sum</th>
+    <th class="num">Mean severity</th><th class="num">Priority</th></tr></thead><tbody>` +
+    rows.map(r => `<tr class="click" data-issue="${r.issue_id}"><td>${r.rank}</td><td><b>${esc(r.issue_id)}</b><br><span class="meta">${esc(r.name)}</span></td>
+    <td class="num">${fmt(r.complaint_count)}</td><td class="num">${fmt(r.severity_sum)}</td><td class="num">${esc(r.mean_severity)}</td>
+    <td class="num">${fmt(r.priority_score)}</td></tr>`).join("") + "</tbody></table>";
+  $("rank-table").querySelectorAll("tr[data-issue]").forEach(tr => tr.onclick = () => selectIssue(tr.dataset.issue));
+}
+
+function trendData(rows) {
+  const months = [...new Set(rows.map(r => r.month))].sort();
+  const totals = {}; rows.forEach(r => totals[r.topic] = (totals[r.topic] || 0) + r.complaints);
+  const top = Object.entries(totals).sort((a, b) => b[1] - a[1]).slice(0, 4).map(([t]) => t);
+  const reviews = Object.fromEntries(rows.map(r => [r.month, r.reviews]));
+  const val = (m, t) => { const r = rows.find(x => x.month === m && x.topic === t); return 100 * (r ? r.complaints : 0) / reviews[m]; };
+  return { months, top, val, reviews };
+}
+
+function trendTable(d) {
+  $("trend-table").innerHTML = `<table><thead><tr><th>Month</th><th class="num">Reviews</th>${d.top.map(t => `<th class="num">${t} %</th>`).join("")}</tr></thead><tbody>` +
+    d.months.map(m => `<tr><td>${m}</td><td class="num">${fmt(d.reviews[m])}</td>${d.top.map(t => `<td class="num">${d.val(m, t).toFixed(2)}</td>`).join("")}</tr>`).join("") +
+    "</tbody></table>";
+}
+
+function drawCharts() {
+  charts.forEach(c => c.destroy()); charts = [];
+  if (!state.ranking) return;
+  const ink2 = css("--ink-2"), grid = css("--grid"), axis = css("--axis"), surface = css("--surface");
+  Chart.defaults.font.family = 'system-ui, -apple-system, "Segoe UI", sans-serif';
+  Chart.defaults.color = ink2;
+  const tooltip = { backgroundColor: surface, titleColor: css("--ink"), bodyColor: ink2, borderColor: css("--ring"), borderWidth: 1, padding: 10 };
+  charts.push(new Chart($("rankCanvas"), {
+    type: "bar",
+    data: { labels: state.ranking.map(r => r.issue_id.replace("ISS-", "")),
+      datasets: [{ data: state.ranking.map(r => r.priority_score), backgroundColor: css("--accent"), borderRadius: 4, borderSkipped: "start",
+                   barPercentage: 0.7, categoryPercentage: 0.9 }] },
+    options: { indexAxis: "y", maintainAspectRatio: false, animation: false,
+      onClick: (_, els) => els.length && selectIssue(state.ranking[els[0].index].issue_id),
+      plugins: { legend: { display: false }, tooltip: { ...tooltip, callbacks: {
+        title: (i) => state.ranking[i[0].dataIndex].issue_id + " — " + state.ranking[i[0].dataIndex].name,
+        label: (i) => { const r = state.ranking[i.dataIndex]; return [`priority ${fmt(r.priority_score)}`, `${fmt(r.complaint_count)} complaints × mean severity ${r.mean_severity}`]; } } } },
+      scales: { x: { grid: { color: grid }, border: { color: axis }, ticks: { callback: v => fmt(v) } },
+                y: { grid: { display: false }, border: { color: axis } } } }
+  }));
+  const d = state.trend;
+  charts.push(new Chart($("trendCanvas"), {
+    type: "line",
+    data: { labels: d.months, datasets: d.top.map(t => ({ label: t, data: d.months.map(m => d.val(m, t)), borderColor: topicColor(t),
+      backgroundColor: topicColor(t), borderWidth: 2, pointRadius: 0, pointHoverRadius: 5, pointHoverBorderColor: surface, pointHoverBorderWidth: 2, tension: 0 })) },
+    options: { maintainAspectRatio: false, animation: false, interaction: { mode: "index", intersect: false },
+      plugins: { legend: { position: "bottom", labels: { boxWidth: 10, boxHeight: 10, useBorderRadius: true, borderRadius: 2 } },
+        tooltip: { ...tooltip, callbacks: { label: (i) => `${i.dataset.label}: ${i.parsed.y.toFixed(2)}%` } } },
+      scales: { x: { grid: { display: false }, border: { color: axis } },
+                y: { grid: { color: grid }, border: { display: false }, ticks: { callback: v => v + "%" } } } }
+  }));
+}
+
+async function selectIssue(id) {
+  document.querySelectorAll("#rank-table tr").forEach(tr => tr.classList.toggle("sel", tr.dataset.issue === id));
+  const [it, revs] = await Promise.all([api(`/api/issues/${id}`), api(`/api/reviews?issue_id=${encodeURIComponent(id)}&limit=15`)]);
+  $("issue-title").innerHTML = `<span class="swatch" style="background:${topicColor(it.topic)}"></span>${esc(id)} — ${esc(it.name)}`;
+  $("issue-summary").textContent = it.summary;
+  const claim = Object.fromEntries(it.claims.map(c => [c.metric, c.value]));
+  $("issue-body").innerHTML = `<p class="sub">${fmt(claim.complaint_count)} complaints · severity sum ${fmt(claim.severity_sum)} ·
+      mean ${claim.mean_severity} · severity mix ${it.severity_mix.map(s => `${s.severity}: ${fmt(s.n)}`).join(", ")}</p>
+    <table><thead><tr><th>Review</th><th>Evidence quote</th><th>Intent</th><th class="num">Sev.</th><th>Date</th></tr></thead><tbody>` +
+    [...it.representative.map(r => ({ ...r, rep: true })), ...revs.filter(r => !it.representative.some(x => x.review_id === r.review_id))]
+      .map(r => `<tr><td><a href="#" data-review="${r.review_id}">${r.review_id.slice(0, 8)}…</a>${r.rep ? '<br><span class="meta">representative</span>' : ""}</td>
+        <td class="quote">${esc(r.evidence_quote)}</td><td>${esc(r.intent)}</td><td class="num">${r.severity}</td><td class="meta">${esc((r.review_timestamp || "").slice(0, 10))}</td></tr>`).join("") +
+    "</tbody></table>";
+}
+
+function runPanel(s) {
+  const calls = s.run.calls_by_role || {}, v = s.run.verify || {};
+  $("run").innerHTML = `<table><thead><tr><th>Role</th><th class="num">Attempts</th><th class="num">Failed</th><th class="num">Input tokens</th><th class="num">Output tokens</th></tr></thead><tbody>` +
+    Object.entries(calls).map(([role, c]) => `<tr><td>${esc(role)}</td><td class="num">${fmt(c.attempts)}</td><td class="num">${fmt(c.failed)}</td>
+      <td class="num">${fmt(c.input_tokens)}</td><td class="num">${fmt(c.output_tokens)}</td></tr>`).join("") + "</tbody></table>" +
+    (v.verified ? `<p class="sub">Independent verifier on a random sample of ${fmt(v.verified)} reviews: topic ${(100 * v.agreement.topic).toFixed(1)}%,
+      intent ${(100 * v.agreement.intent).toFixed(1)}%, severity exact ${(100 * v.agreement.severity_exact).toFixed(1)}% (MAE ${v.severity_mae}).
+      ${fmt(s.needs_review)} records flagged needs_review.</p>` : "");
+}
+
+(async () => {
+  try {
+    const [s, ranking, m, trend] = await Promise.all([api("/api/summary"), api("/api/ranking"), api("/api/recommendation"), api("/api/trends")]);
+    state.ranking = ranking; state.trend = trendData(trend);
+    tiles(s); memo(m); rankTable(ranking); trendTable(state.trend); runPanel(s); drawCharts();
+    if (ranking.length) selectIssue(m.recommended_issue_id || ranking[0].issue_id);
+  } catch (err) {
+    $("scope").textContent = "Could not load data: " + err.message;
+  }
+})();
+</script>
+</body>
+</html>

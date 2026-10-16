@@ -1,0 +1,32 @@
+{
+  "recommended_issue_id": "ISS-USABILITY",
+  "unknown_ids": [],
+  "cited_claims": [
+    "ISS-ACCESS.complaint_count",
+    "ISS-ACCESS.mean_severity",
+    "ISS-BILLING.mean_severity",
+    "ISS-BILLING.priority_score",
+    "ISS-CATALOG.priority_score",
+    "ISS-DOWNLOADS.priority_score",
+    "ISS-OTHER.complaint_count",
+    "ISS-OTHER.mean_severity",
+    "ISS-OTHER.priority_score",
+    "ISS-PLAYBACK.mean_severity",
+    "ISS-PLAYBACK.priority_score",
+    "ISS-SUPPORT.priority_score",
+    "ISS-USABILITY.complaint_count",
+    "ISS-USABILITY.mean_severity",
+    "ISS-USABILITY.priority_score",
+    "ISS-USABILITY.severity_sum"
+  ],
+  "cited_facts": [
+    "F.ISS-OTHER.share_of_complaints_pct",
+    "F.ISS-USABILITY.share_of_complaints_pct",
+    "F.cancellation_intent",
+    "F.complaint_or_cancellation",
+    "F.needs_review",
+    "F.quarantined",
+    "F.total_reviews"
+  ],
+  "unsupported_numbers": []
+}

@@ -1,4 +1,5 @@
-typesafe-sdk
-anthropic
-python-dotenv
-openpyxl
+typesafe-sdk==0.7.5
+anthropic==1.15.0
+python-dotenv==1.2.4
+openpyxl==3.1.5
+-r dashboard/requirements.txt

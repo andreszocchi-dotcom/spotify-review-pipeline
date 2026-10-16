@@ -22,7 +22,7 @@ from dotenv import load_dotenv
 from pipeline import enrich, labels, verify
 from pipeline.common import ROOT, open_state, text_sha, write_json
 from pipeline.ingest import ingest
-from typesafe_sdk import TypeSafeRateLimitError
+from typesafe_sdk import TypeSafeAuthenticationError, TypeSafeRateLimitError
 
 TEST_DB = ROOT / "work" / "tests.sqlite"
 OUT = ROOT / "evals" / "system_tests.json"
@@ -101,6 +101,28 @@ async def offline_tests():
     n = con.execute("SELECT COUNT(*) FROM calls").fetchone()[0]
     results.append({"test": "spend cap: no call is admitted once spent + reservation would exceed the cap",
                     "synthetic": True, "calls_made": n, "budget_stop_raised": stopped, "passed": stopped and n == 1})
+
+    con, e = stub_enricher([TypeSafeAuthenticationError(401, None, __import__("httpx2").Headers(), message="bad key (stub)")])
+    try:
+        await e.classify("r-auth", text_sha(text), text)
+        stopped = False
+    except enrich.ProviderStop:
+        stopped = True
+    q = con.execute("SELECT COUNT(*) FROM quarantine").fetchone()[0]
+    results.append({"test": "account-level error (revoked key / no credit) stops the run; review stays pending, not quarantined",
+                    "synthetic": True, "provider_stop_raised": stopped, "quarantined": q, "passed": stopped and q == 0})
+
+    con, e = stub_enricher([rate_limit_error()] * (enrich.MAX_TRANSIENT_ATTEMPTS * enrich.MAX_CONSECUTIVE_FAILED_REVIEWS))
+    stopped_after = None
+    for n in range(enrich.MAX_CONSECUTIVE_FAILED_REVIEWS + 5):
+        try:
+            await e.classify(f"r-outage-{n}", text_sha(f"{text}{n}"), f"{text}{n}")
+        except enrich.ProviderStop:
+            stopped_after = n + 1
+            break
+    results.append({"test": "circuit breaker: a streak of failed reviews (provider outage) stops the run",
+                    "synthetic": True, "stopped_after_reviews": stopped_after,
+                    "passed": stopped_after == enrich.MAX_CONSECUTIVE_FAILED_REVIEWS})
 
     con, e = stub_enricher([fake_response(model="jev-9.9.9")] * 2)
     await e.classify("r-drift", text_sha(text), text)

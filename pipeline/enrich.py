@@ -27,7 +27,8 @@ from datetime import datetime, timezone
 
 from dotenv import load_dotenv
 from typesafe_sdk import (AsyncTypeSafeClient, RetryPolicy, TypeSafeAPIConnectionError, TypeSafeAPITimeoutError,
-                          TypeSafeError, TypeSafeInternalServerError, TypeSafeRateLimitError)
+                          TypeSafeAuthenticationError, TypeSafeError, TypeSafeInternalServerError,
+                          TypeSafePermissionDeniedError, TypeSafeRateLimitError)
 
 from pipeline import extract, labels
 from pipeline.common import DEFAULT_DB, ROOT, log_call, now, open_state
@@ -40,11 +41,17 @@ NEEDS_REVIEW_CONFIDENCE = 0.5
 JEV_SETTINGS = {"endpoint": "system_one", "questions": ["topic", "intent", "severity", "sentiment"],
                 "reviews_per_request": 1, "sdk_retries": 0}
 TRANSIENT = (TypeSafeRateLimitError, TypeSafeInternalServerError, TypeSafeAPIConnectionError, TypeSafeAPITimeoutError)
+ACCOUNT_ERRORS = (TypeSafeAuthenticationError, TypeSafePermissionDeniedError)  # e.g. revoked key, exhausted credit
+MAX_CONSECUTIVE_FAILED_REVIEWS = 25  # circuit breaker: a streak of failed reviews means the provider is down
 
 
 
 class BudgetStop(Exception):
     pass
+
+
+class ProviderStop(Exception):
+    """Account-level failure or a failure streak: stop and save rather than quarantine everything."""
 
 
 class Ledger:
@@ -96,6 +103,7 @@ class Enricher:
         self.con, self.client, self.ledger, self.run_id, self.phase = con, client, ledger, run_id, phase
         self.questions = labels.questions()
         self.stats = {"completed": 0, "quarantined": 0, "calls": 0, "failed_calls": 0, "input_tokens": 0, "output_tokens": 0}
+        self.consecutive_failed = 0
 
     def log_call(self, review_id, attempt, outcome, started, seconds, usage=None, error=None):
         log_call(self.con, run_id=self.run_id, role="enrich", provider="typesafe", review_ids=[review_id],
@@ -127,7 +135,10 @@ class Enricher:
             except TypeSafeError as e:  # not retryable (bad request, auth, ...)
                 last_error = f"{type(e).__name__}: {str(e)[:200]}"
                 self.log_call(review_id, attempt, "failed", started, time.perf_counter() - t0, error=last_error)
+                self.con.commit()
                 self.ledger.settle(reservation, 0)
+                if isinstance(e, ACCOUNT_ERRORS) or getattr(e, "status", None) == 402:
+                    raise ProviderStop(f"account-level error, review left pending: {last_error}")
                 break
             except ValueError as e:  # the call succeeded and was billed, but its output is unusable
                 last_error = f"invalid_output: {e}"
@@ -140,11 +151,15 @@ class Enricher:
             self.log_call(review_id, attempt, "succeeded", started, time.perf_counter() - t0, usage)
             self.ledger.settle(reservation, usage.input_tokens + usage.output_tokens)
             self.save_result(review_id, text_sha, record)
+            self.consecutive_failed = 0
             return
         self.con.execute("INSERT OR REPLACE INTO quarantine VALUES (?,?,?,?)",
                          (review_id, last_error or "enrichment_failed", attempt, "enrich"))
         self.con.commit()
         self.stats["quarantined"] += 1
+        self.consecutive_failed += 1
+        if self.consecutive_failed >= MAX_CONSECUTIVE_FAILED_REVIEWS:
+            raise ProviderStop(f"{self.consecutive_failed} consecutive reviews failed; last error: {last_error}")
 
     def save_result(self, review_id, text_sha, r):
         self.con.execute("INSERT OR REPLACE INTO results VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)", (
@@ -162,7 +177,7 @@ def pending(con, retry_failed, limit):
                AND NOT EXISTS (SELECT 1 FROM results x WHERE x.text_sha256 = r.text_sha256 AND x.label_config = ?)"""
     if not retry_failed:
         sql += " AND NOT EXISTS (SELECT 1 FROM quarantine q WHERE q.review_id = r.review_id AND q.stage = 'enrich')"
-    sql += " ORDER BY r.row_idx"
+    sql += " ORDER BY r.text_sha256"  # hash order: a partial run is a pseudo-random sample, not the oldest months
     if limit:
         sql += f" LIMIT {int(limit)}"
     return con.execute(sql, (labels.LABEL_CONFIG,)).fetchall()
@@ -200,8 +215,8 @@ async def run(args):
                     stop_reason = f"simulated interruption after {args.stop_after_batches} batches"
                     break
                 results = await asyncio.gather(*(one(r) for r in work[i:i + BATCH_SIZE]), return_exceptions=True)
-                stops = [r for r in results if isinstance(r, BudgetStop)]
-                errors = [r for r in results if isinstance(r, BaseException) and not isinstance(r, BudgetStop)]
+                stops = [r for r in results if isinstance(r, (BudgetStop, ProviderStop))]
+                errors = [r for r in results if isinstance(r, BaseException) and not isinstance(r, (BudgetStop, ProviderStop))]
                 if errors:
                     raise errors[0]
                 s = enricher.stats
@@ -209,7 +224,7 @@ async def run(args):
                       f"failed_calls={s['failed_calls']} tokens={s['input_tokens']:,}/{s['output_tokens']:,} "
                       f"elapsed={time.perf_counter() - started:.1f}s")
                 if stops:
-                    stop_reason = f"budget stop: {stops[0]}"
+                    stop_reason = f"{type(stops[0]).__name__}: {stops[0]}"
                     break
         except (KeyboardInterrupt, asyncio.CancelledError):
             stop_reason = "interrupted"

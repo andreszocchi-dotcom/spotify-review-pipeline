@@ -1,0 +1,76 @@
+{
+  "run_id": "dev10k",
+  "input": "data/analysis_10000.csv",
+  "db": "work/dev10k.sqlite",
+  "wall_seconds": 319.561,
+  "stages": {
+    "ingest": {
+      "seconds": 0.421
+    },
+    "enrich": {
+      "seconds": 259.825,
+      "completed": 8448,
+      "quarantined": 0,
+      "calls": 8448,
+      "failed_calls": 0,
+      "input_tokens": 9099609,
+      "output_tokens": 1660263,
+      "pending_at_start": 8448,
+      "stop_reason": "done",
+      "wall_seconds": 259.74
+    },
+    "verify": {
+      "seconds": 32.302,
+      "sampled": 253,
+      "sent_to_model": 253,
+      "failures": 0
+    },
+    "group": {
+      "seconds": 12.379,
+      "issues": 8,
+      "model_calls": 8
+    },
+    "rank": {
+      "seconds": 0.289,
+      "issues_ranked": 8
+    },
+    "memo": {
+      "seconds": 14.243,
+      "model_calls": 1,
+      "recommended_issue_id": "ISS-USABILITY"
+    }
+  },
+  "calls_by_role": {
+    "enrich": {
+      "attempts": 8448,
+      "failed": 0,
+      "input_tokens": 9099609,
+      "output_tokens": 1660263
+    },
+    "group": {
+      "attempts": 8,
+      "failed": 0,
+      "input_tokens": 9261,
+      "output_tokens": 847
+    },
+    "memo": {
+      "attempts": 1,
+      "failed": 0,
+      "input_tokens": 6648,
+      "output_tokens": 2059
+    },
+    "verify": {
+      "attempts": 11,
+      "failed": 0,
+      "input_tokens": 25797,
+      "output_tokens": 6971
+    }
+  },
+  "limits": {
+    "jev_token_cap": 15000000,
+    "usd_cap": 1.5,
+    "workers": 4,
+    "verify_rate": 0.03,
+    "verify_max": 300
+  }
+}

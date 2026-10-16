@@ -1,0 +1,464 @@
+{
+  "input_sha256": "8d7248c242895d50891e1c8c4d1f8415dbbd1b78116785f734d5f6fa0d3fa967",
+  "config": "claude-sonnet-5-5+medium+memo-v1",
+  "ranking": [
+    {
+      "rank": 1,
+      "issue_id": "ISS-USABILITY",
+      "complaint_count": 1262,
+      "severity_sum": 3582,
+      "mean_severity": "2.838352",
+      "priority_score": 3582
+    },
+    {
+      "rank": 2,
+      "issue_id": "ISS-OTHER",
+      "complaint_count": 1469,
+      "severity_sum": 2881,
+      "mean_severity": "1.961198",
+      "priority_score": 2881
+    },
+    {
+      "rank": 3,
+      "issue_id": "ISS-BILLING",
+      "complaint_count": 737,
+      "severity_sum": 2078,
+      "mean_severity": "2.819539",
+      "priority_score": 2078
+    },
+    {
+      "rank": 4,
+      "issue_id": "ISS-PLAYBACK",
+      "complaint_count": 612,
+      "severity_sum": 2067,
+      "mean_severity": "3.377451",
+      "priority_score": 2067
+    },
+    {
+      "rank": 5,
+      "issue_id": "ISS-ACCESS",
+      "complaint_count": 157,
+      "severity_sum": 629,
+      "mean_severity": "4.006369",
+      "priority_score": 629
+    },
+    {
+      "rank": 6,
+      "issue_id": "ISS-CATALOG",
+      "complaint_count": 186,
+      "severity_sum": 548,
+      "mean_severity": "2.946237",
+      "priority_score": 548
+    },
+    {
+      "rank": 7,
+      "issue_id": "ISS-DOWNLOADS",
+      "complaint_count": 84,
+      "severity_sum": 297,
+      "mean_severity": "3.535714",
+      "priority_score": 297
+    },
+    {
+      "rank": 8,
+      "issue_id": "ISS-SUPPORT",
+      "complaint_count": 9,
+      "severity_sum": 30,
+      "mean_severity": "3.333333",
+      "priority_score": 30
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "ISS-USABILITY.complaint_count",
+      "issue_id": "ISS-USABILITY",
+      "metric": "complaint_count",
+      "value": "1262"
+    },
+    {
+      "claim_id": "ISS-USABILITY.severity_sum",
+      "issue_id": "ISS-USABILITY",
+      "metric": "severity_sum",
+      "value": "3582"
+    },
+    {
+      "claim_id": "ISS-USABILITY.mean_severity",
+      "issue_id": "ISS-USABILITY",
+      "metric": "mean_severity",
+      "value": "2.838352"
+    },
+    {
+      "claim_id": "ISS-USABILITY.priority_score",
+      "issue_id": "ISS-USABILITY",
+      "metric": "priority_score",
+      "value": "3582"
+    },
+    {
+      "claim_id": "ISS-OTHER.complaint_count",
+      "issue_id": "ISS-OTHER",
+      "metric": "complaint_count",
+      "value": "1469"
+    },
+    {
+      "claim_id": "ISS-OTHER.severity_sum",
+      "issue_id": "ISS-OTHER",
+      "metric": "severity_sum",
+      "value": "2881"
+    },
+    {
+      "claim_id": "ISS-OTHER.mean_severity",
+      "issue_id": "ISS-OTHER",
+      "metric": "mean_severity",
+      "value": "1.961198"
+    },
+    {
+      "claim_id": "ISS-OTHER.priority_score",
+      "issue_id": "ISS-OTHER",
+      "metric": "priority_score",
+      "value": "2881"
+    },
+    {
+      "claim_id": "ISS-BILLING.complaint_count",
+      "issue_id": "ISS-BILLING",
+      "metric": "complaint_count",
+      "value": "737"
+    },
+    {
+      "claim_id": "ISS-BILLING.severity_sum",
+      "issue_id": "ISS-BILLING",
+      "metric": "severity_sum",
+      "value": "2078"
+    },
+    {
+      "claim_id": "ISS-BILLING.mean_severity",
+      "issue_id": "ISS-BILLING",
+      "metric": "mean_severity",
+      "value": "2.819539"
+    },
+    {
+      "claim_id": "ISS-BILLING.priority_score",
+      "issue_id": "ISS-BILLING",
+      "metric": "priority_score",
+      "value": "2078"
+    },
+    {
+      "claim_id": "ISS-PLAYBACK.complaint_count",
+      "issue_id": "ISS-PLAYBACK",
+      "metric": "complaint_count",
+      "value": "612"
+    },
+    {
+      "claim_id": "ISS-PLAYBACK.severity_sum",
+      "issue_id": "ISS-PLAYBACK",
+      "metric": "severity_sum",
+      "value": "2067"
+    },
+    {
+      "claim_id": "ISS-PLAYBACK.mean_severity",
+      "issue_id": "ISS-PLAYBACK",
+      "metric": "mean_severity",
+      "value": "3.377451"
+    },
+    {
+      "claim_id": "ISS-PLAYBACK.priority_score",
+      "issue_id": "ISS-PLAYBACK",
+      "metric": "priority_score",
+      "value": "2067"
+    },
+    {
+      "claim_id": "ISS-ACCESS.complaint_count",
+      "issue_id": "ISS-ACCESS",
+      "metric": "complaint_count",
+      "value": "157"
+    },
+    {
+      "claim_id": "ISS-ACCESS.severity_sum",
+      "issue_id": "ISS-ACCESS",
+      "metric": "severity_sum",
+      "value": "629"
+    },
+    {
+      "claim_id": "ISS-ACCESS.mean_severity",
+      "issue_id": "ISS-ACCESS",
+      "metric": "mean_severity",
+      "value": "4.006369"
+    },
+    {
+      "claim_id": "ISS-ACCESS.priority_score",
+      "issue_id": "ISS-ACCESS",
+      "metric": "priority_score",
+      "value": "629"
+    },
+    {
+      "claim_id": "ISS-CATALOG.complaint_count",
+      "issue_id": "ISS-CATALOG",
+      "metric": "complaint_count",
+      "value": "186"
+    },
+    {
+      "claim_id": "ISS-CATALOG.severity_sum",
+      "issue_id": "ISS-CATALOG",
+      "metric": "severity_sum",
+      "value": "548"
+    },
+    {
+      "claim_id": "ISS-CATALOG.mean_severity",
+      "issue_id": "ISS-CATALOG",
+      "metric": "mean_severity",
+      "value": "2.946237"
+    },
+    {
+      "claim_id": "ISS-CATALOG.priority_score",
+      "issue_id": "ISS-CATALOG",
+      "metric": "priority_score",
+      "value": "548"
+    },
+    {
+      "claim_id": "ISS-DOWNLOADS.complaint_count",
+      "issue_id": "ISS-DOWNLOADS",
+      "metric": "complaint_count",
+      "value": "84"
+    },
+    {
+      "claim_id": "ISS-DOWNLOADS.severity_sum",
+      "issue_id": "ISS-DOWNLOADS",
+      "metric": "severity_sum",
+      "value": "297"
+    },
+    {
+      "claim_id": "ISS-DOWNLOADS.mean_severity",
+      "issue_id": "ISS-DOWNLOADS",
+      "metric": "mean_severity",
+      "value": "3.535714"
+    },
+    {
+      "claim_id": "ISS-DOWNLOADS.priority_score",
+      "issue_id": "ISS-DOWNLOADS",
+      "metric": "priority_score",
+      "value": "297"
+    },
+    {
+      "claim_id": "ISS-SUPPORT.complaint_count",
+      "issue_id": "ISS-SUPPORT",
+      "metric": "complaint_count",
+      "value": "9"
+    },
+    {
+      "claim_id": "ISS-SUPPORT.severity_sum",
+      "issue_id": "ISS-SUPPORT",
+      "metric": "severity_sum",
+      "value": "30"
+    },
+    {
+      "claim_id": "ISS-SUPPORT.mean_severity",
+      "issue_id": "ISS-SUPPORT",
+      "metric": "mean_severity",
+      "value": "3.333333"
+    },
+    {
+      "claim_id": "ISS-SUPPORT.priority_score",
+      "issue_id": "ISS-SUPPORT",
+      "metric": "priority_score",
+      "value": "30"
+    }
+  ],
+  "facts": [
+    {
+      "fact_id": "F.total_reviews",
+      "value": 10000
+    },
+    {
+      "fact_id": "F.completed",
+      "value": 10000
+    },
+    {
+      "fact_id": "F.quarantined",
+      "value": 0
+    },
+    {
+      "fact_id": "F.complaint_or_cancellation",
+      "value": 4516
+    },
+    {
+      "fact_id": "F.cancellation_intent",
+      "value": 483
+    },
+    {
+      "fact_id": "F.praise",
+      "value": 4116
+    },
+    {
+      "fact_id": "F.request",
+      "value": 367
+    },
+    {
+      "fact_id": "F.needs_review",
+      "value": 1510
+    },
+    {
+      "fact_id": "F.ISS-USABILITY.share_of_complaints_pct",
+      "value": 27.9
+    },
+    {
+      "fact_id": "F.ISS-OTHER.share_of_complaints_pct",
+      "value": 32.5
+    },
+    {
+      "fact_id": "F.ISS-BILLING.share_of_complaints_pct",
+      "value": 16.3
+    },
+    {
+      "fact_id": "F.ISS-PLAYBACK.share_of_complaints_pct",
+      "value": 13.6
+    },
+    {
+      "fact_id": "F.ISS-ACCESS.share_of_complaints_pct",
+      "value": 3.5
+    },
+    {
+      "fact_id": "F.ISS-CATALOG.share_of_complaints_pct",
+      "value": 4.1
+    },
+    {
+      "fact_id": "F.ISS-DOWNLOADS.share_of_complaints_pct",
+      "value": 1.9
+    },
+    {
+      "fact_id": "F.ISS-SUPPORT.share_of_complaints_pct",
+      "value": 0.2
+    }
+  ],
+  "evidence": [
+    {
+      "issue_id": "ISS-USABILITY",
+      "name": "Playlist loss, shuffle, and playback control failures",
+      "summary": "Reviewers report playlists vanishing or failing to load, shuffle repeating the same artist, skip and queue controls not working, and ads interrupting listening.",
+      "quotes": [
+        {
+          "review_id": "ee11e1df-cb73-4c3a-b5e8-7268c7872b01",
+          "severity": 5,
+          "quote": "Update: my playlist, that had hundreds of songs that took years to put together, just vanished."
+        },
+        {
+          "review_id": "9eb843c6-ab2d-459d-8507-5b8128279fcc",
+          "severity": 4,
+          "quote": "Absolutely can't use it anymore, can't skip to particular part in songs , can't use skip button or replay button , the app won't play the songs next but will play another song in the playlist abd sometimes one that even isn't in playlist, please fix it"
+        },
+        {
+          "review_id": "7a9422f5-7266-4f53-adf3-7cc65803e8bf",
+          "severity": 5,
+          "quote": "Was about stop listening to music but now spotify using same shuffle and same artist over over and OVER."
+        }
+      ]
+    },
+    {
+      "issue_id": "ISS-OTHER",
+      "name": "Vague complaints about app failures and privacy",
+      "summary": "Reviewers give general criticism without a specific feature: the app stopped working or won't update, some raise personal data collection and third-party access concerns, and others offer unspecific dissatisfaction.",
+      "quotes": [
+        {
+          "review_id": "21ddfe12-8433-4bad-b0f8-e7f605c056ae",
+          "severity": 5,
+          "quote": "Collects too much personal information"
+        },
+        {
+          "review_id": "1c4d38cb-9e3f-4f46-99d4-9b4d4880492f",
+          "severity": 4,
+          "quote": "I'm not too sure what happened, but it completely stopped working!"
+        },
+        {
+          "review_id": "9c3b36ee-5b2f-4757-8462-e2fa996e0c2b",
+          "severity": 4,
+          "quote": "Its not working from 3 days.."
+        }
+      ]
+    },
+    {
+      "issue_id": "ISS-BILLING",
+      "name": "Unexpected charges after cancelling or paying",
+      "summary": "Reviewers report being charged monthly or again after cancelling or unsubscribing, and some say they paid for premium without the app working or receiving promised benefits. Several also say core features now require premium.",
+      "quotes": [
+        {
+          "review_id": "ff7a2f97-2603-4e0e-95c9-29fa03a803a3",
+          "severity": 5,
+          "quote": "Works perfectly for playing music, but I'm still being charged monthly even though I canceled."
+        },
+        {
+          "review_id": "41c0c736-6617-466a-8e4d-3a2b551185e5",
+          "severity": 5,
+          "quote": "I had unsubscribed, and Spotify stole My money!!!"
+        },
+        {
+          "review_id": "70c10706-cb1c-4623-9c21-bf303e1e6ebe",
+          "severity": 5,
+          "quote": "Charged me for subscription even though I tried cancelling it 50 times this is the worst app ever DO NOT DOWN!!"
+        }
+      ]
+    },
+    {
+      "issue_id": "ISS-PLAYBACK",
+      "name": "App crashes, freezes, and stops playback",
+      "summary": "Reviewers report the app crashing or closing when songs play, stalling on black or logo screens, failing to load after updates, and stopping playback on pause or lockscreen. Some say reinstalling or clearing data helped temporarily.",
+      "quotes": [
+        {
+          "review_id": "73724807-3061-4a00-86fe-64065dbd8d74",
+          "severity": 4,
+          "quote": "Not happy 😒, Spotify keeps crashing on my android, I'll open it and it will be a black screen, I delete and install it again and it works, I've had to do this 3 times already!"
+        },
+        {
+          "review_id": "23cf7b22-c8dd-4f19-b37e-1f6df6fc2a05",
+          "severity": 4,
+          "quote": "Everytime I try playing a song, it immediately stops and exits the app."
+        },
+        {
+          "review_id": "a58d4149-46fd-4f9d-9864-25254119557f",
+          "severity": 4,
+          "quote": "Will not keep playing to next song after a break or pause."
+        }
+      ]
+    },
+    {
+      "issue_id": "ISS-ACCESS",
+      "name": "Login failures and unexpected account lockouts",
+      "summary": "Users report being unable to log in, sudden logouts that wipe liked songs and playlists, suspected account hacks, and sign-in errors claiming no internet connection, with support not helping.",
+      "quotes": [
+        {
+          "review_id": "305c3fe1-109c-4f52-b7c4-5b95bb526035",
+          "severity": 5,
+          "quote": "Why am I paying for this? Unable to login, can not reach tech support. Looks like the account was hacked."
+        },
+        {
+          "review_id": "55123d02-711d-4e41-b644-06e2c3c4db18",
+          "severity": 5,
+          "quote": "Whenever I close the app it always logs me out and it did it this time and I had 1300 liked songs and lost all of them"
+        },
+        {
+          "review_id": "12efd15d-4d4f-4a71-8e71-69d03b6f983a",
+          "severity": 4,
+          "quote": "I can't login to the app, it keep saying that there's no internet connection, whereas everything else on my phone is connected to the internet."
+        }
+      ]
+    },
+    {
+      "issue_id": "ISS-CATALOG",
+      "name": "Songs, artists, and lyrics not loading",
+      "summary": "Reviewers report that songs, artists, and podcasts fail to appear in search or playlists, and lyrics show 'couldn't load' errors for weeks, some after updates or reinstalling.",
+      "quotes": [
+        {
+          "review_id": "fb4c21ae-6e1a-4bbd-b984-2ffee672e3df",
+          "severity": 4,
+          "quote": "What's wrong with the lyrics lately? The lyrics haven't loaded for me in like 3 weeks now and no one is fixing"
+        },
+        {
+          "review_id": "2d7b2ebe-826f-49cd-a109-b0ab3bf52c2d",
+          "severity": 4,
+          "quote": "wth is happening with this app???? i can't find or listen to any song i try searching. It doesn't show my liked songs now that i have reinstalled it. I am paying for this app u should fix this asap"
+        },
+        {
+          "review_id": "a7353811-9bcc-4c49-ab4d-f2b924368f5e",
+          "severity": 4,
+          "quote": "I search for artists and there's nothing there."
+        }
+      ]
+    }
+  ]
+}
