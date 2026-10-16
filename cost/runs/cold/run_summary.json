@@ -1,0 +1,76 @@
+{
+  "run_id": "pilot-cold",
+  "input": "C:\\Users\\andre\\spotify-review-pipeline\\data\\cost_100.csv",
+  "db": "C:\\Users\\andre\\spotify-review-pipeline\\work\\pilot.sqlite",
+  "wall_seconds": 44.5,
+  "stages": {
+    "ingest": {
+      "seconds": 0.205
+    },
+    "enrich": {
+      "seconds": 13.251,
+      "completed": 100,
+      "quarantined": 0,
+      "calls": 100,
+      "failed_calls": 0,
+      "input_tokens": 102887,
+      "output_tokens": 19655,
+      "pending_at_start": 100,
+      "stop_reason": "done",
+      "wall_seconds": 13.23
+    },
+    "verify": {
+      "seconds": 6.414,
+      "sampled": 20,
+      "sent_to_model": 20,
+      "failures": 0
+    },
+    "group": {
+      "seconds": 10.406,
+      "issues": 7,
+      "model_calls": 7
+    },
+    "rank": {
+      "seconds": 0.006,
+      "issues_ranked": 7
+    },
+    "memo": {
+      "seconds": 13.996,
+      "model_calls": 1,
+      "recommended_issue_id": "ISS-USABILITY"
+    }
+  },
+  "calls_by_role": {
+    "enrich": {
+      "attempts": 100,
+      "failed": 0,
+      "input_tokens": 102887,
+      "output_tokens": 19655
+    },
+    "group": {
+      "attempts": 7,
+      "failed": 0,
+      "input_tokens": 5486,
+      "output_tokens": 721
+    },
+    "memo": {
+      "attempts": 1,
+      "failed": 0,
+      "input_tokens": 6078,
+      "output_tokens": 2078
+    },
+    "verify": {
+      "attempts": 1,
+      "failed": 0,
+      "input_tokens": 2044,
+      "output_tokens": 547
+    }
+  },
+  "limits": {
+    "jev_token_cap": 250000,
+    "usd_cap": 0.5,
+    "workers": 1,
+    "verify_rate": 0.2,
+    "verify_max": 20
+  }
+}

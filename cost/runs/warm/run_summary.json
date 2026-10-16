@@ -1,0 +1,51 @@
+{
+  "run_id": "pilot-warm",
+  "input": "C:\\Users\\andre\\spotify-review-pipeline\\data\\cost_100.csv",
+  "db": "C:\\Users\\andre\\spotify-review-pipeline\\work\\pilot.sqlite",
+  "wall_seconds": 0.116,
+  "stages": {
+    "ingest": {
+      "seconds": 0.031
+    },
+    "enrich": {
+      "seconds": 0.007,
+      "completed": 0,
+      "quarantined": 0,
+      "calls": 0,
+      "failed_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "pending_at_start": 0,
+      "stop_reason": "done",
+      "wall_seconds": 0.0
+    },
+    "verify": {
+      "seconds": 0.004,
+      "sampled": 20,
+      "sent_to_model": 0,
+      "failures": 0
+    },
+    "group": {
+      "seconds": 0.004,
+      "issues": 7,
+      "model_calls": 0
+    },
+    "rank": {
+      "seconds": 0.004,
+      "issues_ranked": 7
+    },
+    "memo": {
+      "seconds": 0.002,
+      "model_calls": 0,
+      "recommended_issue_id": "ISS-USABILITY"
+    }
+  },
+  "calls_by_role": {},
+  "limits": {
+    "jev_token_cap": 250000,
+    "usd_cap": 0.5,
+    "workers": 1,
+    "verify_rate": 0.2,
+    "verify_max": 20
+  }
+}

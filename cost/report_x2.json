@@ -1,0 +1,463 @@
+{
+  "rate_multiplier": 2.0,
+  "pilot": {
+    "input": "data/cost_100.csv",
+    "input_sha256": "c884ac3b9be5066995d5063f96ad9af6e5e082975788c1684c4f6b6ea661dd0e",
+    "rows": 100,
+    "distinct_nonempty_texts": 100,
+    "status_counts": {
+      "completed": 100
+    },
+    "limits": {
+      "jev_token_cap": 250000,
+      "usd_cap": 0.5,
+      "workers": 1,
+      "verify_rate": 0.2,
+      "verify_max": 20
+    }
+  },
+  "rates": {
+    "claude-haiku-5-5:input_tokens": {
+      "provider": "anthropic",
+      "checked_on": "2026-10-16",
+      "source": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "quoted": "0.10 USD per 1,000,000 tokens",
+      "usd_per_unit": 2.0000000000000002e-07
+    },
+    "claude-haiku-5-5:cache_read_input_tokens": {
+      "provider": "anthropic",
+      "checked_on": "2026-10-16",
+      "source": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "quoted": "0.01 USD per 1,000,000 tokens",
+      "usd_per_unit": 2e-08
+    },
+    "claude-haiku-5-5:cache_creation_input_tokens": {
+      "provider": "anthropic",
+      "checked_on": "2026-10-16",
+      "source": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "quoted": "0.125 USD per 1,000,000 tokens",
+      "usd_per_unit": 2.5e-07
+    },
+    "claude-haiku-5-5:output_tokens": {
+      "provider": "anthropic",
+      "checked_on": "2026-10-16",
+      "source": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "quoted": "0.50 USD per 1,000,000 tokens",
+      "usd_per_unit": 1e-06
+    },
+    "claude-sonnet-5-5:input_tokens": {
+      "provider": "anthropic",
+      "checked_on": "2026-10-16",
+      "source": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "quoted": "2.00 USD per 1,000,000 tokens",
+      "usd_per_unit": 4e-06
+    },
+    "claude-sonnet-5-5:output_tokens": {
+      "provider": "anthropic",
+      "checked_on": "2026-10-16",
+      "source": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "quoted": "10.00 USD per 1,000,000 tokens",
+      "usd_per_unit": 2e-05
+    },
+    "jev-1.13.0:input_tokens": {
+      "provider": "typesafe",
+      "checked_on": "2026-10-16",
+      "source": "https://docs.typesafe.ai/primitives/choice",
+      "quoted": "unknown USD per 1,000,000 tokens",
+      "usd_per_unit": null
+    },
+    "jev-1.13.0:output_tokens": {
+      "provider": "typesafe",
+      "checked_on": "2026-10-16",
+      "source": "https://docs.typesafe.ai/primitives/choice",
+      "quoted": "unknown USD per 1,000,000 tokens",
+      "usd_per_unit": null
+    }
+  },
+  "measured": {
+    "cold": {
+      "stages": [
+        {
+          "stage": "enrich",
+          "provider": "typesafe",
+          "model": "jev-1.13.0",
+          "attempts": 100,
+          "failed_attempts": 0,
+          "input_tokens": 102887,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0,
+          "output_tokens": 19655,
+          "usd": null,
+          "unknown_rate_items": [
+            "input_tokens",
+            "output_tokens"
+          ]
+        },
+        {
+          "stage": "group",
+          "provider": "anthropic",
+          "model": "claude-haiku-5-5",
+          "attempts": 7,
+          "failed_attempts": 0,
+          "input_tokens": 5486,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0,
+          "output_tokens": 721,
+          "usd": 0.0018181999999999999,
+          "unknown_rate_items": []
+        },
+        {
+          "stage": "memo",
+          "provider": "anthropic",
+          "model": "claude-sonnet-5-5",
+          "attempts": 1,
+          "failed_attempts": 0,
+          "input_tokens": 6078,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0,
+          "output_tokens": 2078,
+          "usd": 0.06587200000000001,
+          "unknown_rate_items": []
+        },
+        {
+          "stage": "verify",
+          "provider": "anthropic",
+          "model": "claude-haiku-5-5",
+          "attempts": 1,
+          "failed_attempts": 0,
+          "input_tokens": 2044,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0,
+          "output_tokens": 547,
+          "usd": 0.0009557999999999999,
+          "unknown_rate_items": []
+        }
+      ],
+      "api_usd_known": 0.06864600000000003,
+      "api_usd_unknown_items": [
+        "jev-1.13.0:input_tokens",
+        "jev-1.13.0:output_tokens"
+      ],
+      "wall_seconds": 44.511,
+      "stage_seconds": {
+        "ingest": 0.205,
+        "enrich": 13.251,
+        "verify": 6.414,
+        "group": 10.406,
+        "rank": 0.006,
+        "memo": 13.996
+      },
+      "throughput_rows_per_sec": 2.25,
+      "usd_per_1000_rows_known": 0.6864600000000003,
+      "usd_per_completed_known": 0.0006864600000000003,
+      "result_cache_hits": 0,
+      "enrich_calls": 100
+    },
+    "warm": {
+      "stages": [],
+      "api_usd_known": 0.0,
+      "api_usd_unknown_items": [],
+      "wall_seconds": 0.122,
+      "stage_seconds": {
+        "ingest": 0.031,
+        "enrich": 0.007,
+        "verify": 0.004,
+        "group": 0.004,
+        "rank": 0.004,
+        "memo": 0.002
+      },
+      "throughput_rows_per_sec": 819.67,
+      "usd_per_1000_rows_known": 0.0,
+      "usd_per_completed_known": 0.0,
+      "result_cache_hits": 100,
+      "enrich_calls": 0
+    }
+  },
+  "per_text_enrich_tokens": {
+    "input_tokens": 1028.9,
+    "output_tokens": 196.6
+  },
+  "enrich_texts_per_second_1_worker": 7.55,
+  "full_run": {
+    "rows": 660622,
+    "nonempty": 660609,
+    "empty_quarantined": 13,
+    "distinct_nonempty_texts": 484189
+  },
+  "assumptions": {
+    "_note": "Editable full-run assumptions. Measured pilot values come from pilot_measurements.json and usage.csv and are never changed by this file.",
+    "budget_usd": {
+      "anthropic": 18.0,
+      "typesafe": 20.0
+    },
+    "full_run": {
+      "rows": 660622,
+      "nonempty": 660609,
+      "empty_quarantined": 13,
+      "distinct_nonempty_texts": 484189
+    },
+    "verify_sample_reviews": 1000,
+    "issues": 8,
+    "memo_calls": 1,
+    "max_workers": 8,
+    "parallel_efficiency": 0.8,
+    "output_token_cap_per_call": {
+      "enrich": 300,
+      "verify_per_review": 60,
+      "group": 600,
+      "memo": 6000
+    },
+    "max_fallback_fraction": 0.0,
+    "scenarios": {
+      "base": {
+        "enrich_retry_rate": 0.01,
+        "anthropic_retry_rate": 0.05
+      },
+      "conservative": {
+        "enrich_retry_rate": 0.05,
+        "anthropic_retry_rate": 0.25
+      }
+    },
+    "typesafe_rate_override_usd_per_mtok": {
+      "input_tokens": null,
+      "output_tokens": null
+    },
+    "typesafe_balance_reconciliation": {
+      "_note": "Fill in the Jev console balance before and after a measured run to derive an effective blended rate.",
+      "balance_before_usd": null,
+      "balance_after_usd": null,
+      "tokens_between_readings": null
+    },
+    "local_compute": {
+      "usd_per_hour": null,
+      "_note": "Laptop running the orchestrator; electricity not metered -> unknown, not zero."
+    }
+  },
+  "projections": {
+    "base_reuse": {
+      "texts_classified": 484189,
+      "lines": [
+        {
+          "stage": "enrich",
+          "provider": "typesafe",
+          "model": "jev-1.13.0",
+          "input_tokens": 503149212,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0,
+          "output_tokens": 96119021,
+          "usd": null
+        },
+        {
+          "stage": "verify",
+          "provider": "anthropic",
+          "model": "claude-haiku-5-5",
+          "input_tokens": 107310,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0,
+          "output_tokens": 28718,
+          "usd": 0.0501795
+        },
+        {
+          "stage": "group",
+          "provider": "anthropic",
+          "model": "claude-haiku-5-5",
+          "input_tokens": 6583,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0,
+          "output_tokens": 865,
+          "usd": 0.00218184
+        },
+        {
+          "stage": "memo",
+          "provider": "anthropic",
+          "model": "claude-sonnet-5-5",
+          "input_tokens": 6382,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0,
+          "output_tokens": 2182,
+          "usd": 0.06916560000000001
+        }
+      ],
+      "usd_by_provider": {
+        "anthropic": 0.12152694
+      },
+      "unknown_cost_providers": [
+        "typesafe"
+      ],
+      "enrich_hours_modeled": 2.81,
+      "workers_modeled": 8,
+      "warnings": [
+        "typesafe: cost unknown (no published rate) - cannot confirm it fits the $20.00 budget"
+      ]
+    },
+    "base_no_reuse": {
+      "texts_classified": 660609,
+      "lines": [
+        {
+          "stage": "enrich",
+          "provider": "typesafe",
+          "model": "jev-1.13.0",
+          "input_tokens": 686477590,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0,
+          "output_tokens": 131141126,
+          "usd": null
+        },
+        {
+          "stage": "verify",
+          "provider": "anthropic",
+          "model": "claude-haiku-5-5",
+          "input_tokens": 107310,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0,
+          "output_tokens": 28718,
+          "usd": 0.0501795
+        },
+        {
+          "stage": "group",
+          "provider": "anthropic",
+          "model": "claude-haiku-5-5",
+          "input_tokens": 6583,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0,
+          "output_tokens": 865,
+          "usd": 0.00218184
+        },
+        {
+          "stage": "memo",
+          "provider": "anthropic",
+          "model": "claude-sonnet-5-5",
+          "input_tokens": 6382,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0,
+          "output_tokens": 2182,
+          "usd": 0.06916560000000001
+        }
+      ],
+      "usd_by_provider": {
+        "anthropic": 0.12152694
+      },
+      "unknown_cost_providers": [
+        "typesafe"
+      ],
+      "enrich_hours_modeled": 3.84,
+      "workers_modeled": 8,
+      "warnings": [
+        "typesafe: cost unknown (no published rate) - cannot confirm it fits the $20.00 budget"
+      ]
+    },
+    "conservative_reuse": {
+      "texts_classified": 484189,
+      "lines": [
+        {
+          "stage": "enrich",
+          "provider": "typesafe",
+          "model": "jev-1.13.0",
+          "input_tokens": 523075913,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0,
+          "output_tokens": 99925715,
+          "usd": null
+        },
+        {
+          "stage": "verify",
+          "provider": "anthropic",
+          "model": "claude-haiku-5-5",
+          "input_tokens": 127750,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0,
+          "output_tokens": 34188,
+          "usd": 0.0597375
+        },
+        {
+          "stage": "group",
+          "provider": "anthropic",
+          "model": "claude-haiku-5-5",
+          "input_tokens": 7837,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0,
+          "output_tokens": 1030,
+          "usd": 0.002597428571428571
+        },
+        {
+          "stage": "memo",
+          "provider": "anthropic",
+          "model": "claude-sonnet-5-5",
+          "input_tokens": 7598,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0,
+          "output_tokens": 2598,
+          "usd": 0.08234
+        }
+      ],
+      "usd_by_provider": {
+        "anthropic": 0.14467492857142855
+      },
+      "unknown_cost_providers": [
+        "typesafe"
+      ],
+      "enrich_hours_modeled": 2.92,
+      "workers_modeled": 8,
+      "warnings": [
+        "typesafe: cost unknown (no published rate) - cannot confirm it fits the $20.00 budget"
+      ]
+    },
+    "conservative_no_reuse": {
+      "texts_classified": 660609,
+      "lines": [
+        {
+          "stage": "enrich",
+          "provider": "typesafe",
+          "model": "jev-1.13.0",
+          "input_tokens": 713664821,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0,
+          "output_tokens": 136334834,
+          "usd": null
+        },
+        {
+          "stage": "verify",
+          "provider": "anthropic",
+          "model": "claude-haiku-5-5",
+          "input_tokens": 127750,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0,
+          "output_tokens": 34188,
+          "usd": 0.0597375
+        },
+        {
+          "stage": "group",
+          "provider": "anthropic",
+          "model": "claude-haiku-5-5",
+          "input_tokens": 7837,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0,
+          "output_tokens": 1030,
+          "usd": 0.002597428571428571
+        },
+        {
+          "stage": "memo",
+          "provider": "anthropic",
+          "model": "claude-sonnet-5-5",
+          "input_tokens": 7598,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0,
+          "output_tokens": 2598,
+          "usd": 0.08234
+        }
+      ],
+      "usd_by_provider": {
+        "anthropic": 0.14467492857142855
+      },
+      "unknown_cost_providers": [
+        "typesafe"
+      ],
+      "enrich_hours_modeled": 3.99,
+      "workers_modeled": 8,
+      "warnings": [
+        "typesafe: cost unknown (no published rate) - cannot confirm it fits the $20.00 budget"
+      ]
+    }
+  },
+  "typesafe_derived_blended_usd_per_mtok": null
+}

@@ -103,6 +103,10 @@ def ingest(input_path, db_path):
                     "missing_app_version": 159701, "distinct_nonempty_texts": 484189}
         report["manifest_check"] = {k: {"expected": v, "actual": report[k], "ok": report[k] == v}
                                     for k, v in expected.items()}
+    con.execute("CREATE TABLE IF NOT EXISTS meta (key TEXT PRIMARY KEY, value TEXT NOT NULL)")
+    con.executemany("INSERT OR REPLACE INTO meta VALUES (?,?)", [
+        ("input_path", str(input_path)), ("input_sha256", report["input_sha256"]), ("records", str(report["records"]))])
+    con.commit()
     return report
 
 

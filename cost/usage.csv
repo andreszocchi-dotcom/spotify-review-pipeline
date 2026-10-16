@@ -1,0 +1,13 @@
+pilot_run,stage,provider,model,item,units,failed_attempts,source
+cold,enrich,typesafe,jev-1.13.0,attempts,100,0,pilot_calls.jsonl where pilot_run=cold and role=enrich
+cold,enrich,typesafe,jev-1.13.0,input_tokens,102887,,pilot_calls.jsonl where pilot_run=cold and role=enrich
+cold,enrich,typesafe,jev-1.13.0,output_tokens,19655,,pilot_calls.jsonl where pilot_run=cold and role=enrich
+cold,group,anthropic,claude-haiku-5-5,attempts,7,0,pilot_calls.jsonl where pilot_run=cold and role=group
+cold,group,anthropic,claude-haiku-5-5,input_tokens,5486,,pilot_calls.jsonl where pilot_run=cold and role=group
+cold,group,anthropic,claude-haiku-5-5,output_tokens,721,,pilot_calls.jsonl where pilot_run=cold and role=group
+cold,memo,anthropic,claude-sonnet-5-5,attempts,1,0,pilot_calls.jsonl where pilot_run=cold and role=memo
+cold,memo,anthropic,claude-sonnet-5-5,input_tokens,6078,,pilot_calls.jsonl where pilot_run=cold and role=memo
+cold,memo,anthropic,claude-sonnet-5-5,output_tokens,2078,,pilot_calls.jsonl where pilot_run=cold and role=memo
+cold,verify,anthropic,claude-haiku-5-5,attempts,1,0,pilot_calls.jsonl where pilot_run=cold and role=verify
+cold,verify,anthropic,claude-haiku-5-5,input_tokens,2044,,pilot_calls.jsonl where pilot_run=cold and role=verify
+cold,verify,anthropic,claude-haiku-5-5,output_tokens,547,,pilot_calls.jsonl where pilot_run=cold and role=verify

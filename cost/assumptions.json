@@ -1,0 +1,29 @@
+{
+  "_note": "Editable full-run assumptions. Measured pilot values come from pilot_measurements.json and usage.csv and are never changed by this file.",
+  "budget_usd": {"anthropic": 18.0, "typesafe": 20.0},
+  "full_run": {
+    "rows": 660622,
+    "nonempty": 660609,
+    "empty_quarantined": 13,
+    "distinct_nonempty_texts": 484189
+  },
+  "verify_sample_reviews": 1000,
+  "issues": 8,
+  "memo_calls": 1,
+  "max_workers": 8,
+  "parallel_efficiency": 0.8,
+  "output_token_cap_per_call": {"enrich": 300, "verify_per_review": 60, "group": 600, "memo": 6000},
+  "max_fallback_fraction": 0.0,
+  "scenarios": {
+    "base": {"enrich_retry_rate": 0.01, "anthropic_retry_rate": 0.05},
+    "conservative": {"enrich_retry_rate": 0.05, "anthropic_retry_rate": 0.25}
+  },
+  "typesafe_rate_override_usd_per_mtok": {"input_tokens": null, "output_tokens": null},
+  "typesafe_balance_reconciliation": {
+    "_note": "Fill in the Jev console balance before and after a measured run to derive an effective blended rate.",
+    "balance_before_usd": null,
+    "balance_after_usd": null,
+    "tokens_between_readings": null
+  },
+  "local_compute": {"usd_per_hour": null, "_note": "Laptop running the orchestrator; electricity not metered -> unknown, not zero."}
+}

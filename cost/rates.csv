@@ -1,0 +1,9 @@
+provider,model,item,price,per_units,currency,unit,checked_on,source,notes
+anthropic,claude-haiku-5-5,input_tokens,0.10,1000000,USD,token,2026-10-16,https://platform.claude.com/docs/en/about-claude/pricing,prompts <=100K tokens (standard tier)
+anthropic,claude-haiku-5-5,cache_read_input_tokens,0.01,1000000,USD,token,2026-10-16,https://platform.claude.com/docs/en/about-claude/pricing,0.1x input
+anthropic,claude-haiku-5-5,cache_creation_input_tokens,0.125,1000000,USD,token,2026-10-16,https://platform.claude.com/docs/en/about-claude/pricing,5-minute cache write 1.25x input
+anthropic,claude-haiku-5-5,output_tokens,0.50,1000000,USD,token,2026-10-16,https://platform.claude.com/docs/en/about-claude/pricing,includes thinking tokens
+anthropic,claude-sonnet-5-5,input_tokens,2.00,1000000,USD,token,2026-10-16,https://platform.claude.com/docs/en/about-claude/pricing,fallback only; not used unless declared
+anthropic,claude-sonnet-5-5,output_tokens,10.00,1000000,USD,token,2026-10-16,https://platform.claude.com/docs/en/about-claude/pricing,fallback only; not used unless declared
+typesafe,jev-1.13.0,input_tokens,,1000000,USD,token,2026-10-16,https://docs.typesafe.ai/primitives/choice,price not published; UNKNOWN until reconciled with console balance
+typesafe,jev-1.13.0,output_tokens,,1000000,USD,token,2026-10-16,https://docs.typesafe.ai/primitives/choice,price not published; UNKNOWN until reconciled with console balance

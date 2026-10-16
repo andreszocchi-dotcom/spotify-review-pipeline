@@ -1,0 +1,130 @@
+{
+  "generated_at": "2026-10-16T19:03:59+00:00",
+  "label_config": "jev-1.13.0+labels-v1+schema-v1",
+  "verifier_config": "claude-haiku-5-5+low+verify-v1",
+  "sample_seed": "a5-verify-2026-10-16",
+  "sampled": 20,
+  "verified": 20,
+  "agreement": {
+    "topic": 0.95,
+    "intent": 0.8,
+    "severity_exact": 0.75
+  },
+  "severity_mae": 0.3,
+  "disagreements": 8,
+  "failures": [],
+  "disagreement_cases": [
+    {
+      "review_id": "e5e6c55f-3069-4b7c-9807-f8b5d5bf2726",
+      "text": "Too many ads.... it's literally useless if u hv not taken premium",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "0a5ff524-27b1-4f3b-a761-17ca48ee731d",
+      "text": "Best app for listening music",
+      "enrich": {
+        "topic": "other",
+        "intent": "request",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "cf6166ae-d71a-4839-9add-088645ad3b78",
+      "text": "DON'T DOWNLOAD THIS:Such a worst app ... that always plays adds instead of songs ...if want to enjoy music free without adds don't download this app ..",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "45c561b9-cc47-4d80-95d3-f0d20bc84af3",
+      "text": "The update made the app useless .... Uninstall krdia ye app ab bekar hai ... Wynk hi theek h",
+      "enrich": {
+        "topic": "other",
+        "intent": "cancellation",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "cancellation",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "ff14ea84-fdec-4363-9b1b-a23dcab287c5",
+      "text": "Good at all",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "e16a4550-43e7-4ae1-b538-a65cc652c31b",
+      "text": "Am very sad about the new spotfy update. i can't play song happly . Can't repeat and play specific part.please solve this matter. I'm leaving spotfy",
+      "enrich": {
+        "topic": "usability",
+        "intent": "cancellation",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "cancellation",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "b9a3e661-0eac-4cc9-a30e-7b1e11ef1315",
+      "text": "I ended up on Spotify because I wanted to listen to a specific podcast I really thought I was a Pandora lover, but I haven't turned my Pandora on since I loaded Spotify.",
+      "enrich": {
+        "topic": "other",
+        "intent": "cancellation",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "unclear",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "21915fcd-9a35-48ba-b277-6296c4154603",
+      "text": "This app the new update has made everthing premium and so usless i thought this app is good but no. Youtube music is better than this usless app. This has become premium just for the creator of spotify to earn money anyways it is a very bad app usless since this new update! Worthless app",
+      "enrich": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "cancellation",
+        "severity": 2
+      }
+    }
+  ]
+}
