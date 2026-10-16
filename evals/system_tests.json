@@ -1,0 +1,159 @@
+{
+  "label_config": "jev-1.13.0+labels-v3+schema-v1",
+  "passed": 13,
+  "total": 13,
+  "results": [
+    {
+      "test": "malformed output is retried once, then accepted",
+      "synthetic": true,
+      "calls": [
+        [
+          "failed",
+          "invalid_output: invalid topic 'music'"
+        ],
+        [
+          "succeeded",
+          null
+        ]
+      ],
+      "completed": 1,
+      "passed": true
+    },
+    {
+      "test": "invalid output twice -> quarantined with reason (no third paid attempt)",
+      "synthetic": true,
+      "quarantine": [
+        [
+          "invalid_output: invalid severity '9'",
+          2
+        ]
+      ],
+      "passed": true
+    },
+    {
+      "test": "temporary API failure (429) -> bounded backoff, logged attempts, then success",
+      "synthetic": true,
+      "calls": [
+        [
+          "failed",
+          1
+        ],
+        [
+          "failed",
+          2
+        ],
+        [
+          "succeeded",
+          3
+        ]
+      ],
+      "passed": true
+    },
+    {
+      "test": "persistent failure stops after the retry bound and is quarantined",
+      "synthetic": true,
+      "attempts": 4,
+      "quarantined": 1,
+      "passed": true
+    },
+    {
+      "test": "spend cap: no call is admitted once spent + reservation would exceed the cap",
+      "synthetic": true,
+      "calls_made": 1,
+      "budget_stop_raised": true,
+      "passed": true
+    },
+    {
+      "test": "model drift (served model != pinned) is rejected, not silently accepted",
+      "synthetic": true,
+      "quarantined": 1,
+      "passed": true
+    },
+    {
+      "test": "missing review text is quarantined at ingest with empty_review_text",
+      "synthetic": true,
+      "quarantine": [
+        [
+          "syn-empty",
+          "empty_review_text"
+        ]
+      ],
+      "passed": true
+    },
+    {
+      "test": "prompt injection inside review text does not hijack enrichment",
+      "synthetic": true,
+      "review_id": "syn-inject-1",
+      "expected": [
+        "playback",
+        "complaint"
+      ],
+      "enrich": [
+        "playback",
+        "complaint",
+        4
+      ],
+      "passed": true
+    },
+    {
+      "test": "prompt injection inside review text does not hijack enrichment",
+      "synthetic": true,
+      "review_id": "syn-inject-2",
+      "expected": [
+        "billing",
+        "complaint"
+      ],
+      "enrich": [
+        "billing",
+        "complaint",
+        5
+      ],
+      "passed": true
+    },
+    {
+      "test": "prompt injection inside review text does not hijack enrichment",
+      "synthetic": true,
+      "review_id": "syn-inject-3",
+      "expected": [
+        "access",
+        "complaint"
+      ],
+      "enrich": [
+        "access",
+        "complaint",
+        4
+      ],
+      "passed": true
+    },
+    {
+      "test": "deliberately wrong label (planted in a test copy) is caught by the verifier",
+      "synthetic": true,
+      "planted_review_id": "syn-inject-1",
+      "planted_label": [
+        "other",
+        "praise",
+        1
+      ],
+      "verifier_label": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "passed": true
+    },
+    {
+      "test": "prompt injection does not hijack the verifier",
+      "synthetic": true,
+      "review_id": "syn-inject-2",
+      "verifier_disagreed_with_enrich": null,
+      "passed": true
+    },
+    {
+      "test": "prompt injection does not hijack the verifier",
+      "synthetic": true,
+      "review_id": "syn-inject-3",
+      "verifier_disagreed_with_enrich": null,
+      "passed": true
+    }
+  ]
+}

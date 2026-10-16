@@ -8,7 +8,7 @@ are keyed by text + LABEL_CONFIG, so a new version forces fresh work instead of 
 from typesafe_sdk import Choice, Score
 
 JEV_MODEL = "jev-1.13.0"  # pinned; "jev-latest" resolved to this on 2026-10-16
-PROMPT_VERSION = "labels-v1"
+PROMPT_VERSION = "labels-v3"  # v3: v1 topics + v2 severity wording (generic complaints -> 2)
 SCHEMA_VERSION = "schema-v1"
 LABEL_CONFIG = f"{JEV_MODEL}+{PROMPT_VERSION}+{SCHEMA_VERSION}"
 
@@ -34,7 +34,7 @@ INTENTS = {
     "cancellation": "Explicitly leaving, uninstalling, cancelling, switching away, or threatening to.",
     "complaint": "A negative experience, including mixed praise and criticism, or a generic 'bad app'.",
     "request": "Asks for a change or new feature without reporting a failure.",
-    "praise": "Positive about the app with no complaint.",
+    "praise": "Positive about the app with no complaint and no requested change.",
     "unclear": "Meaningless, unrelated, or a bare boycott slogan with no product complaint or personal departure.",
 }
 
@@ -46,14 +46,14 @@ INTENT_INSTRUCTIONS = (
 SEVERITY = {
     "1": "No reported problem: praise, neutral or unclear content, or a pure feature request.",
     "2": "Dislike, generic criticism, minor annoyance or cosmetic issue; no functional loss described.",
-    "3": "A function is degraded or restricted, but some use or a workaround remains.",
-    "4": "A core task is clearly blocked, such as being unable to log in or play music at all.",
+    "3": "A specific function is degraded or restricted (e.g. skip limits, frequent ads, intermittent errors), but some use remains.",
+    "4": "A specific core task is clearly blocked and described, such as being unable to log in or to play any music.",
     "5": "Explicit serious financial, privacy or data harm (e.g. charged without consent, account hacked, library wiped).",
 }
 
 SEVERITY_INSTRUCTIONS = (
     "Rate the most severe problem the text actually reports. Angry language, an expensive plan, "
-    "a crash alone, or saying they will cancel does not raise severity. Do not assume impact the text does not state."
+    "a crash alone, or saying they will cancel does not raise severity. Generic verdicts such as 'useless', 'worst app' or 'the update ruined it' without a described functional loss are severity 2. Do not assume impact the text does not state."
 )
 
 SENTIMENT_LEVELS = ["very negative", "negative", "neutral or mixed", "positive", "very positive"]
