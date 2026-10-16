@@ -1,0 +1,17 @@
+# secrets
+.env
+.env.*
+!.env.example
+
+# large raw data (download link + checksum in README)
+data/*.csv
+!data/cost_100.csv
+!data/golden_50_to_label.csv
+
+# local working state (exported artifacts live in grading/, cost/, evals/)
+work/
+.venv/
+__pycache__/
+*.pyc
+self-check.json
+local-reference.json
