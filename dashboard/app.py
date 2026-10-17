@@ -26,6 +26,11 @@ def rows(sql, **params):
 
 @app.get("/api/summary")
 def summary():
+    info = {r["key"]: r["value"] for r in rows("SELECT key, value FROM run_info")}
+    run = {**{k: v for k, v in info.items() if k != "summary"},
+           "calls_by_role": json.loads(info.get("calls_by_role", "{}")), "verify": json.loads(info.get("verify", "{}"))}
+    if "summary" in info:  # precomputed by dashboard.load
+        return {**json.loads(info["summary"]), "run": run}
     status = {r["status"]: r["n"] for r in rows("SELECT status, COUNT(*) AS n FROM records GROUP BY status")}
     intents = {r["intent"]: r["n"] for r in rows(
         "SELECT intent, COUNT(*) AS n FROM records WHERE status='completed' GROUP BY intent")}

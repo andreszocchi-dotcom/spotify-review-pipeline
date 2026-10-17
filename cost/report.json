@@ -1,5 +1,37 @@
 {
   "rate_multiplier": 1.0,
+  "refresh": [
+    {
+      "checkpoint": "checkpoint_500",
+      "texts": 279,
+      "workers": 2,
+      "texts_per_second": 15.81,
+      "failed_calls": 0,
+      "input_per_text": 1029.1,
+      "output_per_text": 196.5,
+      "full_run_tokens": {
+        "input": 498258248,
+        "output": 95147477
+      },
+      "full_run_hours_same_workers": 8.51,
+      "full_run_jev_usd": null
+    },
+    {
+      "checkpoint": "analysis_10000",
+      "texts": 8448,
+      "workers": 4,
+      "texts_per_second": 32.51,
+      "failed_calls": 0,
+      "input_per_text": 1077.1,
+      "output_per_text": 196.5,
+      "full_run_tokens": {
+        "input": 521535344,
+        "output": 95156378
+      },
+      "full_run_hours_same_workers": 4.14,
+      "full_run_jev_usd": null
+    }
+  ],
   "pilot": {
     "input": "data/cost_100.csv",
     "input_sha256": "c884ac3b9be5066995d5063f96ad9af6e5e082975788c1684c4f6b6ea661dd0e",
@@ -231,6 +263,10 @@
     "local_compute": {
       "usd_per_hour": null,
       "_note": "Laptop running the orchestrator; electricity not metered -> unknown, not zero."
+    },
+    "refresh_from": {
+      "checkpoint_500": "outputs/dev500/run_summary.json",
+      "analysis_10000": "outputs/dev10k/run_summary.json"
     }
   },
   "projections": {

@@ -110,6 +110,13 @@ Full run: 660,622 rows · 660,609 nonempty · 13 empty-text quarantines · 484,1
 - Enrichment time (modeled, 8 workers): **3.99 h**
 - ⚠ typesafe: cost unknown (no published rate) - cannot confirm it fits the $20.00 budget
 
+## Refreshed estimates from later checkpoints
+
+| checkpoint | texts | workers | texts/s | failed calls | in/text | out/text | full-run Jev tokens (in / out) | hours at same workers | Jev cost |
+|---|---|---|---|---|---|---|---|---|---|
+| checkpoint_500 | 279 | 2 | 15.81 | 0 | 1029.1 | 196.5 | 498,258,248 / 95,147,477 | 8.51 | unknown |
+| analysis_10000 | 8,448 | 4 | 32.51 | 0 | 1077.1 | 196.5 | 521,535,344 / 95,156,378 | 4.14 | unknown |
+
 ## Controls
 
 - Budgets: {'anthropic': 18.0, 'typesafe': 20.0} · output-token caps per call: {'enrich': 300, 'verify_per_review': 60, 'group': 600, 'memo': 6000}

@@ -1,0 +1,76 @@
+{
+  "run_id": "full-b",
+  "input": "data/spotify_reviews_18months.csv",
+  "db": "work/full.sqlite",
+  "wall_seconds": 17205.557,
+  "stages": {
+    "ingest": {
+      "seconds": 63.332
+    },
+    "enrich": {
+      "seconds": 16897.39,
+      "completed": 464189,
+      "quarantined": 0,
+      "calls": 464201,
+      "failed_calls": 12,
+      "input_tokens": 501146584,
+      "output_tokens": 91252247,
+      "pending_at_start": 464189,
+      "stop_reason": "done",
+      "wall_seconds": 16893.63
+    },
+    "verify": {
+      "seconds": 180.45,
+      "sampled": 968,
+      "sent_to_model": 968,
+      "failures": 3
+    },
+    "group": {
+      "seconds": 28.032,
+      "issues": 8,
+      "model_calls": 8
+    },
+    "rank": {
+      "seconds": 9.817,
+      "issues_ranked": 8
+    },
+    "memo": {
+      "seconds": 25.683,
+      "model_calls": 1,
+      "recommended_issue_id": "ISS-USABILITY"
+    }
+  },
+  "calls_by_role": {
+    "enrich": {
+      "attempts": 464201,
+      "failed": 12,
+      "input_tokens": 501146584,
+      "output_tokens": 91252247
+    },
+    "group": {
+      "attempts": 8,
+      "failed": 0,
+      "input_tokens": 9801,
+      "output_tokens": 826
+    },
+    "memo": {
+      "attempts": 1,
+      "failed": 0,
+      "input_tokens": 6786,
+      "output_tokens": 2048
+    },
+    "verify": {
+      "attempts": 42,
+      "failed": 6,
+      "input_tokens": 107051,
+      "output_tokens": 34279
+    }
+  },
+  "limits": {
+    "jev_token_cap": 700000000,
+    "usd_cap": 3.0,
+    "workers": 8,
+    "verify_rate": 0.002,
+    "verify_max": 1000
+  }
+}

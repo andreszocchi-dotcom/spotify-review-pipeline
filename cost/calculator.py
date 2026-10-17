@@ -158,7 +158,27 @@ def calculate(multiplier=1.0):
     if all(recon.get(k) is not None for k in ("balance_before_usd", "balance_after_usd", "tokens_between_readings")):
         derived = (recon["balance_before_usd"] - recon["balance_after_usd"]) / recon["tokens_between_readings"] * 1e6
 
-    return {"rate_multiplier": multiplier, "pilot": {k: m[k] for k in ("input", "input_sha256", "rows",
+    refresh = []
+    for name, rel in a.get("refresh_from", {}).items():
+        path = COST.parent / rel
+        if not path.exists():
+            continue
+        run = json.loads(path.read_text(encoding="utf-8"))
+        e = run["stages"]["enrich"]
+        texts = e.get("completed", 0)
+        if not texts:
+            continue
+        tin, tout = e["input_tokens"] / texts, e["output_tokens"] / texts
+        tps = texts / e["seconds"]
+        n = fr["distinct_nonempty_texts"]
+        refresh.append({"checkpoint": name, "texts": texts, "workers": run["limits"]["workers"],
+                        "texts_per_second": round(tps, 2), "failed_calls": e.get("failed_calls", 0),
+                        "input_per_text": round(tin, 1), "output_per_text": round(tout, 1),
+                        "full_run_tokens": {"input": round(tin * n), "output": round(tout * n)},
+                        "full_run_hours_same_workers": round(n / tps / 3600, 2),
+                        "full_run_jev_usd": price(rates, enrich["model"], {"input_tokens": tin * n, "output_tokens": tout * n})[0]})
+
+    return {"rate_multiplier": multiplier, "refresh": refresh, "pilot": {k: m[k] for k in ("input", "input_sha256", "rows",
             "distinct_nonempty_texts", "status_counts", "limits")}, "rates": {f"{k[0]}:{k[1]}": {**sources[k],
             "usd_per_unit": v} for k, v in rates.items()}, "measured": measured,
             "per_text_enrich_tokens": {i: round(v, 1) for i, v in per_text.items() if v},
@@ -211,6 +231,15 @@ def render(r):
               f"- Unknown-cost providers: {pr['unknown_cost_providers'] or 'none'}",
               f"- Enrichment time (modeled, {pr['workers_modeled']} workers): **{pr['enrich_hours_modeled']} h**"]
         L += [f"- ⚠ {w}" for w in pr["warnings"]] + [""]
+    if r.get("refresh"):
+        L += ["## Refreshed estimates from later checkpoints", "",
+              "| checkpoint | texts | workers | texts/s | failed calls | in/text | out/text | full-run Jev tokens (in / out) | hours at same workers | Jev cost |",
+              "|---|---|---|---|---|---|---|---|---|---|"]
+        for c in r["refresh"]:
+            L.append(f"| {c['checkpoint']} | {c['texts']:,} | {c['workers']} | {c['texts_per_second']} | {c['failed_calls']} | "
+                     f"{c['input_per_text']} | {c['output_per_text']} | {c['full_run_tokens']['input']:,} / "
+                     f"{c['full_run_tokens']['output']:,} | {c['full_run_hours_same_workers']} | {fmt_usd(c['full_run_jev_usd'], 2)} |")
+        L.append("")
     L += ["## Controls", "",
           f"- Budgets: {r['assumptions']['budget_usd']} · output-token caps per call: {r['assumptions']['output_token_cap_per_call']}",
           f"- Max workers {r['assumptions']['max_workers']} · declared max fallback fraction {r['assumptions']['max_fallback_fraction']}",

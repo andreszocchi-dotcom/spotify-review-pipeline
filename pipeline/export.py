@@ -29,6 +29,14 @@ def calls(con, run_prefix=None):
         c = dict(zip(CALL_FIELDS, row))
         c["review_ids"] = json.loads(c["review_ids"])
         c["settings"] = json.loads(c["settings"])
+        if c["input_tokens"] is None or c["output_tokens"] is None:
+            # The provider returned no usage (connection error before any response). The contract format needs
+            # integers, so these export as 0 and say so; the state database keeps them NULL.
+            c["usage_source"] = "none_returned: failed before any provider response; billed usage unknown, exported as 0"
+            c["input_tokens"] = c["input_tokens"] or 0
+            c["output_tokens"] = c["output_tokens"] or 0
+        else:
+            c["usage_source"] = "provider_response"
         yield c
 
 

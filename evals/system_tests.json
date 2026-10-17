@@ -1,7 +1,7 @@
 {
   "label_config": "jev-1.13.0+labels-v3+schema-v1",
-  "passed": 13,
-  "total": 13,
+  "passed": 15,
+  "total": 15,
   "results": [
     {
       "test": "malformed output is retried once, then accepted",
@@ -61,6 +61,19 @@
       "synthetic": true,
       "calls_made": 1,
       "budget_stop_raised": true,
+      "passed": true
+    },
+    {
+      "test": "account-level error (revoked key / no credit) stops the run; review stays pending, not quarantined",
+      "synthetic": true,
+      "provider_stop_raised": true,
+      "quarantined": 0,
+      "passed": true
+    },
+    {
+      "test": "circuit breaker: a streak of failed reviews (provider outage) stops the run",
+      "synthetic": true,
+      "stopped_after_reviews": 25,
       "passed": true
     },
     {

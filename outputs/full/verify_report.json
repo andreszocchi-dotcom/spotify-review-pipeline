@@ -1,0 +1,5198 @@
+{
+  "generated_at": "2026-10-17T00:16:28+00:00",
+  "label_config": "jev-1.13.0+labels-v3+schema-v1",
+  "verifier_config": "claude-haiku-5-5+low+verify-v1",
+  "sample_seed": "a5-verify-2026-10-16",
+  "sampled": 968,
+  "verified": 968,
+  "agreement": {
+    "topic": 0.8502,
+    "intent": 0.905,
+    "severity_exact": 0.7769
+  },
+  "severity_mae": 0.249,
+  "disagreements": 370,
+  "failures": [],
+  "disagreement_cases": [
+    {
+      "review_id": "8518bfe5-e0b5-42a4-914e-a3bdadc3a692",
+      "text": "This is a load of bullsh#t I pay the premium to listen my country's kak music.im not interested in South african music how do I block music from South Africa.if not I will cancel and go back to apple music",
+      "enrich": {
+        "topic": "usability",
+        "intent": "cancellation",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "cancellation",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "380cf7d1-079d-4230-be42-e26c11306cbb",
+      "text": "Premium 😗",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "unclear",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "4dc7ee53-4f49-4037-8916-1f3d9cc16d11",
+      "text": "Aplikasi ni ga buruk, banyak lagu2 yg udh lama maupun baru rilis. Tapi, entah knp spotify sya ngga ada liriknya, apa krn ga premium apa gmn? 🙏",
+      "enrich": {
+        "topic": "catalog",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "3de988e3-289e-49aa-8db7-a8a45590b438",
+      "text": "I love all the songs that are the best but one thing that I hate is when you took down xxxtentacion now I can't listen to xxxtentacion plz bring him back 💔",
+      "enrich": {
+        "topic": "catalog",
+        "intent": "request",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "request",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "37f30ca8-e8d0-47b7-ada1-749f47ba391b",
+      "text": "Keeps crashing on Samsung s22 ultra connected to apple airpod pros (1st gen).",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "60e2cb40-f923-4453-9e39-4d281bbd7aed",
+      "text": "The recent Update was a L move every basic function is a premium now like what? Are you guys going bankrupt?",
+      "enrich": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "0e3cc77b-ef81-4008-a5c4-9edaed003eaa",
+      "text": "How to give 0 stars to this app?",
+      "enrich": {
+        "topic": "other",
+        "intent": "request",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "unclear",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "56dc3d1c-de56-4723-acc0-6f653bf943a7",
+      "text": "There are more problems in this app running playlists and the music were also so bad...",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "a95192ea-d8d5-4df9-a1fc-6e53b548983b",
+      "text": "Too many glitches 😕 Some serious app developer required at the company!",
+      "enrich": {
+        "topic": "other",
+        "intent": "complaint",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "20fcaff0-1d87-4fe6-87eb-16c93eaed1dd",
+      "text": "Nah I ain't paying just to listen to music without it forcefully making us shuffle through random song",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "bcf1174c-3542-4c9e-9995-462b3c3b4bb8",
+      "text": "My account is premium already but why I can't join the Spotify session?",
+      "enrich": {
+        "topic": "access",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "d6f69194-1fd9-4650-bf65-62d3eccea0d5",
+      "text": "Great app. Buying premium during promotion periods is recommended.",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "f31cacb2-e40c-4792-b1de-476c72bc88bf",
+      "text": "Great Recommendations",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "968e5f69-d34c-4484-8a90-8fcc9d22036d",
+      "text": "Some of my favourite songs are missing. Please fix that ASAP.",
+      "enrich": {
+        "topic": "catalog",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "eb4410b4-5515-4f64-829c-bfbbb1d25f56",
+      "text": "I not recieveing the updates",
+      "enrich": {
+        "topic": "other",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "ddae8f64-09d1-48e6-a1fb-31a68a43a3b6",
+      "text": "5 Star because of legend Sidhu Moose wala",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "215b6d51-3094-4f9c-9ade-7c44cf1e394b",
+      "text": "مفيش تنزيل",
+      "enrich": {
+        "topic": "downloads",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "downloads",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "53b3bda5-3b88-49e9-b273-181749062193",
+      "text": "Sounds great and meagles with the audience",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "6077b5b6-c1c7-4499-be6e-bb4b35d7fd97",
+      "text": "I'm a premium user but the app itself fails a lot and the way buttons are suddenly changed from position on screen is a pain in the @$$ been using YouTube music and works well plus you got the videos...",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "98af4694-f0a7-4c95-980c-4ab7b01e5f86",
+      "text": "This app was incredible but as people say \"when someone's destruction comes, their own intelligence gets corrupted\"... Now the downfall of Spotify has arrived.",
+      "enrich": {
+        "topic": "other",
+        "intent": "complaint",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "unclear",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "393a5997-cc11-4671-b770-efbc5fd36d0c",
+      "text": "The idea and the app in general are cool, it just regularly switches to radios which is not the point. If I start playing a playlist I want to listen to that playlist and not something else after five songs. Also, radios and playlists start from the beginning very often while listening through them.",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "acaa17b0-1617-4ec4-8330-a013570f85a0",
+      "text": "Não aparece mais para mim a opção de tradução, tirando isso é ok.",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "91a43b83-848c-48f6-a2e6-ef968b02efe2",
+      "text": "Why can't i upgrade to Premuim? 😠",
+      "enrich": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "request",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "2e87453d-f736-4737-a558-714974d3487e",
+      "text": "Always available, any country I travel...superb service.",
+      "enrich": {
+        "topic": "support",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "acb264a9-15a3-46d7-96f6-b64fce11c58d",
+      "text": "Make everything premium 😑😑😑😑😑😑😑😑😑😑😑😑..",
+      "enrich": {
+        "topic": "other",
+        "intent": "request",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "request",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "69fd093d-fd69-42c8-b58f-5642e458c19f",
+      "text": "Love the app.. love that I can transfer the app to my tv..",
+      "enrich": {
+        "topic": "usability",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "76c9baa5-cdd3-4f12-a699-a084471ef71d",
+      "text": "very bad 👎 never download",
+      "enrich": {
+        "topic": "other",
+        "intent": "complaint",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "downloads",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "737fe30d-ad0a-4ac6-bac0-d51960e2dd3d",
+      "text": "½ a star",
+      "enrich": {
+        "topic": "other",
+        "intent": "unclear",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "unclear",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "30a29316-2121-4c1a-ba38-d1bda8e0910f",
+      "text": "Have had a medium experience, but for the fact that when recommending your artist, the list never ends. I should be given that option for more similar artists only if am interested",
+      "enrich": {
+        "topic": "catalog",
+        "intent": "request",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "fb76f383-be6f-4a9c-90e0-db839beb752b",
+      "text": "Cant choose my own song boggggus update",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "a9e12b1a-66bf-4fad-8ff4-392b0fbca123",
+      "text": "Best music app I've used,easy,no bs,no having to sign in every time just to listen to music, continuously plays songs.Love it! Still great to me.",
+      "enrich": {
+        "topic": "access",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "36aa0a03-4731-4053-820e-92de82473dea",
+      "text": "Best App for music",
+      "enrich": {
+        "topic": "other",
+        "intent": "unclear",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "256249ed-8a6e-446a-9955-c251a5d5fcfc",
+      "text": "Can I write a review on spotify without exploring the premium version !",
+      "enrich": {
+        "topic": "billing",
+        "intent": "request",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "unclear",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "e3fcbd5f-21d2-472c-9e69-684e87cfb042",
+      "text": "So hard to remove songs from playlist. Almost impossible and so annoying. Makes me want to go to Pandora mushic. Why force a song I don't want to listen to anymore. Totally lame",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "57aa6abc-1142-490e-8e75-4f1f635dda5e",
+      "text": "The last update broke something, the play bar keeps disappearing within app again, also the player when Spotify is on in background in my phone's 'notification page' keeps disconnecting won't respond to play/pause or update what's playing currently. However I've always enjoyed Spotify since 2013 use",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "e283c9d8-5eeb-46eb-b4cb-fe8eb5f814bd",
+      "text": "The daily play list and the personal recommendations does the work for me, I don't need to do my own play lists",
+      "enrich": {
+        "topic": "usability",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "f7b9a288-1ceb-49bf-ab78-7bddb57aa730",
+      "text": "Nice but no any back to listen another time so this thing are not got",
+      "enrich": {
+        "topic": "other",
+        "intent": "cancellation",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "downloads",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "e6ad670f-9597-467a-b289-8a293a594f04",
+      "text": "I like how this app lets you listen to a lot of songs but there are lots of ads and the premium is a bit costly. I would still recommend this app to everyone sinceit is very useful and is user-friendly.",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "e7d428ef-30ac-4286-b46a-7912e8ef2314",
+      "text": "Links to songs aren't opening",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "f5d68a33-6205-4e3b-9b79-ad8afb7da429",
+      "text": "Ya'll must know that this new \"Picked for You\" stuff wasn't gonna fly. You have to. Whoever put that together needs to lose their job. Is it 1998? No? Then why is unprompted music blasting through my speakers when I open and scroll through the app? Unacceptable. I'm content to block every last artis",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "cancellation",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "c5bed783-f78b-4317-9b0a-2e6e8495c4fa",
+      "text": "I hate this app!!! I've been paying for over a year and I still can't find the login, still get tons of adds, it's rediculous. At one stage I was paying 2 premiums for the same app but still couldn't log in, It needs to be more user friendly there's no support",
+      "enrich": {
+        "topic": "access",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "access",
+        "intent": "cancellation",
+        "severity": 4
+      }
+    },
+    {
+      "review_id": "7478687f-072b-4883-b1c3-9a53ac6f1e52",
+      "text": "Bekar hae ye app sala without premium jpt song bajata haee , I don't like thuuuuu",
+      "enrich": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "6d10032d-6eaa-4660-9c34-6af3de90cb87",
+      "text": "I Love This App All Strees will be vanished By listening Musics",
+      "enrich": {
+        "topic": "other",
+        "intent": "cancellation",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "460676a7-8751-41d7-8eeb-f91e4a45a934",
+      "text": "Takes 5 GB+ storage for what!?",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "downloads",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "20a4f704-7fed-4cca-8519-ee6a018826a5",
+      "text": "Very good remastering of oldies. Exceptional excellence. My sincerest gratitude to Spotify.",
+      "enrich": {
+        "topic": "playback",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "4f9b2276-f7af-4ffc-911d-fffe1227cd96",
+      "text": "Just downloaded this app, and I have to say that is it one of the slowest apps I have ever used. I tried clearing my cache and reopening the app, but the app is still very slow. This is surprising because this a relatively new phone with few other applications installed.",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "2a2049e3-9143-4554-82b8-8695e0051bfa",
+      "text": "\"Go to playlist radio\" is just gone for some reason? With no explanation.",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "cf425dbc-3a31-4b6c-8e31-5037f397e864",
+      "text": "This is the worst app which I have seen in my life because I can't skip the song even when I am trying to take premium and then I change my mind to decline the payment think what will happend it is not possible to remove auto-pay from the application of phone pay even I talked to costumer care they ",
+      "enrich": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "cancellation",
+        "severity": 5
+      }
+    },
+    {
+      "review_id": "9a4b379c-f691-4c8b-a9ce-239f4f3390ea",
+      "text": "#band this app",
+      "enrich": {
+        "topic": "other",
+        "intent": "unclear",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "unclear",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "649d95df-73a5-4008-8ae9-38c522e90abb",
+      "text": "No 👎👎👎👎 tum log Islam ka Quran jalaya hai",
+      "enrich": {
+        "topic": "other",
+        "intent": "complaint",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "unclear",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "a9afbf76-ac64-4802-bcfe-964971e96262",
+      "text": "In my beliefs I think Spotify is the best app for music free music and the premium is pretty cool. And you can make your own space where you can share your favorite songs; music ; podcast etc .. with the public. 😎",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "5a3edb89-14fb-4ba5-af0d-cd07b9d83817",
+      "text": "After the new updates, you can't loop or seek songs, which is what a music player should be able to do. Instead, it's locked up behind a paywall, just another way to promote Premium. I am deleting this app forever now, and go on for pirated songs.",
+      "enrich": {
+        "topic": "usability",
+        "intent": "cancellation",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "cancellation",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "8bcbbe6f-690e-433a-9688-c1f778257a0a",
+      "text": "Great app, easy to use, love it!",
+      "enrich": {
+        "topic": "usability",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "d1ea7767-4a42-4bf5-bf11-ec8960128140",
+      "text": "Wow... I moved from ios to Android and the lack of care for Android is astonishing. I'm a software engineer and I would have been fired months ago if I released something this buggy and didn't even bother to fix it. This is not acceptable. It's not that it's buggy, it's that there is no care to fix ",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "55941264-fa39-421c-a9ed-1324ad6fc6ce",
+      "text": "Horrible customer service, among the worst. Scammed me out of 10 bucks, like 4 times. Never accepted a refund request even less than 6 hours later. Never returning to their unreliable service. If I could rate them 0 stars, I would! I kinda want them to go out of business and shut down permanently.",
+      "enrich": {
+        "topic": "support",
+        "intent": "cancellation",
+        "severity": 5
+      },
+      "verify": {
+        "topic": "support",
+        "intent": "cancellation",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "99844d37-fb9f-48ea-b6da-611e7f5cc092",
+      "text": "bohot sahi aap hai gaane sunne ke liye par isme bar bar add de dete hai koi bhi song suno next song lagate hi add aajata hai",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "1ff0a4e1-ff33-4457-9437-a7b0278fe940",
+      "text": "The app is great but there are a few songs that I can't find eventhough they were in other music platforms I used to have (anghami)",
+      "enrich": {
+        "topic": "catalog",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "d2ee9439-7fdb-4b0c-9c23-86310f2dbcaa",
+      "text": "Latest update ruin Spotify all the basic stuff required premium now 👎",
+      "enrich": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "da0d472a-0e83-4c29-aacf-4a79eaaefbac",
+      "text": "This is the best app to get any kind of music on planet earth period",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "85d0bb5a-4287-4cf9-918c-6358dd41689a",
+      "text": "Even I had custome care of yours but it's no use.. I am having trouble if this before update.. It was my favourite app..",
+      "enrich": {
+        "topic": "other",
+        "intent": "complaint",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "support",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "4b47c664-7911-457b-8599-960fd141e021",
+      "text": "I'm giving 4 starts because i really want lyrics too in my downloaded songs with premium, so please add this feature i really want lyric offline. I love the premium experience though.",
+      "enrich": {
+        "topic": "catalog",
+        "intent": "request",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "downloads",
+        "intent": "request",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "97147bed-1c08-4d3d-86a2-b052aadd2f4d",
+      "text": "More ads than music jio saavan and yt music is better Spotify more like adify and it's not like im gonna buy a subscription for this app",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "cancellation",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "7e450913-e7a4-4813-aacd-21940632bc53",
+      "text": "Seems to go offline a lot these days",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "aaf6a376-3a77-4aa2-aa3a-5275b7efa545",
+      "text": "For ages now the app will be great some days and then others it will play 10s bursts of what I'm listening to and then stop playing at all and disappear. Then, going back into the app, the home page is unresponsive and then loses where I'm up to in episodes. So frustrating especially when driving. N",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "f4defa83-8dd4-498e-b362-770145ec9eb8",
+      "text": "The new home tiles are just terrible! I can't believe someone thought it was a good idea. And you can't get rid of that.",
+      "enrich": {
+        "topic": "other",
+        "intent": "complaint",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "550bddf1-1cf4-400e-8330-5cd93ce6be00",
+      "text": "Ever since they decided to consolidate \"Enhance\" feature into the shuffle button itself as \"smart shuffle\" it's been a mess. Why would you do that? I'm forced to cycle through it no matter what. Trying to quickly swap back to normal order on playlist? Sorry gotta wait several seconds for smart shuff",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 5
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "request",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "00cef85b-9a7f-48cc-8a21-7d7a6b2ad9fe",
+      "text": "Use it almost every day at work. Gives me a good mix",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "1cf0768b-b82a-4e62-91d5-f42a8e14b246",
+      "text": "The app in not working it's just showing go online to see menu even though my net is always on So I'm not at all happy with it please see my problem nd make sure it works properly Thnx",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "access",
+        "intent": "complaint",
+        "severity": 4
+      }
+    },
+    {
+      "review_id": "8d46a5d7-cac1-4aab-abd4-5759b5237a40",
+      "text": "many ads : (",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "19859acd-b218-4b29-98ef-9ba218ca876b",
+      "text": "Y'all removed the LOOP and SEEK options, now please kindly REMOVE the FEATURE OF PLAYING SONGS on this app. That would be truly remarkable. Thanks ✨️ 💪",
+      "enrich": {
+        "topic": "usability",
+        "intent": "request",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "request",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "8d379553-2e83-48f5-b75c-7830abfd8dd0",
+      "text": "You listen only add not music 😔",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "unclear",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "8e9d4c8f-3aec-4e5c-9997-208d419c7813",
+      "text": "It's hard to work it won't work at all every time I try to play a song that plays half of it when you get on my nerves it makes me mad one that's why I give this app one star",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "570a9441-5b07-49f7-8eb7-b708c1382d59",
+      "text": "Best to worst 👎",
+      "enrich": {
+        "topic": "other",
+        "intent": "unclear",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "2ba9d724-af53-4258-9680-a3565ec05dd6",
+      "text": "with your last updated, people are gonna hate it, i mean you can't replay a song if it's in the middle of it , YOU CAN'T EVEN PLAY A PLAYLIST STRAIGHT, WHY IS IT A PREMIUM FEATURE NOW ? WHY IS SHUFFLE ALWAYS ON IF YOU DON'T HAVE PREMIUM !? , WHERE IS MY QUEUE FEATURE !!!????",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "7aa4138a-900d-4d08-bd18-78b10e2224f4",
+      "text": "i love this apps. use it for free, i didn't get the speciality like the premium user. but that's not a problem. i still can listening to my fav podcast and song...",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "6c346032-bf85-4f7e-b90d-814ecdef8462",
+      "text": "It was very easy to make a playlist. It worked exactly how I wanted it for my event. I was able to take wonderful songs by searching others play list to make it quicker.",
+      "enrich": {
+        "topic": "usability",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "d65a59aa-e38a-455a-91d5-8d5f84f10e71",
+      "text": "The worst Android app it doesn't allow me to play the songs which I want it plays the song which it wants all the features which was for free have been upgraded to premium i can revind nor replay nor chose which song to play next it gives ad after every don't please don't download it it's a waste of",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "700ed377-48d4-4388-ae80-a97fe834d00d",
+      "text": "The new home sucks big time. It plays music automatically and the last few layer songs aren't there any more.",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "58691186-074b-458c-a2dd-a0faa99b39b7",
+      "text": "Worse than YouTube Music. If you use Spotify stay with FREE then at least you will not feel like you're being ripped off. You will also see a better selection of music. Premium forece feeds you suggestions out side types of music you like. Just another form of ads slipped into a paid service.",
+      "enrich": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "cancellation",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "8dfc369a-2da7-4626-97f2-5319cb280cf3",
+      "text": "Bygood",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "unclear",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "31b97a41-0336-4d5f-9550-022c655df060",
+      "text": "Nah man worst music app 😭it was good first but now it is worst literally every human right is in premium 🗿",
+      "enrich": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "31b175b8-eba5-4db7-9a08-9a5f40ea37ec",
+      "text": "My liked songs folder doesn't open",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "downloads",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "fc3cf2e5-524b-451f-9fa6-7a50478101eb",
+      "text": "it was good back then now it's doing non stop ads",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "ba8d0562-d8f3-49d4-9202-0e3300753aac",
+      "text": "Haven't worked it ourt yet but sure is OK.",
+      "enrich": {
+        "topic": "other",
+        "intent": "unclear",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "65fd40eb-9dfa-4b95-b04c-69c343d1f2f6",
+      "text": "The songs are spirit filled songs they are beautiful",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "1ef963d5-37c8-4312-aef2-13da5df34226",
+      "text": "J'adore cette appli dommage qu'il faille payer pour des options censée être gratuite, tel que pour pouvoir changer de musique",
+      "enrich": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "c35da7be-7dd1-4599-9954-2faa86f0e6fa",
+      "text": "THESE PEOPLE R RUINING THE APP FOR EVERYBODY. LIKE??? WHO ASKS USERS TO PAY TO SIMPLY SHUFFLE THE SONGS OR PLAY THEM IN THE DESIRED ORDER BRUH. absolute trash of an app.",
+      "enrich": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "7011cb55-cbcc-4192-a050-1d9e08435ac2",
+      "text": "Your loss... I tried to buy the premium package but Spotify kept telling me my card wasn't valid, even though my card is and there is a tiny bit of money in my bank account... That's ok because YouTube music account set up now.",
+      "enrich": {
+        "topic": "billing",
+        "intent": "cancellation",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "cancellation",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "d40747ea-dfe7-4e9d-bb90-18c182915bfb",
+      "text": "First I used to use thi app this was my fav now they even want money for loop song and changing lyrics I hate this app this app doesn't even deserve one star",
+      "enrich": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "cancellation",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "55e6d0cb-9751-481b-9c91-76f632b4d5fd",
+      "text": "even to play songs without shuffle we need a premium account. Worst update",
+      "enrich": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "4fa1aec7-399c-4b57-ae9f-a88589e56138",
+      "text": "Keeps playing songs that are \"recommended\" that I can't skip so whenever I open Spotify these songs automatically play and I can't turn them off or turn off play random without buying the premium. Not everyone can pay for that. Make it better for free users",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "801b753a-ec12-4d68-b233-051d980ff2f2",
+      "text": "Everything was still bearable but why would you stop the repeat option of a song!?",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "b5f79f17-9e93-4482-b2d0-ef6fbc32c5b7",
+      "text": "It weird glitch we're it won't let me pick my song that I want And it just weird so plz fix it and I will give it a five and it will be good. Goodbye",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "c4e315fe-dde5-4187-99b3-a08d08b5b5b8",
+      "text": "The User Interface is barely functional. Im surprised the app is so popular when using it feels like driving a car by reaching through the window and trying to run along beside it.",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "33f19889-0cdc-4bb9-97cd-8eb34b7490a6",
+      "text": "I hate this application I love islam",
+      "enrich": {
+        "topic": "other",
+        "intent": "complaint",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "unclear",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "a7d2c4dc-dca2-4154-82ab-2547bc8f59f0",
+      "text": "Great app overall but I don't like how it's different on iPads and phones, I would like to choose a specific song and not listen to only a preview.",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "request",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "484984d9-d384-4680-bfe6-531e51b1ca03",
+      "text": "It is very nice app loved this but the reason I am giving 4 stats is too much ads .. pls try to fix it😊",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "208d93d7-77a3-4d9d-b4a8-9bb483bc816c",
+      "text": "The music is ovusly amazing 😍🤩😍",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "2d902cb9-58f6-4b3f-8d03-5d834387cf85",
+      "text": "Full of ads.. Uninstalled",
+      "enrich": {
+        "topic": "usability",
+        "intent": "cancellation",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "cancellation",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "4c464eff-91fd-4455-8240-c649ada0e83a",
+      "text": "Everything simple are now needed to pay like sort list or repeat is now needed to be paid tobe sorted like why that's too much at least the download one is understandable but repeat or sort",
+      "enrich": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "a8d1f063-8f59-424f-9a58-5c2b2f1d09a3",
+      "text": "New update is so disgusting, i cannot shuffle the song , cannot add to next play , cannot skip the songs lines, can't hear a song in a row , and many more disgusting options. you are just making money for you ☄️",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "fe29e040-0454-4308-8749-9211d24fe4d3",
+      "text": "I just love the overall experience. I would love if the feud between you and Zee could end so that I could stream the music of some of my other favourite artists.",
+      "enrich": {
+        "topic": "catalog",
+        "intent": "request",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "9a98cd82-1a62-4c08-8075-602226dd659e",
+      "text": "Ads after every 2 song ; modded app is the only option",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "deb473bc-b60c-4a94-9c28-884a0a8d84e9",
+      "text": "Despite autoplay being turned off in settings, it still sometimes plays random songs after what I'm listening to has finished.",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "3261ea38-9a2c-4a5d-b75c-170eed042890",
+      "text": "It's a good app but it randomly just uninstalls out of my phone every couple of months which is quite annoying, The music keeps pausing every time I load an app on my phone aswell I have no clue if it's just my phone or anyone else is experiencing this issue.",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "cancellation",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "c7d92601-16c4-41f3-9c75-192cbfdce964",
+      "text": "Too many ads and mobile has less features than desktop (not premium)",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "6f23cff2-6cbd-40a3-9185-b70499225477",
+      "text": "Good app. . artists u can't easily get their works are assessible with this app",
+      "enrich": {
+        "topic": "catalog",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "04c73cb8-3d5c-415c-8e34-b3f84675b8aa",
+      "text": "We recently made the switch to Spotify after being pandora customers/supporters from the beginning. Pandora just wasn't cutting it anymore. Spotify has everything we ask for and we are happy we made the switch!",
+      "enrich": {
+        "topic": "other",
+        "intent": "cancellation",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "60fba4a2-f929-4804-9fc9-58a4a10c0d77",
+      "text": "I really like it and it would be 5 stars if it had some songs but I understand that not all songs can be everywhere. But other then that I love it! ( I want premium tho lol)",
+      "enrich": {
+        "topic": "catalog",
+        "intent": "request",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "0821095b-c6e9-43a2-8f66-cfd7b8f5aa3b",
+      "text": "Suggest only high base song",
+      "enrich": {
+        "topic": "other",
+        "intent": "request",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "request",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "ade3176d-03d2-480d-94b0-a1fe47d886ed",
+      "text": "It's a pretty good app if you got premium, it's worth the price",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "19da007e-7111-4e1b-9265-320d86ea981a",
+      "text": "Worst app. Too many ads. Can't skip songs. Can't choose what to play.",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "0bc5aa9a-0bee-498f-a792-17019c4b8b96",
+      "text": "I am not able to get premium for students, it is not moving forward to the payment option after the verification process. Should slove this asap",
+      "enrich": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "ff3650c1-f211-48cc-b75d-bcc0aaa16e9e",
+      "text": "It's a very good app and comfortable to use",
+      "enrich": {
+        "topic": "usability",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "eb1503e9-c849-4780-9cfc-9ff69535434b",
+      "text": "This app is amazing, it has a variety of songs. But the only thing is there is 3 ads in between songs, it doesnt bother me that much but 1 is enough",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "d011d56d-e3c3-4169-aa94-637270aa36bb",
+      "text": "Lyrics are removed only premium user can use lyrics worst app😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡😡",
+      "enrich": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "7dcc9958-a07b-407b-ac9b-989ef4c39cd7",
+      "text": "Too many ads but still best app",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "68877ebc-0a8d-4af3-9828-72ca8d607731",
+      "text": "Ykw guys lets just boycott spotify and use amazon music instead",
+      "enrich": {
+        "topic": "other",
+        "intent": "cancellation",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "unclear",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "1d1355a0-deb5-4711-8448-64c590b1dde6",
+      "text": "too much paking ads",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "930d6b94-36e6-42b3-a300-ba9bac271bac",
+      "text": "Sometimes it doesn't show my online",
+      "enrich": {
+        "topic": "access",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "1ecb17f9-bc42-4750-bbdb-67af0800b2e8",
+      "text": "when you go offline mode, there's a bug that logs you out and you can't log back in",
+      "enrich": {
+        "topic": "access",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 4
+      }
+    },
+    {
+      "review_id": "1b6a625c-0b97-411d-a43f-22cb1a064610",
+      "text": "I don't like the lastest update why I do and why you always want primium even though you should play a ads too much, that why I deleted the app",
+      "enrich": {
+        "topic": "billing",
+        "intent": "cancellation",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "cancellation",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "3d2a4ecf-34d3-4475-8f95-ebe075a45046",
+      "text": "The free version is virtually unusable. I've been a premium user for years and this recent tiktok like update is atrocious and intrusive and gets in the way of my reason for actually having the app: listening to my music, music I actually enjoy, not having music I'm not interested in take up my enti",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "07b0f71c-c7c5-45cc-a44a-5bfda6e018c2",
+      "text": "Good app, wish we had a way to turn off lyrics and all that stuff under the song, I'm sick of trying to swipe to the next song and it scrolling down instead",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "request",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "5b19f05f-27b8-442b-a396-e223c3887800",
+      "text": "Good music but you should not have to be forced to listen songs you put on there get rid of it",
+      "enrich": {
+        "topic": "usability",
+        "intent": "cancellation",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "015e08f9-ee6b-4ecf-a6bf-05348ea8af8f",
+      "text": "4 for ads",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "16faeeda-c191-492b-b5f8-d7e38546b3b2",
+      "text": "Very much amazing experience old and New music it's great keep up the good work dig more golden oldies more especially South Africa music thank you",
+      "enrich": {
+        "topic": "catalog",
+        "intent": "request",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "60248d7a-d8d7-419e-930f-8f75eb20d733",
+      "text": "Perfect. But I'm only giving this 5 stars because I use the premium version and if I was on the free version, well I would minus about 3 stars. The premium is definitely worth it.",
+      "enrich": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "7df607a7-e0f0-4493-aeda-c459d2dcf555",
+      "text": "always loading",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "9dde8228-b85e-4bdb-a572-45008c497b51",
+      "text": "ads on premium",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "c62da549-38ea-4390-b1ec-88107be2c2e6",
+      "text": "Hate this application for Hazrat Muhammad PBUH💓❤",
+      "enrich": {
+        "topic": "other",
+        "intent": "complaint",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "unclear",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "1b8fac98-3b48-4109-af7c-24f2c8034003",
+      "text": "Can't even listen to the favourite part",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "b7ff37d1-3454-4d07-a142-2adcc8213d1b",
+      "text": "Have it a 0 start option and i give it to 0 star I and also every users need back to old Spotify",
+      "enrich": {
+        "topic": "usability",
+        "intent": "cancellation",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "request",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "0ce1d8de-d462-4097-9e3e-18a28385d199",
+      "text": "Terrible app that magically works if you pay for premium.",
+      "enrich": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "5b6ab28e-4d6e-4bb3-b200-b9683d213143",
+      "text": "With last update these huge video icons appeared. WHYYYYY? One item per page?! Seriously? Is it for children or what? Can't figure out why anybody thought this to be a good idea. Ruins the home screen functionality completely.",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "89e57d79-d400-4a42-97e4-32434bb1a788",
+      "text": "Latest update makes it unuseable. Won't stay on my playlist if i skip a song. Jumps to random lists that are not mine and no connection to my music. Not set to random or anything. In car mode whether on screen or using vehicle controls clicking next or previous only goes backwards.",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "fa344dd1-c7de-4066-9a1b-82419fd4aadd",
+      "text": "Love Spotify! Even though 1 thing can be a bit annoying I still gave 5 stars. If I'm driving in my car listening to Spotify and someone at my home asks Alexa(amazon)to play something, my song changes in my car or sometimes the song just shuts off. I would try to figure out many times why this would ",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "f12d36b4-a4a2-4688-b0fd-b9e6d7e06324",
+      "text": "Just another annoying company that refuses to let you listen to the actual songs/ artists you want to listen to.",
+      "enrich": {
+        "topic": "catalog",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "7a128392-918c-4505-90c2-84d4c8be83ae",
+      "text": "Spotify has let me down lately, the ads have become unbearable and mobile spotify has gotten rid of the lyric feature, the best feature in the whole app.",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "0fad782b-82fb-459a-9d8a-d88fd9d87eb5",
+      "text": "I am giving it 4 stars because some songs are not there",
+      "enrich": {
+        "topic": "catalog",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "ea5e8cd9-5729-4295-9c4a-eb228ad84e74",
+      "text": "You already know the reason for 1 star",
+      "enrich": {
+        "topic": "other",
+        "intent": "complaint",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "badb0890-d4dc-44eb-bf11-b1c844c54cd8",
+      "text": "Subscription based music services are absurd. The functionality and interface are bad. Let me purchase my Playlist and leave me alone. WTB Google Play Music.",
+      "enrich": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "cancellation",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "fe1e6ba8-ade0-4736-ba0f-dbefb35bc5e3",
+      "text": "Spotify makes me a permanent listener 😭😩",
+      "enrich": {
+        "topic": "other",
+        "intent": "complaint",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "138e29d6-bf16-4a49-9600-f370b83dbc7c",
+      "text": "Has what I need. Not always optimised to its best but still pretty good.",
+      "enrich": {
+        "topic": "other",
+        "intent": "complaint",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "368e1cca-3083-4dc3-beeb-fabb8b531d2d",
+      "text": "It will be a more add in this app. But songs are very super.....👌👌",
+      "enrich": {
+        "topic": "other",
+        "intent": "request",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "fbfdf6da-def2-4133-b1b2-f019ca6c23b4",
+      "text": "I can listen to any music on here on sometimes you can get no ads for free!",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "6d9640b7-7a11-4ac1-8d0a-252cc19ffd60",
+      "text": "Can't opened.",
+      "enrich": {
+        "topic": "other",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 4
+      }
+    },
+    {
+      "review_id": "e16207b5-90f1-44b8-b71d-efe4d303cb69",
+      "text": "Spotify's latest update has left many users disappointed, as it introduced changes that are perceived as unfavorable. One of the most significant issues is the revamped user interface, which has drawn criticism for being less intuitive than the previous version. Users have reported difficulties in n",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "1add047e-24b6-49df-977a-a9fbf416d2dd",
+      "text": "Worst app everything is paid ad pop up after every 2 songs , can't shuffle playlist and go to previous song or play any song in loop without premium hungry for money and also they don't have Zee music",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "cc84082e-1f12-42f8-879f-77aef7c3f768",
+      "text": "Love the songs in the playlists",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "cf100e15-23ac-41d0-8b31-ebd461f5a765",
+      "text": "Your asking why I vote 4stars,beacause when I update it can't forward anymore, please fix this so I will give 5 starts",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "64f25157-0569-4427-8f7e-1027231b3f97",
+      "text": "Can you stop removing indian songs its so disturbing to see my fav indian songs getting removed . If this thing is going to continue as an indian i will end my premium membership .",
+      "enrich": {
+        "topic": "catalog",
+        "intent": "cancellation",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "cancellation",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "61182fee-8480-4367-ab0f-614154794933",
+      "text": "You should try this app there is alot of beautiful song that you can listen all day and you can make playlist for music you like then shill with it all night 😎",
+      "enrich": {
+        "topic": "usability",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "68276a2d-83dd-4701-903f-6a9a9e9e8b47",
+      "text": "Some of the songs are Missing like phonks",
+      "enrich": {
+        "topic": "catalog",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "7abd2995-a7ce-47fb-a293-d043ce142333",
+      "text": "great app, but it wants money for full use... ;)",
+      "enrich": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "60cec9fd-b116-4a19-9895-ba5234ea758f",
+      "text": "Only free downloads is remaining to be perfect",
+      "enrich": {
+        "topic": "billing",
+        "intent": "request",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "downloads",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "adee1ddf-b378-42af-bef6-9ebd81c09db9",
+      "text": "Unable to view liked songs. Fix it.",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "1cae14a6-942e-4c21-95b3-94c2b988c385",
+      "text": "Great 👍 app love the music and podcasts very friendly and easy to use GREAT NUMBER ONE!!!!!",
+      "enrich": {
+        "topic": "catalog",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "9ababf6a-3a33-4312-a1e9-cfa518d648ad",
+      "text": "Very bad application I diced don't install",
+      "enrich": {
+        "topic": "other",
+        "intent": "cancellation",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "559c2cd2-32de-451c-9c4c-351b896a1dbb",
+      "text": "I can't make it through 1 song before it stops playing. Fix your app.",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "53f9bb52-47f1-441e-b7cd-99fa4e960fec",
+      "text": "Extremely buggy, plays random things randomly",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "ab1bf36b-491c-48c2-99b9-70b4a391119a",
+      "text": "Great music app but i hate the fact that you can't listen to your music in order-always on shuffle. And too much ads!",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "e3551998-bff1-44e3-a382-861232c2680a",
+      "text": "I will only resubscribe when there is 24-bit lossless audio option.",
+      "enrich": {
+        "topic": "playback",
+        "intent": "cancellation",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "cancellation",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "693de880-22ac-486a-ad77-ac789614ec37",
+      "text": "I can't even play a song I like. I need a premium subscription. This is just too much.",
+      "enrich": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "0e3560cc-ad12-429e-880a-f7c04a492c44",
+      "text": "Premium is amazing very sure this is my favorite app",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "251285b5-103c-440b-98d6-15c10b6e5206",
+      "text": "💯👌🏾🎶🎧",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "unclear",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "71e63b0b-20b9-49c8-b885-31bfba44de97",
+      "text": "Throughly enjoy thiz app like making my own Playlists from known artists back in my dayz growing up 2 the new artists currently becoming starz themselves plus really don't mind paying 4 a premium account 2 not have ads ruin the music flow @ 57 yrz old ppl look & shake there headz when me & my system",
+      "enrich": {
+        "topic": "usability",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "0e25c6b1-6b54-4eb3-9869-9daa98ee0230",
+      "text": "After the last update it became worst, I can't even select which song I want to listen next and can't even play next or previous song,for that I have to purchase premium on Spotify, I can't even play particular part of song and even can't play songs without shuffling them, for all the things like ba",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "1758fa21-0321-4409-9261-2cdcd2014f0e",
+      "text": "Add more only add no music only add app",
+      "enrich": {
+        "topic": "other",
+        "intent": "request",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "7fc8af1a-9304-4d79-a4fa-00e365351ff1",
+      "text": "Excellent audio quality and accessibility to literally tons of hours of whatever you want to listen to",
+      "enrich": {
+        "topic": "playback",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "2b498171-5782-42da-9c36-d12c05bcc1f3",
+      "text": "Always error, when i was pay for premium",
+      "enrich": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 4
+      }
+    },
+    {
+      "review_id": "e846005b-ebd7-4c3b-8d6d-f3c2e0d67032",
+      "text": "I love the amount of amazing music and so much more that is offered. The AI DJ rocks. Easy to use and great to listen to.",
+      "enrich": {
+        "topic": "catalog",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "a4a19d94-cd98-4561-b90e-fc68431d3279",
+      "text": "It's becoming pay to listen these days ( don't play with music)",
+      "enrich": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "d91d0181-5622-4e66-9673-765a0fbfd326",
+      "text": "I would give it a five-star but when I can't pay my bill and they pause my subscription when I come back to it after I pay it I have to download all my playlist again and I don't like that I think if it's paused it should pause all that and not delete the playlist already downloaded cuz now it takes",
+      "enrich": {
+        "topic": "downloads",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "a818d941-5988-4106-b2f5-5636e8a74ca3",
+      "text": "I seriously don't hate the app but I love my Islam , Sweden burnt my Qur'an so I'll delete this app I know they worked very hard for this but I will not compromise for Islam , Allahu Akbar",
+      "enrich": {
+        "topic": "other",
+        "intent": "cancellation",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "cancellation",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "077c64d9-b6a9-445f-aaf1-562f90c75af7",
+      "text": "They provide ads",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "dca72f5e-c7a9-4b4e-bd51-f297eaa15c1a",
+      "text": "Artist radio feature is so broken, i d not believe it. Only a handful gets played over an over and if I click on a different song, app just doesn't recognise it. Holy moses. This is an app for music but could not play the song on a list its created.... Bruhhhhhhhhhh..... tell you ceo, he should hope",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "506d8e74-2e22-429d-836a-57e79836e4e4",
+      "text": "After recent update, we couldn't play any specific song from our playlist. instead there is just a stupid shuffle option that plays a random song! Hope u undo that recent update and switch it back to how it was. Thinking to change my music app tbh 😏 pfft",
+      "enrich": {
+        "topic": "usability",
+        "intent": "cancellation",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "cancellation",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "49c50447-545a-4513-bdd0-c6c150c32d0f",
+      "text": "Best music app ever. Worth paying for",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "6b38f9ee-d38c-4d83-94e5-72bf6448fd3c",
+      "text": "Premium feature is worst",
+      "enrich": {
+        "topic": "other",
+        "intent": "complaint",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "dfabf315-b134-4548-b1b8-91e761c9f995",
+      "text": "Kok gabisa klaim reward? Mohon diperbaiki",
+      "enrich": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "request",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "84db8aac-00d2-4b6d-b0c2-516793ee4dce",
+      "text": "All messed up now because of premium",
+      "enrich": {
+        "topic": "other",
+        "intent": "complaint",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "109108cc-cb22-4431-9220-cc08a468cbb4",
+      "text": "Enjoying the New Dj. They play hits I forgot about and something new.",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "ba55b026-276e-440f-ae99-95cf3d5344f5",
+      "text": "Great app will give 5 star After More A.I. improvement",
+      "enrich": {
+        "topic": "other",
+        "intent": "request",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "a9490840-fc0a-4b30-8d97-6ac97ff1c72f",
+      "text": "with good quality",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "95503ddb-d85a-4101-80f5-8979288c0232",
+      "text": "The new subscription is verybaseless",
+      "enrich": {
+        "topic": "other",
+        "intent": "complaint",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "df5cf866-d553-408f-98fa-f380defc4904",
+      "text": "Nice app.But many songs and albums are missing.",
+      "enrich": {
+        "topic": "catalog",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "ca525e79-2139-4aee-abcf-383ebf67d0a3",
+      "text": "Great app. Easy to use with useful Information about albums",
+      "enrich": {
+        "topic": "usability",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "9f2fe308-b936-42e6-8e4e-947005df06c7",
+      "text": "Audio quality good. But, the app hangs sometimes.",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "39f5c8c6-86f9-4cf4-bbda-c933d294cb84",
+      "text": "Please ondo explore primium feature",
+      "enrich": {
+        "topic": "other",
+        "intent": "request",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "request",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "ad378003-98d8-4df2-8980-6ed003fe9ea0",
+      "text": "Money best spent to be subscribed...",
+      "enrich": {
+        "topic": "other",
+        "intent": "unclear",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "d8a4217b-c4c4-4280-b171-02183e9cbd30",
+      "text": "I am cancelling my subscription (and will stop using Spotify altogether) in direct response to the Swedish Government's lack of reaction towards the blatant insult that was the burning of the Holy Quran in front of Turkey's embassy. This was not freedom of speech this was hate speech and it should b",
+      "enrich": {
+        "topic": "other",
+        "intent": "cancellation",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "cancellation",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "e32e39b8-8efb-4b9d-84bd-d7c7d1e80cb1",
+      "text": "So good and no Distributs and so spam calls",
+      "enrich": {
+        "topic": "other",
+        "intent": "complaint",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "36adca4e-f915-40cf-883b-00cf7e5bc51f",
+      "text": "I like it , make your own play list for free . What I don't like is showing music that I don't what . Period ever .",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "d1bafead-fa1f-4737-af8a-29a9636309aa",
+      "text": "I used to love this app. But now the update has just made the app useless. Pointless. People without premium cannot do anything. Cannot repeat songs. Cannot listen to a certain part of a song again if they want. Cannot fast forward. Cannot go back. Its usesless. Dissapointing. I have premium but if ",
+      "enrich": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "ea80eb8a-1732-499b-b862-deeb9611442f",
+      "text": "Bloody advertisements One or two is fine continuously making irritate.",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "dc751614-9ec0-46d4-8f19-b7b7c74d2e39",
+      "text": "after this update ablums are not opening properly. plz fix the bleach",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "4cfa2309-85bf-4ec7-ab26-dfc1c67073fe",
+      "text": "I do like it but when I go to a different app it always plays then when I swipe it stills plays",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "03a5c872-56a2-46e9-a18a-10859c0ea329",
+      "text": "Got everything you need xx",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "unclear",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "fc212612-e2da-445b-8908-5fb5ec820421",
+      "text": "Awesome Music App 👌🏻 . I loved to listen music 🎵. But the only reason is to give 4 stars 🌟 is that 1-2 ad's are OK but sometimes there are 3-4 ads in continuous that was to much annoying. Ads are the source of money 💰 I know but 1-2 ads are enough. I Hope you solve this problem.",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "request",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "26501d3a-b8b7-4cc6-b921-2434e5a16eec",
+      "text": "All we need now is hi-fi/lossless quality. What's taking so long? It's bad business to let yourself fall behind the competition.",
+      "enrich": {
+        "topic": "playback",
+        "intent": "request",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "request",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "f85e9d62-6385-4b22-8b7e-eeaafefbb58e",
+      "text": "Really love using this app, but these past few days, everytime a song ends, there's no song after it freezes and I have to restart it 3-4 times to work again. Sometimes I can't even finish songs because it freezes.",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "10523e6d-b70a-491d-b8a8-d9182a3b1f67",
+      "text": "Wish I could rate it half a star. Spotify was one of the best app to listen music anytime. Again it \"was\" best but now I can't even play a song without getting premium it's like forcing to get premium it's not an option anymore. I'm gonna wait 2-3 days then delete it for forever. Never using Spotify",
+      "enrich": {
+        "topic": "billing",
+        "intent": "cancellation",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "cancellation",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "f9417d39-df3f-4e64-bcd9-282aba72db3a",
+      "text": "Great app but features have stopped working. I can no longer swipe to change preset playlists on my liked songs. Tried deleting and reinstall. It randomly worked for a day then stopped working again. Apart from that it's great",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "dac29e32-e34c-4e6a-875c-be5173f9827d",
+      "text": "Too many restrictions on the free version. I am sorry but this decision is definitely going to backfire.",
+      "enrich": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "af37109b-edb6-4298-b914-0f78ad4f05b6",
+      "text": "Sometimes it's Didn't show full screen view on video playback.. please fix this",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "a76d75ca-4592-44dc-bb2d-f7fd3a51352e",
+      "text": "Awful experience!!! Forcing their customers to take premium membership",
+      "enrich": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "dfde15cd-6513-42b9-ad35-aed1e88afed6",
+      "text": "been trying to pay my premium mini for rewards but always ended up with \"Page Not Available\". i have tried updating, clearing data and cache, but none of those works.",
+      "enrich": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "de950333-c1e4-4b89-823e-d8aaa2fac1d7",
+      "text": "Every time i click the puase/play button on my headphones, well, i have spotify closed, and it will start playing a song. I also currently have the spotify setting do not play in background. Please reply with a solution",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "request",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "f50b679b-e834-46d6-b818-d1f7833ac698",
+      "text": "It dosemt show thw real music anymore it plays other stuff i dont like the new update",
+      "enrich": {
+        "topic": "catalog",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "044ebdfc-2a7e-457c-8078-94619e867cb5",
+      "text": "I only listen to gospel music and I really enjoy listening to it on Spotify.",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "e46c95ac-2e41-4b15-b9ee-44340ae1b4e4",
+      "text": "It do be playing music.....",
+      "enrich": {
+        "topic": "other",
+        "intent": "unclear",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "unclear",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "fa3597e6-7214-498f-9b86-a38279b6a83d",
+      "text": "Worst app. Full of ads. Resso is the best app for music,it dont have much ads.",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "e28d31b2-a27f-4f68-a87a-67957c019087",
+      "text": "😤😡🤬🤮",
+      "enrich": {
+        "topic": "other",
+        "intent": "complaint",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "unclear",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "c287875a-7eb8-425c-97b9-53cef59e6977",
+      "text": "Too much of Ads showing frequently, so I'm uninstalling the app.",
+      "enrich": {
+        "topic": "usability",
+        "intent": "cancellation",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "cancellation",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "984df7cf-3e50-4e56-8156-1d47d9e2a365",
+      "text": "I boycott all apps & everything of sweden.. Because the government of sweden given permission to burn our holy book \"Quraan\". BOYCOTT SWEDEN",
+      "enrich": {
+        "topic": "other",
+        "intent": "cancellation",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "unclear",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "29d61f6d-43d1-4376-b15f-605c69395651",
+      "text": "I would give five stars, one or the best music apps but sometimes I can choose my songs and I need to hear ones I don't like fix that, and thanks.",
+      "enrich": {
+        "topic": "usability",
+        "intent": "request",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "116c70e1-5f3d-4232-9e30-14b684954e0a",
+      "text": "Wow... I cant even choose the song in my Daily Mix now, looks like you really forced us to buy your premium huh, not really a good move",
+      "enrich": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "2bddd6ae-eb3c-49ea-933d-770374628b0d",
+      "text": "So many adds but I love it",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "e892e3ca-ee06-4ba5-9d3a-de6367735b91",
+      "text": "Nice app to listen songs",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "e16b2e39-fbc6-4ce2-9ae2-9c149f0d6e80",
+      "text": "It's a great app to listen music although there are ads when you don't sign to premium but over all it's a great app.❤️",
+      "enrich": {
+        "topic": "other",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "f17e3534-85cf-4d62-b4b1-4e657a7fb996",
+      "text": "Would be great if there was a way to re-arrange the queued songs in bulk while using the app. Works on the desktop app using 'shift' but it's very clunky and unpredictable. A \"Play Next\" option in addition to queuing songs would be great.",
+      "enrich": {
+        "topic": "usability",
+        "intent": "request",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "request",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "e91a22cf-fc71-427f-be54-3e70084fb8c7",
+      "text": "Where's Canvas? I can't use it anymore and my phone is up to date :(",
+      "enrich": {
+        "topic": "access",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "3b6de4b8-ddac-4edc-8cb1-baeb8c6133d9",
+      "text": "It's a nice app for music but there few songs that are not there in this app but over all 😊",
+      "enrich": {
+        "topic": "catalog",
+        "intent": "complaint",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "1d461de2-fd73-4654-a33d-8fe01cf22357",
+      "text": "It's a great app for music but you only really get the real experience with premium. Like offline music, as many skips, no ads, etc",
+      "enrich": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "8b199bc5-f3e7-49e6-bbfb-5e0577303fca",
+      "text": "I want to see the lyrics but I just installed the app and it doesn't work I asked my sister she said I have to update it how",
+      "enrich": {
+        "topic": "catalog",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "374d9a9b-fceb-42c5-8e6e-33ba5164e414",
+      "text": "Spotify is the one source of music that I use and I love it. 10/10 would recommend this and it doesn't cost money unless you want premium. The only this is that is sometimes might give you too many adds. But other than that, it's a great app!",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "dd3fdd9d-549e-412a-8ea0-61a9fc1c337f",
+      "text": "Really disappointed with the recent update. Can't even skip the song we don't like. Useless Update! Uninstalling this app right away.",
+      "enrich": {
+        "topic": "usability",
+        "intent": "cancellation",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "cancellation",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "3e792ce6-f7a4-4c7d-88e2-d5e4a06151b2",
+      "text": "Literally perfect for any mood I'm in related to music or podcasts or story telling to even sleep sounds or background sounds?",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "54de9f38-3eaa-41e0-91fd-5dfae0ef7a8a",
+      "text": "Hey Spotify, Kindly roll back to the old UI. Really not enjoying the vertical scroll inspired feom the reels concept. I am a premium user from past 3 years. Its a humble request, please roll it back.",
+      "enrich": {
+        "topic": "usability",
+        "intent": "request",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "request",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "9b51ab84-db63-405b-a09a-00f2efceb519",
+      "text": "Interface hell, inconsistent controls on different platforms. Continuous updates of unneeded bloat. If this is your first time installing Spotify, Don't! Stay clear and find an app that stays true to it's core, Music. If i could, the rating would be minus 1 star * I use(d) this app for many years an",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "cancellation",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "f11bf071-2800-4802-b538-858f75014d57",
+      "text": "Overall good app, but lately I'm seeing a lot of sync issues. Like button animation does not work 50% of the time so I can't verify that song was added to favorites. Rewind/skip/pause sometimes don't work at all until I reload the app.",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "5a61074a-7905-42a6-a227-8db7071f0d5d",
+      "text": "After update it became worst even I can't play any song according to me....I have take premium even to play songs",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "dfb2ad2f-dd7e-4e54-b133-64b8d52f371d",
+      "text": "Spotify has all the music I need",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "8d0392ee-11fa-4cf1-9d42-e37f313c3858",
+      "text": "Removed two stars. Some of the covered songs are featured under original artist and no way to report it. Major missing is a feature of organising songs by language, genre, time by a single artist.",
+      "enrich": {
+        "topic": "catalog",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "820a78fb-e6a4-4303-90d7-1ab7add73ed0",
+      "text": "So, fast ap",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "db33ee7e-536d-4ddd-8b9f-e8961317d98f",
+      "text": "Hate this application & also whole Sweaden",
+      "enrich": {
+        "topic": "other",
+        "intent": "complaint",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "unclear",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "a6e45b4d-504b-409f-aa0d-10cf30985e2f",
+      "text": "I've deleted my Spotify account all songs and albums all come off YouTube. I rather listen to my MP3s than actually use this App that one needs a data connection, big deal can follow, like what ever else you call it. One can only delete account via a browser like Chrome not in the actual App where o",
+      "enrich": {
+        "topic": "access",
+        "intent": "cancellation",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "access",
+        "intent": "cancellation",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "68c1007f-3e25-4cfd-bdfd-e9902c1953e0",
+      "text": "I just love it cause as I listened 1st song , automatically my favourite songs were played continuously . Really I am addicted to it",
+      "enrich": {
+        "topic": "usability",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "6ee4fd5c-d832-45f8-a4c7-e47002cdc8b9",
+      "text": "Worst app I have ever used and literally this app is forcing me to buy premium and in just two months I suffered because it. World's worst app to listen music if you don't have a premium",
+      "enrich": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "aab971aa-8486-4cdb-b98f-91511afca5ec",
+      "text": "I love spotify, its just that they removed the enhance playlist, it was by far one of the best feature.",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "90ffe6d2-9046-4236-ae12-1b7c0553975e",
+      "text": "Brooo what did u do",
+      "enrich": {
+        "topic": "other",
+        "intent": "complaint",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "unclear",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "23294352-3840-424e-91d4-7223cd4d15f0",
+      "text": "Used to be really easy to use, but when I tried using it today, despite having fenominal internet connection every single thing I tried to do said \"something went wrong\"",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "489331e4-5677-4aec-acdb-f0d7aa9278e5",
+      "text": "The app is good just I don't know how to make my own playlist",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "6ca76669-2322-4342-a92e-3195b201652c",
+      "text": "Enjoying the great music",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "aaa3879c-4a30-4cf2-93fd-eff909475158",
+      "text": "I'm very satisfied with this app , could be cheaper I think so that everyone could enjoy it but overall I like it",
+      "enrich": {
+        "topic": "billing",
+        "intent": "request",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "26b27f1f-9697-4282-9d14-765f32419d3e",
+      "text": "I just love it any song I want to listen to is pretty much at my fingertips things come and go but that's life. I would not trade my Spotify for a million dollars unless the million dollars came with Spotify... LMAO!",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "7dc33372-e108-4162-9f0d-51863f49dc30",
+      "text": "Tried switching to Apple Music do I could enjoy better quality tracks. With the exception of spatial audio played over my home cinema speakers, I confess I couldn't really tell the difference. Plus Spotify seems to do a much, much better job of offering me new songs and playlists that match my taste",
+      "enrich": {
+        "topic": "playback",
+        "intent": "cancellation",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "8d6245d8-80ce-40e7-98de-77f672e08730",
+      "text": "I love genshin impact!",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "unclear",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "6a373535-6717-4215-a74b-f50a6977b7b7",
+      "text": "Im not sure why but everytime i go to open specifically instagram, spotify will pause whatever is playing. This is only an issue with instagram and after deleting both apps and reinstalling, nothing has been changed. there is no audio from instagram that would cause spotify to pause and i do not kno",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "9f9fa1cd-df9d-4327-8dfe-18a659055873",
+      "text": "This is just too bad ....like they are not even letting me skip to the part of the song which I like the most ...cause i know there will be many people like me who listen to a song for its particular part😂😅...but ya that also needs premium now 🙂",
+      "enrich": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "9a1d3345-8527-431e-89f6-d6f0b2b805d8",
+      "text": "It usually useless. We can't play back songs and repeat 🔁 it . And this update is not working at all . So I guess we need that old version of it ..",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "f3191727-a564-466d-adaa-05890a992bea",
+      "text": "Last update causes app to crash",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "498910b4-478e-4754-be79-52a57af9ab68",
+      "text": "I used to be able to pick what song i wanted to play when i wanted and didnt need premium and it was nice could play music at partys and sucj but all the sudden i cant do it and now its no better then any other music app bring back the ability to do that and ill be happier",
+      "enrich": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "request",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "1a2281e8-d338-4339-841d-e1fc0f3a7221",
+      "text": "Ads have been getting out of hand lately as has premium advertising, they hardly have listen to this add for 30-minutes of uninterrupted listening anymore. But other than that its an amazing app with great music that I love 🤍",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "ca930a3e-b20b-4e40-8c08-382627d9e730",
+      "text": "capitalist scums",
+      "enrich": {
+        "topic": "other",
+        "intent": "unclear",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "unclear",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "d8384dd1-74a1-474b-bf5d-360ad8ba9ba6",
+      "text": "Love the custom Playlist!",
+      "enrich": {
+        "topic": "usability",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "3f7b1f52-05a3-4236-bceb-6d4af7736ec8",
+      "text": "Bump pandora iTunes and SoundCloud. Spotify is where I became a law-abiding citizen. 😆",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "unclear",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "a76b1c8c-e4fc-45ea-a3ef-7118181b2700",
+      "text": "It truly has been a smooth experience, but you have to improve on certain things. (1) Your sound quality is too low for the price, relative to the competition. (2) Spotify DJ could be so much better if only it'd be a lot more vocal with adlibs after a few songs here and there. It's like a glorified ",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "request",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "973f3acb-c773-4409-be26-a5cbadbf2d1b",
+      "text": "My biggest source of music discovery",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "737ff980-4ffd-437d-a0fb-332a3ea24edd",
+      "text": "Vry good available songs godown...tqu",
+      "enrich": {
+        "topic": "catalog",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "ab651070-dfa3-45df-857d-9e1741c22a8a",
+      "text": "The last review was done by someone under my account. Well played Spotify, just like your music.",
+      "enrich": {
+        "topic": "other",
+        "intent": "complaint",
+        "severity": 5
+      },
+      "verify": {
+        "topic": "access",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "093217c4-a795-49ac-b9d6-e64b0a089311",
+      "text": "Can't loop",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "56b9e60c-27e2-4a91-85af-39e5366b3906",
+      "text": "Never plays the playlist. Instead, it plays \"like\" songs to my playlist.",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "0d8ddfc1-82d2-4003-85f9-83a8abf51783",
+      "text": "Yr gaane hatne ka kya mtlb hai .....Team Spotify 🤨 Playlist ki aisi taisi kr rakhi h , kabhi kuch hata dete h kabhi kuch .",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "632f7af9-8012-4f4d-9911-fa3d918bf38b",
+      "text": "The app really struggles to work when I'm offline ( downloaded playlists, albums and songs won't open).",
+      "enrich": {
+        "topic": "downloads",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "downloads",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "5ae1e8df-5433-4990-8ce2-13acf91abecc",
+      "text": "Great music range, great audio quality, premium is definitely worth it",
+      "enrich": {
+        "topic": "catalog",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "b4a891d3-fb3c-42a1-bc68-88f51edf08cc",
+      "text": "Like another reviewer has said, lately Spotify has not been working well. The function to pause or stop what's playing disappears and the only thing I can do is uninstall the app to stop what's playing. Very annoying.",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "cancellation",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "113f67d5-885b-4b5b-8125-233dfe7845b2",
+      "text": "This app has become very glitchy and annoying. To the point I'm probably going to switch to AM. I use it on an iphone and this Pixel and it operates poorly on both, and it does the same for my gf and friends. Spotify is getting worse and I'm pulling my playlists.",
+      "enrich": {
+        "topic": "playback",
+        "intent": "cancellation",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "cancellation",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "3fdc4856-6d6d-428c-867a-a6ed2ee42181",
+      "text": "To begin with, it does NOT have all the songs, plus you cannot play a song on repeat or skip music or time in the song, such a stupid app, switching back to old school music player now",
+      "enrich": {
+        "topic": "catalog",
+        "intent": "cancellation",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "cancellation",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "9db51566-509b-4157-bae4-e7d1c3c590b0",
+      "text": "Hate this application and Sweden",
+      "enrich": {
+        "topic": "other",
+        "intent": "complaint",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "unclear",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "47f5dcc5-7933-48c4-8602-afb0a81d9d7c",
+      "text": "Been using Spotify for years, worth every penny.",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "a585e892-f1fc-4a46-9a17-13b4089de685",
+      "text": "Spotify is excellent my only problem when I am on data it doesn't work. It only works if I use a VPN.i hope they get this resolved.",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "7f119754-7be9-4b14-b1a4-d8a423ccab4e",
+      "text": "Love the lyrics addition to but it needs to be updated more often some lyrics dont show otherwise class👏🎶",
+      "enrich": {
+        "topic": "catalog",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "00ab1398-a571-4f91-8bcf-d1c8391a3fa6",
+      "text": "The app keeps becoming more and more unusable, I can't even view the songs in albums or someone else's playlists, and even editing my own is pointless more difficult now, with the 15ish second preview function removed and the add more button gone.",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "b48eab84-12f8-40b2-8d29-8549c3474cd6",
+      "text": "Was great... Until the recent update at the end of March. Now I find it impossible to use the home screen for anything except the last six things I played. Gone are any of my daily mixes, easy to access podcasts etc. The quicker they revert back, the better... And if they don't, I'll be cancelling m",
+      "enrich": {
+        "topic": "usability",
+        "intent": "cancellation",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "cancellation",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "d2087dfc-4971-44d2-bd87-c843b32d5a79",
+      "text": "My 16hr+ playlist I put together prior and during premium membership gone after canceling premium. Pfff....",
+      "enrich": {
+        "topic": "downloads",
+        "intent": "cancellation",
+        "severity": 5
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "fceb2f72-aab5-4383-92d1-7d2539c7e69c",
+      "text": "It crashes about 96% of the time",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 4
+      }
+    },
+    {
+      "review_id": "eaa80736-711b-4e75-81c7-bce0a75b9751",
+      "text": "It's great I love premium",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "cfa00b84-9a08-4116-bb63-1d273f5f2683",
+      "text": "Good music mix i love it",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "36d9aeec-e0da-4a95-a86d-8f6491ed8022",
+      "text": "Still all nice, still all good, but the ad's are too many",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "8249e8ee-daff-499e-918c-2791ed4af639",
+      "text": "🤮🤮🤢🤮🤢🤮🕊️",
+      "enrich": {
+        "topic": "other",
+        "intent": "complaint",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "unclear",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "267e6a00-205f-4fcc-9ec4-2b74d2c1bea3",
+      "text": "Hate this app i haye this country maker and country also plz banned this application from play store",
+      "enrich": {
+        "topic": "other",
+        "intent": "complaint",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "cancellation",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "8995da9f-582e-4690-a454-031059ec3eaf",
+      "text": "I love how it automatically plays music for me in the morning. I just love it",
+      "enrich": {
+        "topic": "playback",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "5be0a657-0999-4691-8932-001a126f984f",
+      "text": "Spotify is great! When ads aren't popping up after every two songs. I will listen to a song, get an ad afterwards, listen to a song, and then get ads after that song even when it says it will give me 30 minutes of uninterrupted listening. It's a lie and it ruins the entire experience.",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "4083032d-af2a-4038-9b8b-d9e8a61053fa",
+      "text": "easy to use and affordable",
+      "enrich": {
+        "topic": "usability",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "4b58ef98-d786-4eee-a23d-1616ab2988c6",
+      "text": "Best relative songs here 👍❣️❣️",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "643b9fb7-32a3-4a63-9ce7-2628b2d4b071",
+      "text": "It keeps adding music i dont want added, and it plays a different song when i don't even have the played song in my playlist",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "54739795-735d-45a9-9e62-5318c3988afa",
+      "text": "This was my go-to app and i loved it. The recent update totally changed everything. Literally nothing can be done without the premium. Shuffle can't be turned off and the songs can't be rewinded which is just the worst. Hope you fix it. Feeling sad that i have to let spotify down.",
+      "enrich": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "cancellation",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "e9f12043-f72d-4385-8b23-6282a98a3e37",
+      "text": "Spotify keep pausing music like it's lagging even with stable Wi-Fi/mobile data, please fix it because it became impossible to listen to music, also I have a premium account so I'm paying for a service I cannot use properly!",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "826e300e-d20a-4f69-872c-86d8190030de",
+      "text": "I'm very pleased with the playlist they made for me!😝",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "4458b0f2-8f5d-4436-a6c8-a5f653a6ccd7",
+      "text": "I've been using this app for years now and I love it but sometimes the auto play gets a bit wonky and every now and then I get disconnected for some reason",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "3b4e4576-9dc7-40f8-af93-3f19ba9df11e",
+      "text": "What the hell with \"need premium for playing songs in order\", what the hell are you smoking",
+      "enrich": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "b70511e3-6fdf-442c-b1f4-2bfda390b0d7",
+      "text": "When I press play it will kick me out",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "b9801341-056c-4b82-a800-75bfdae233c5",
+      "text": "Over capitalism is bad for your app u know ☠️",
+      "enrich": {
+        "topic": "other",
+        "intent": "unclear",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "unclear",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "b0fc02ea-f787-487a-b9db-5c48d479631d",
+      "text": "Before the June 11, 2019 update, Spotify was the unparalleled best music streaming service. It was perfect for finding new music and browsing your own saved music in a library. Now, however, the new functionality has ruined it. All the songs that used to be easily accessible in my library are now in",
+      "enrich": {
+        "topic": "usability",
+        "intent": "cancellation",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "cancellation",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "95cb96a0-6668-48d3-bd98-2908876ccd54",
+      "text": "Its getting worse now. Spotify will just not play anything at all. Pay for premium and not even an option to report errors. Its been random but getting more and more frequent. Wont even start playing and just have to give up about half the time now. Its prob an easy fix but cant find it and no optio",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "40f64833-5b6c-4557-8f4f-85f3c4f8a3ea",
+      "text": "A great editing programme.",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "unclear",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "2b809347-0e6f-4bd7-a742-c582215dec69",
+      "text": "Excellent layout, most of the music you can think of, never experienced a problem or glitch in the app. I cannot recommend Spotify enough, and if I could rate it higher than 5 stars I would!",
+      "enrich": {
+        "topic": "usability",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "6a4d6a77-2e02-44dc-9940-27b0cf51334c",
+      "text": "No customer service! I've had Spotify for over 10 years and a few months ago it decided to start charging me for the family plan. I shut off auto pay and have tried to contact them twice now with no response at all. I do like Spotify but I refuse to keep paying for service I don't want!",
+      "enrich": {
+        "topic": "support",
+        "intent": "complaint",
+        "severity": 5
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "cancellation",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "40d5b8f4-c61a-4f95-9dc7-47f1adcee698",
+      "text": "ऋतिक होली गाना",
+      "enrich": {
+        "topic": "other",
+        "intent": "unclear",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "request",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "02072965-4b54-4270-80e6-263f1ae2a43d",
+      "text": "On settings i don't have a offline mode so one time in say i need to go online but in setting the offline mode is gone so please fix this spotify",
+      "enrich": {
+        "topic": "downloads",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "downloads",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "42a58bc0-f8ef-4db3-acfd-3a40a5dd4ff1",
+      "text": "No issues, loads fine for me. Great algorithm for finding music, sometimes seems to heavily favor some bands for recommendations...even if you dislike the artist and ask it to show less.",
+      "enrich": {
+        "topic": "catalog",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "465cd9b0-512d-4893-b310-7d12608f021d",
+      "text": "This app is A.M.A.Z.I.N.G. But I just wanted to say that for some reason when I am playing a song, and I am clicking on something else so I will listen to it, nothing happens. And also, I can't press the button that makes you listen to the song you played earlier. Pls fix this, I really like that ap",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "d63e5475-f084-4783-9e46-f7f2597e9adf",
+      "text": "bhojpuri नहीं है 👎👎👎👎👎👎👎👎👎👎👎👎👎👎👎👎👎",
+      "enrich": {
+        "topic": "other",
+        "intent": "complaint",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "5618ed3e-69b8-4c78-9a93-7f1e875240b4",
+      "text": "I love it and use it alot but stop giving me suggested songs on my liked playlist. I can't listen to the music I actually like bc I gotta kid the song I don't like.",
+      "enrich": {
+        "topic": "catalog",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "bbb39418-33bf-4197-ac21-5152e0fde5ec",
+      "text": "In my opinion, thise is worst app & Boycott swiden.",
+      "enrich": {
+        "topic": "other",
+        "intent": "complaint",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "cancellation",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "612e924a-43e7-4244-8309-1c4984d1b1bb",
+      "text": "Spotify is great, but I won't give 5 stars until the app stops teleporting me out of my Playlist to the home screen every time I lock my phone or change apps.",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "4602bbae-4610-42c6-81dc-863ce3de59c7",
+      "text": "Sadly what was once possibly my favourite app has deteriorated to the point that it's actually negatively impacting my life. The Connect feature - Spotify's crowning glory - has had significant issues basically continuously for 6 months that are now ruining my listening experience. Spotify's answer ",
+      "enrich": {
+        "topic": "usability",
+        "intent": "cancellation",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "cancellation",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "2ed0dd42-afaa-4968-9b63-2241f9ea565c",
+      "text": "I like the app,honestly but the one thing I dont like is how they split the groups up in premium which you have to pay for and just so you can skip songs and listen anywhere you want with no ads,or whatever....but the people who dont have the money for premium cant have those privileges and so we do",
+      "enrich": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "6b83e687-28e8-4705-89b6-3ddd86bd28d4",
+      "text": "bagus njur",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "unclear",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "9c0bdd5b-04fe-493d-8cb5-b037a436615d",
+      "text": "I grew up with pandora so it doesnt take much to be better. I work landscaping and plowing so music is one of the few things that keep me sane. In my opinion even without a premium sub spotify is miles above the other streaming apps so when i got the premium and was able to download the 2500 songs i",
+      "enrich": {
+        "topic": "downloads",
+        "intent": "complaint",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "downloads",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "7c416f43-2672-45e6-b39a-0d445695ab4d",
+      "text": "Most irritating song app . Full of advertisements and now they are doing the worst service . They don't use many features which is really bad .. i wish i could rate a big zero for it's rating",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "7b75ef60-ec81-4651-8c44-8ddefa8af5e4",
+      "text": "Fiyah lol",
+      "enrich": {
+        "topic": "other",
+        "intent": "unclear",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "bd018d00-f3d3-43de-83f8-978e918a8aaa",
+      "text": "Spotify has been my go to for music for a long time. I switched over about 10 years ago from Pandora and I would not go back. I do pay the monthly For the Premium service and it is so worth it, it's the only music service I need. I love being able to customize an entire station around one artist or ",
+      "enrich": {
+        "topic": "usability",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "4a68d715-6ab9-4c08-ab4f-4df6418d815a",
+      "text": "Absolutely great. No adds. Always playing with me on the go!",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "beb29d88-f5f9-4be8-bfd2-f97dd19582bc",
+      "text": "Please fix the Downloaded Icon not showing. Makes it hard to add music.",
+      "enrich": {
+        "topic": "downloads",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "downloads",
+        "intent": "request",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "3da6c996-be74-4a47-9792-d723827d6bde",
+      "text": "This was the best music app back than but now, NAHHHHHH DON'T EVEN ASK, SPOTIFY YOU'RE PATHETIC YOU TOOK THE FREEDOM AWAY OF BASIC FEATURES I WISH I COULD RATE 0 STARS, PATHETIC, MONEY HUNGRY PEOPLE, UNINSTALLING SOON",
+      "enrich": {
+        "topic": "billing",
+        "intent": "cancellation",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "cancellation",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "4a1b298f-5861-4751-83c5-aaa9fcde0c0d",
+      "text": "Thay are giving a plan valedete",
+      "enrich": {
+        "topic": "other",
+        "intent": "unclear",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "unclear",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "44f4b8e4-d478-4fc0-92c5-639a39f9a523",
+      "text": "The app so good but i delete this beacause i am boring and a try it to download again and try to build acc a cant build acc idk what happen",
+      "enrich": {
+        "topic": "access",
+        "intent": "cancellation",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "access",
+        "intent": "complaint",
+        "severity": 4
+      }
+    },
+    {
+      "review_id": "950b78c2-4e99-4940-9045-95128273b94f",
+      "text": "100 PER CENT QUALITY",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "5020b2d8-2e00-4e56-8474-9c1e39d2e2d9",
+      "text": "Excellent App. I really enjoy the music, and it is so easy to use as well as setting up your favorites. And... it does so much more. Thank you to the creators of Spotify! Great job!",
+      "enrich": {
+        "topic": "usability",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "5e7bcb96-f608-4f13-b38b-904d23fd632c",
+      "text": "Ad bahut are h",
+      "enrich": {
+        "topic": "other",
+        "intent": "unclear",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "aa21e3f8-c126-4eae-952d-ef85842365e9",
+      "text": "The sound quality and general ease of use is great; but this is my 2nd time uninstalling this app bc no matter what settings I use - Spotify means it must play whenever it to wants in my ear buds. And yes, I've read the Spotify \"how to's\" and watched the YouTube videos but the same result... unsolic",
+      "enrich": {
+        "topic": "usability",
+        "intent": "cancellation",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "cancellation",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "fa03ae17-a7a5-4cdd-9d4c-91e16fcddee2",
+      "text": "Good for English music abroad",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "cc4db4b9-c93f-4fcf-b8c4-629b608747c4",
+      "text": "premium is the best option 💪",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "b094fb6e-dbba-4ebf-bc26-b80f13a22718",
+      "text": "The latest update is worst please don't keep the premium on the songs",
+      "enrich": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "ad0eea2e-92fe-4de5-90ff-d210ba6aa72e",
+      "text": "Lossless when? I hope there will be in future",
+      "enrich": {
+        "topic": "playback",
+        "intent": "request",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "request",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "4adde905-baea-406d-8920-2618f95f1c22",
+      "text": "banu ipakita nio nmn aq sa spotify sesh hahahahaha sakit m! booooo 👎",
+      "enrich": {
+        "topic": "other",
+        "intent": "complaint",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "unclear",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "82311157-6c02-4fd0-ba2d-cc67b14ce2f0",
+      "text": "New update sucks!!! I can't finish where I left off on my music after I close the app! Fix it!!!",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "a09f2cf5-a51e-4242-8c8a-0dd93d204aa9",
+      "text": "Takes a bit time when starts Gosh respected team what's happening..like after this new update what's wrong with Spotify I can't switch cause it's my fav app to go but damn it sucks now .....I know Spotify can improve Please respected team look upto issues created over agodddddddd why aren't u all gi",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "request",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "c80d65b7-e126-4e4f-9e61-5d36999f67a4",
+      "text": "I dont why but when i play the song it plays completely another song and when i try to disable shuffle it says that i need premium to unlock it. its like you need to pay to use the entire app. This update made spotify no more usable",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "e2edc76c-a168-47ef-a8b9-290abdffc80c",
+      "text": "This Premium user has ads on their favorite podcasts. Sometimes I wonder why I am even paying for the service, especially when my podcasts are non-exclusive to Spotify. That's a no on my part, sorry!",
+      "enrich": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "cancellation",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "27f97678-2bc0-4c20-a667-2a8b0c2a053e",
+      "text": "😯Free my music🤣",
+      "enrich": {
+        "topic": "billing",
+        "intent": "request",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "unclear",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "3f01597b-03b1-4cd5-adc6-2455eec1021e",
+      "text": "Would be 5 stars, but the new home page UI is obnoxious. Nobody wants, needs, or otherwise asked for video previews. Certainly not videos that autoplay at full volume and take up the entire screen. At the very least, provide users with an option to disable these entirely. Forcing them upon users is ",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "request",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "95af20d7-b0be-4ba3-ad28-e6dc69cc87a2",
+      "text": "I deleted this aap....such hai poor app... begging for premium 😡😡😡😡...we can't play song continuously now and can't select aur favourite song to listen.....😡😡😡😡😡❌❌❌❌❌❌❌😡😡❌❌😡... worst experience ever in Spotify.....dont download this app",
+      "enrich": {
+        "topic": "billing",
+        "intent": "cancellation",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "cancellation",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "81d0569d-7e5f-40ed-9d95-cb02228f5799",
+      "text": "Dear Spotify, you are very bad. I don't like you anymore.",
+      "enrich": {
+        "topic": "other",
+        "intent": "complaint",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "cancellation",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "510b3a6d-60d5-4e20-90b8-09eb4f78c9d9",
+      "text": "What the hell is going on with xbox? All songs are skipping 5 or 6 times and them become unplayable and im not even pressing anything! Ive deleted and redownloaded this app on xbox 3 times and its not working what have spotify done???",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "5c66b7cb-bf89-400f-8a9f-3e59f4a7feab",
+      "text": "Basically I cant listen to my music comfortably. It keeps showing 30+ second ads everytime I click on something. Please stop forcing your listeners to buy premium if you can't, could you just please give 1 ad once every 5 songs? I'd be greatful if you lessen the ads.",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "request",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "6555d723-c8d1-4d27-9921-cff71d1119ac",
+      "text": "Please Control Chaand Baliyaan Ad I Can't Like Irritating Me Kindly Please Control Your App Is Very Nice I Vibe With Spotify Everyday",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "request",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "3d233a0d-37fe-4c14-90e9-ecd749a818cf",
+      "text": "Me cierra sesión si apagó el celular y me borra la música a veces tengo que desinstalar y volver a instalar y eso que soy premium un asco",
+      "enrich": {
+        "topic": "access",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "access",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "e2bfc60d-c536-4af0-b0cf-bddd8af1fb3f",
+      "text": "Bro it's just worst when there are ads in our playlist!",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "d525e47c-880a-4952-b83b-c189ba553fc3",
+      "text": "It's okay so far, but not being able to listen to downloads offline is weird. All in all it's been excellent",
+      "enrich": {
+        "topic": "downloads",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "downloads",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "42b0de20-a7c1-4367-998d-a5fcf4f83afe",
+      "text": "Best mixtapes",
+      "enrich": {
+        "topic": "other",
+        "intent": "unclear",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "b7d0c6de-3343-4bcf-b7ea-6bf640e3e74b",
+      "text": "Good app but sometimes loading is too slow on Android.",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "b3dbb7dc-8766-4fa5-9162-7d42c4b11feb",
+      "text": "Why do we have to pay for rewind , lyrics , repeat and to play in order 😭😭",
+      "enrich": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "709792d5-c49e-4567-b955-f92bdef27784",
+      "text": "Would be five if they tuned down the adds I can just use YouTube",
+      "enrich": {
+        "topic": "usability",
+        "intent": "cancellation",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "cancellation",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "59f1e01c-d2c7-418b-b5f1-c24e888b83bc",
+      "text": "Nice app but one problem bug",
+      "enrich": {
+        "topic": "other",
+        "intent": "complaint",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "6df5580b-16f9-4a8b-9ad4-71c365d2847a",
+      "text": "Buy premium brokies /jk chill out",
+      "enrich": {
+        "topic": "other",
+        "intent": "unclear",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "unclear",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "f9d83bc4-fd54-4fbe-80ca-7e6be5016541",
+      "text": "O.p app 👌🤘🤘🤘🤘🤘🤘👌👌👌👌👌👌👌💝🍑🍆",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "unclear",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "fe4a2975-8755-4c2c-bea5-e6ab73b22e7a",
+      "text": "I find the music I like and it's so easy .",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "66f3930f-81e8-44a5-b4fa-07767f1f0c5f",
+      "text": "Ok pero cuando pagas.!❤️😭la vida es mejor",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "d9c7636e-9ac4-4d4d-aecf-12c301dd8416",
+      "text": "Sometimes songs automatically skip, and I'm not able to listen to any podcast.",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "3a8d2e47-6dd3-4dd1-893f-27cd1db08b27",
+      "text": "I love spotify and I used it for a little while but now whenever I go on my liked Playlist the songs I want to listen to won't play and only play a little bit of the song. Even when I hit the randomize button it does the same thing. Is there anything I can do to fix this? I want to listen to the mus",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "a3885940-a752-41e6-a23c-48ee20121a32",
+      "text": "Because of new update I uninstalled this app I can't choose what to play It's just play random song's I don't like this new update...",
+      "enrich": {
+        "topic": "usability",
+        "intent": "cancellation",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "cancellation",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "4904183c-1413-40f6-b4ca-375ffa3af79d",
+      "text": "I am uninstalling Spotify because I banned Swedish product because of the person who burnt Holy Quran. I pray InshaAllah that person shall be burnt in hell fire and all the Swedish economy as well. I love Islam and Prophet Muhammad Sallallahu alaihi wasallam.",
+      "enrich": {
+        "topic": "other",
+        "intent": "cancellation",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "cancellation",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "5e3438b4-816b-463c-bfd8-70e8b67da7ec",
+      "text": "ive been using spotify since 2020, i really like it actually, even the premium subscription maybe a bit expensive for me but its alr i can buy them gahah",
+      "enrich": {
+        "topic": "billing",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "ae278ddf-5b6b-43a7-b8b8-4b435b93888f",
+      "text": "App has gotten very buggy",
+      "enrich": {
+        "topic": "other",
+        "intent": "complaint",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "29008c67-bb92-4f21-b3cc-d4e44d5a6ccf",
+      "text": "I've had Spotify for about 5 years now and I'm a premium user I love the sound quality and the music they put on here the only problem which is why I'm give 4 stars is that it keeps glitching when I'm skipping songs it will either not play or keep going to the song previous or just skip 3 songs over",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "9ca29dc7-c161-4d44-9dc2-7ae4371167ce",
+      "text": "Some songs that are available but not playable and when clicked on its album the song apperas to be light in colour please fix it No solution till now",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "9bc41f8f-14c0-4c93-9f0b-d5642d7b17b3",
+      "text": "Waste app. Whenever u want to listen a song. It asks to subscribe",
+      "enrich": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "billing",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "716978be-568d-4b6e-a3c8-6888e46e59fb",
+      "text": "New update is literally nonsense. It's so annoying. I can't play the song I want to, I can't add songs in queue, I can't even skip the song parts or listen them again. The only option I have is to delete the app. Whoever is doing it is so greedy. Not everyone can buy subscription.",
+      "enrich": {
+        "topic": "usability",
+        "intent": "cancellation",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "cancellation",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "32384424-5486-41ac-8dc4-a56728b2ddef",
+      "text": "was perfect until recent updates, and now it's just crashing all the time, especially while i have Pokémon Go playing. used to work just fine, now playing that cause ls my songs to stop and the app to crash 😭",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 4
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 3
+      }
+    },
+    {
+      "review_id": "68ae6291-6bb5-43ab-91e6-e2d903505a92",
+      "text": "I enjoy listening to the play list I created. I don't like it when Spotify adds songs to them. Wish there was a way to disable this practice.",
+      "enrich": {
+        "topic": "usability",
+        "intent": "request",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "f3900ba7-199f-4a48-8fa4-07323943edaf",
+      "text": "Best MP3 Song App",
+      "enrich": {
+        "topic": "other",
+        "intent": "unclear",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "3f83e9af-339f-464b-9ec6-8e196e341f2f",
+      "text": "Easier to pilot a plane than to use this mess of an app.",
+      "enrich": {
+        "topic": "usability",
+        "intent": "complaint",
+        "severity": 2
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "c6a96471-b94a-4579-ad92-0cb4c726f521",
+      "text": "amazing app spotify also i love you and love barcelona but there some problem i mean some songs dont work and when i hear a song and i like it i want To play it again, I press on it, but another song starts, I don't know how, although I pressed on the song that I want to hear again, hope you fix thi",
+      "enrich": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 3
+      },
+      "verify": {
+        "topic": "playback",
+        "intent": "complaint",
+        "severity": 2
+      }
+    },
+    {
+      "review_id": "194e888c-08e7-4cee-b5ed-b8fe68dc9104",
+      "text": "It has my favorite soundtracks from super meat boy and super meat boy forever",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "praise",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "388a0c9c-6d47-4252-8d38-4d377dd8ad5f",
+      "text": "Omni present, even after a restart!",
+      "enrich": {
+        "topic": "other",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "other",
+        "intent": "unclear",
+        "severity": 1
+      }
+    },
+    {
+      "review_id": "79b8c554-aef2-4b36-be05-98b23fa0de59",
+      "text": "Love this ap. Great music which saves me downloading albums i already own.",
+      "enrich": {
+        "topic": "downloads",
+        "intent": "praise",
+        "severity": 1
+      },
+      "verify": {
+        "topic": "catalog",
+        "intent": "praise",
+        "severity": 1
+      }
+    }
+  ]
+}

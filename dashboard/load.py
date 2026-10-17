@@ -99,6 +99,18 @@ def load(state_db, outputs, url, quote_max=300):
                 "calls_by_role": json.dumps(run.get("calls_by_role", {})),
                 "verify": json.dumps({k: verify.get(k) for k in ("sampled", "verified", "agreement", "severity_mae", "disagreements")}),
                 "label_config": records and next((r["label_config"] for r in records if r["status"] == "completed"), "") or ""}
+        done = [r for r in records if r["status"] == "completed"]
+        topics = Counter(r["topic"] for r in done)
+        topic_complaints = Counter(r["topic"] for r in done if r["intent"] in ("complaint", "cancellation"))
+        info["summary"] = json.dumps({
+            "status": dict(Counter(r["status"] for r in records)),
+            "intents": dict(Counter(r["intent"] for r in done)),
+            "topics": [{"topic": t, "n": n, "complaints": topic_complaints[t]} for t, n in topics.most_common()],
+            "quarantine_reasons": [{"reason": k, "n": v} for k, v in
+                                   Counter(r["reason"] for r in records if r["status"] == "quarantined").items()],
+            "needs_review": sum(1 for r in done if r["needs_review"]),
+            "cache_reused": sum(1 for r in records if r.get("cache_source_id")),
+        })  # precomputed once so the API never scans every record per page view
         db.execute(text("INSERT INTO run_info VALUES (:k, :v)"), [{"k": k, "v": v} for k, v in info.items()])
     return len(records)
 

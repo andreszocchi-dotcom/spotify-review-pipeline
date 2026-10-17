@@ -88,7 +88,7 @@ def verify(con, run_id, phase, rate, cap, usd_cap):
         try:
             items = claude.json_call(role="verify", system=SYSTEM, user=user, schema=OUTPUT_SCHEMA,
                                      review_ids=[r[0] for r in chunk], validate=validate,
-                                     max_tokens=60 * len(chunk) + 200, label_config=VERIFIER_CONFIG)
+                                     max_tokens=150 * len(chunk) + 2000, label_config=VERIFIER_CONFIG)  # thinking tokens count toward the cap
         except BudgetStop as e:
             failures.append({"reason": str(e), "review_ids": [r[0] for r in todo[i:]]})
             break

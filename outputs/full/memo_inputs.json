@@ -1,0 +1,464 @@
+{
+  "input_sha256": "d025200a7f4cc6cb67834e864e943a5bd70a4a2ea7f16ec1ff521ff1358910ac",
+  "config": "claude-sonnet-5-5+medium+memo-v2",
+  "ranking": [
+    {
+      "rank": 1,
+      "issue_id": "ISS-USABILITY",
+      "complaint_count": 81495,
+      "severity_sum": 232048,
+      "mean_severity": "2.847389",
+      "priority_score": 232048
+    },
+    {
+      "rank": 2,
+      "issue_id": "ISS-OTHER",
+      "complaint_count": 97748,
+      "severity_sum": 192024,
+      "mean_severity": "1.964480",
+      "priority_score": 192024
+    },
+    {
+      "rank": 3,
+      "issue_id": "ISS-PLAYBACK",
+      "complaint_count": 39139,
+      "severity_sum": 131792,
+      "mean_severity": "3.367281",
+      "priority_score": 131792
+    },
+    {
+      "rank": 4,
+      "issue_id": "ISS-BILLING",
+      "complaint_count": 45693,
+      "severity_sum": 127196,
+      "mean_severity": "2.783709",
+      "priority_score": 127196
+    },
+    {
+      "rank": 5,
+      "issue_id": "ISS-CATALOG",
+      "complaint_count": 14158,
+      "severity_sum": 41086,
+      "mean_severity": "2.901964",
+      "priority_score": 41086
+    },
+    {
+      "rank": 6,
+      "issue_id": "ISS-ACCESS",
+      "complaint_count": 10199,
+      "severity_sum": 40364,
+      "mean_severity": "3.957643",
+      "priority_score": 40364
+    },
+    {
+      "rank": 7,
+      "issue_id": "ISS-DOWNLOADS",
+      "complaint_count": 6003,
+      "severity_sum": 21265,
+      "mean_severity": "3.542395",
+      "priority_score": 21265
+    },
+    {
+      "rank": 8,
+      "issue_id": "ISS-SUPPORT",
+      "complaint_count": 710,
+      "severity_sum": 1868,
+      "mean_severity": "2.630986",
+      "priority_score": 1868
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "ISS-USABILITY.complaint_count",
+      "issue_id": "ISS-USABILITY",
+      "metric": "complaint_count",
+      "value": "81495"
+    },
+    {
+      "claim_id": "ISS-USABILITY.severity_sum",
+      "issue_id": "ISS-USABILITY",
+      "metric": "severity_sum",
+      "value": "232048"
+    },
+    {
+      "claim_id": "ISS-USABILITY.mean_severity",
+      "issue_id": "ISS-USABILITY",
+      "metric": "mean_severity",
+      "value": "2.847389"
+    },
+    {
+      "claim_id": "ISS-USABILITY.priority_score",
+      "issue_id": "ISS-USABILITY",
+      "metric": "priority_score",
+      "value": "232048"
+    },
+    {
+      "claim_id": "ISS-OTHER.complaint_count",
+      "issue_id": "ISS-OTHER",
+      "metric": "complaint_count",
+      "value": "97748"
+    },
+    {
+      "claim_id": "ISS-OTHER.severity_sum",
+      "issue_id": "ISS-OTHER",
+      "metric": "severity_sum",
+      "value": "192024"
+    },
+    {
+      "claim_id": "ISS-OTHER.mean_severity",
+      "issue_id": "ISS-OTHER",
+      "metric": "mean_severity",
+      "value": "1.964480"
+    },
+    {
+      "claim_id": "ISS-OTHER.priority_score",
+      "issue_id": "ISS-OTHER",
+      "metric": "priority_score",
+      "value": "192024"
+    },
+    {
+      "claim_id": "ISS-PLAYBACK.complaint_count",
+      "issue_id": "ISS-PLAYBACK",
+      "metric": "complaint_count",
+      "value": "39139"
+    },
+    {
+      "claim_id": "ISS-PLAYBACK.severity_sum",
+      "issue_id": "ISS-PLAYBACK",
+      "metric": "severity_sum",
+      "value": "131792"
+    },
+    {
+      "claim_id": "ISS-PLAYBACK.mean_severity",
+      "issue_id": "ISS-PLAYBACK",
+      "metric": "mean_severity",
+      "value": "3.367281"
+    },
+    {
+      "claim_id": "ISS-PLAYBACK.priority_score",
+      "issue_id": "ISS-PLAYBACK",
+      "metric": "priority_score",
+      "value": "131792"
+    },
+    {
+      "claim_id": "ISS-BILLING.complaint_count",
+      "issue_id": "ISS-BILLING",
+      "metric": "complaint_count",
+      "value": "45693"
+    },
+    {
+      "claim_id": "ISS-BILLING.severity_sum",
+      "issue_id": "ISS-BILLING",
+      "metric": "severity_sum",
+      "value": "127196"
+    },
+    {
+      "claim_id": "ISS-BILLING.mean_severity",
+      "issue_id": "ISS-BILLING",
+      "metric": "mean_severity",
+      "value": "2.783709"
+    },
+    {
+      "claim_id": "ISS-BILLING.priority_score",
+      "issue_id": "ISS-BILLING",
+      "metric": "priority_score",
+      "value": "127196"
+    },
+    {
+      "claim_id": "ISS-CATALOG.complaint_count",
+      "issue_id": "ISS-CATALOG",
+      "metric": "complaint_count",
+      "value": "14158"
+    },
+    {
+      "claim_id": "ISS-CATALOG.severity_sum",
+      "issue_id": "ISS-CATALOG",
+      "metric": "severity_sum",
+      "value": "41086"
+    },
+    {
+      "claim_id": "ISS-CATALOG.mean_severity",
+      "issue_id": "ISS-CATALOG",
+      "metric": "mean_severity",
+      "value": "2.901964"
+    },
+    {
+      "claim_id": "ISS-CATALOG.priority_score",
+      "issue_id": "ISS-CATALOG",
+      "metric": "priority_score",
+      "value": "41086"
+    },
+    {
+      "claim_id": "ISS-ACCESS.complaint_count",
+      "issue_id": "ISS-ACCESS",
+      "metric": "complaint_count",
+      "value": "10199"
+    },
+    {
+      "claim_id": "ISS-ACCESS.severity_sum",
+      "issue_id": "ISS-ACCESS",
+      "metric": "severity_sum",
+      "value": "40364"
+    },
+    {
+      "claim_id": "ISS-ACCESS.mean_severity",
+      "issue_id": "ISS-ACCESS",
+      "metric": "mean_severity",
+      "value": "3.957643"
+    },
+    {
+      "claim_id": "ISS-ACCESS.priority_score",
+      "issue_id": "ISS-ACCESS",
+      "metric": "priority_score",
+      "value": "40364"
+    },
+    {
+      "claim_id": "ISS-DOWNLOADS.complaint_count",
+      "issue_id": "ISS-DOWNLOADS",
+      "metric": "complaint_count",
+      "value": "6003"
+    },
+    {
+      "claim_id": "ISS-DOWNLOADS.severity_sum",
+      "issue_id": "ISS-DOWNLOADS",
+      "metric": "severity_sum",
+      "value": "21265"
+    },
+    {
+      "claim_id": "ISS-DOWNLOADS.mean_severity",
+      "issue_id": "ISS-DOWNLOADS",
+      "metric": "mean_severity",
+      "value": "3.542395"
+    },
+    {
+      "claim_id": "ISS-DOWNLOADS.priority_score",
+      "issue_id": "ISS-DOWNLOADS",
+      "metric": "priority_score",
+      "value": "21265"
+    },
+    {
+      "claim_id": "ISS-SUPPORT.complaint_count",
+      "issue_id": "ISS-SUPPORT",
+      "metric": "complaint_count",
+      "value": "710"
+    },
+    {
+      "claim_id": "ISS-SUPPORT.severity_sum",
+      "issue_id": "ISS-SUPPORT",
+      "metric": "severity_sum",
+      "value": "1868"
+    },
+    {
+      "claim_id": "ISS-SUPPORT.mean_severity",
+      "issue_id": "ISS-SUPPORT",
+      "metric": "mean_severity",
+      "value": "2.630986"
+    },
+    {
+      "claim_id": "ISS-SUPPORT.priority_score",
+      "issue_id": "ISS-SUPPORT",
+      "metric": "priority_score",
+      "value": "1868"
+    }
+  ],
+  "facts": [
+    {
+      "fact_id": "F.total_reviews",
+      "value": 660622
+    },
+    {
+      "fact_id": "F.completed",
+      "value": 660609
+    },
+    {
+      "fact_id": "F.quarantined",
+      "value": 13
+    },
+    {
+      "fact_id": "F.complaint_or_cancellation",
+      "value": 295145
+    },
+    {
+      "fact_id": "F.cancellation_intent",
+      "value": 31529
+    },
+    {
+      "fact_id": "F.praise",
+      "value": 274629
+    },
+    {
+      "fact_id": "F.request",
+      "value": 23525
+    },
+    {
+      "fact_id": "F.needs_review",
+      "value": 100316
+    },
+    {
+      "fact_id": "F.ISS-USABILITY.share_of_complaints_pct",
+      "value": 27.6
+    },
+    {
+      "fact_id": "F.ISS-OTHER.share_of_complaints_pct",
+      "value": 33.1
+    },
+    {
+      "fact_id": "F.ISS-PLAYBACK.share_of_complaints_pct",
+      "value": 13.3
+    },
+    {
+      "fact_id": "F.ISS-BILLING.share_of_complaints_pct",
+      "value": 15.5
+    },
+    {
+      "fact_id": "F.ISS-CATALOG.share_of_complaints_pct",
+      "value": 4.8
+    },
+    {
+      "fact_id": "F.ISS-ACCESS.share_of_complaints_pct",
+      "value": 3.5
+    },
+    {
+      "fact_id": "F.ISS-DOWNLOADS.share_of_complaints_pct",
+      "value": 2.0
+    },
+    {
+      "fact_id": "F.ISS-SUPPORT.share_of_complaints_pct",
+      "value": 0.2
+    }
+  ],
+  "evidence": [
+    {
+      "issue_id": "ISS-USABILITY",
+      "name": "Excessive unskippable ads and playback interruptions",
+      "summary": "Reviewers say ads are too frequent and often unskippable, with some reporting ads placed after skips or every few songs, plus repeated songs and shuffle or navigation limits.",
+      "quotes": [
+        {
+          "review_id": "25b3b4c8-151c-4bc7-8c0a-9df1062ae76c",
+          "severity": 3,
+          "quote": "gives you upwards of 4 ads, each 30 seconds long, all unskippable, either every time you skip a song, or just after every few songs."
+        },
+        {
+          "review_id": "0d3ad186-3a08-45e2-a3d2-afb773921738",
+          "severity": 3,
+          "quote": "Too many ads"
+        },
+        {
+          "review_id": "ae776e66-d026-4313-a3d9-c7f5c34c4f6f",
+          "severity": 3,
+          "quote": "Worst experience.. No option for turn off shuffle..... You just search for a music then click on it & another music start playing."
+        }
+      ]
+    },
+    {
+      "issue_id": "ISS-OTHER",
+      "name": "Generic negative reviews with no specific complaint",
+      "summary": "Reviewers mostly express general dissatisfaction, calling the app bad, worst, or junk, with some mentioning recent updates, bugs, or not working properly, but without naming a specific feature.",
+      "quotes": [
+        {
+          "review_id": "51886740-111a-4006-a56a-3a9dab9954e2",
+          "severity": 2,
+          "quote": "Very wrost app i uninstalled this app very very bad application"
+        },
+        {
+          "review_id": "b7fe09f0-370b-4f28-956c-bf5639123cf5",
+          "severity": 2,
+          "quote": "I hate this app now"
+        },
+        {
+          "review_id": "49a4b8af-602d-4e15-ab05-f9ec39551e22",
+          "severity": 2,
+          "quote": "Bugsss all the timee"
+        }
+      ]
+    },
+    {
+      "issue_id": "ISS-PLAYBACK",
+      "name": "Playback fails, crashes, and stalls after updates",
+      "summary": "Reviewers report songs that stop, won't play, or stay stuck, along with crashes, slow loading, and lag, often persisting after reinstalling, restarting, or updating the app.",
+      "quotes": [
+        {
+          "review_id": "a95a01d3-972f-427c-8bf2-93975ec35984",
+          "severity": 4,
+          "quote": "i updated it and now i cant play songs"
+        },
+        {
+          "review_id": "4a310e02-2b6b-495c-aa37-56c78ccaf452",
+          "severity": 4,
+          "quote": "I love this app but whenever i play a song it suddenly stops."
+        },
+        {
+          "review_id": "a6bfdf63-6899-476f-811b-80ab6cd2362b",
+          "severity": 4,
+          "quote": "App won't even start. I'm in a perpetual load screen no matter how many times I do a clean install."
+        }
+      ]
+    },
+    {
+      "issue_id": "ISS-BILLING",
+      "name": "Core features locked behind premium paywall",
+      "summary": "Reviewers say basic functions like turning off shuffle, seeking within songs, downloading, and playing in order now require Premium, and they feel pushed to pay for them.",
+      "quotes": [
+        {
+          "review_id": "baa39929-9b20-4027-88df-a2ecb7d4552d",
+          "severity": 3,
+          "quote": "Spotify's new update is just for the promotion of getting premium i mean this app sucks after the new update you cant turn off shuffle without premium you cant see the lyrics yoou cant adjust the slider to listen from any part of the song."
+        },
+        {
+          "review_id": "2b684155-496f-4668-9619-6f0173c29c9d",
+          "severity": 3,
+          "quote": "Great app only problem is that I can't download music unless I buy premium"
+        },
+        {
+          "review_id": "fc97f2eb-102a-4a81-9455-ddc0e628a0dd",
+          "severity": 3,
+          "quote": "At least the basic function (like skipping in the songs, playing songs orderly ) are not even possible now without the premium."
+        }
+      ]
+    },
+    {
+      "issue_id": "ISS-CATALOG",
+      "name": "Missing lyrics, songs, and weak recommendations",
+      "summary": "Reviewers report lyrics that fail to appear or were removed, favorite songs missing from the catalog, limited search options, and unwanted suggested songs cluttering playlists and mixes.",
+      "quotes": [
+        {
+          "review_id": "f7d1dff5-7b0a-41fa-b211-6c3c50c9fb71",
+          "severity": 3,
+          "quote": "Gpod but lyrics won't show up."
+        },
+        {
+          "review_id": "052f7bf9-26c5-4b9c-bf2f-4fd5f54fb350",
+          "severity": 3,
+          "quote": "Few of my favorite songs are not available in particular this app like uri the surgical strike and even namo namo kedarnath I don't know what's the problem between spotify and the makers of the song but I'm suffering and I'm paying to @spotifyindia with a premium subscription you guys better comprom"
+        },
+        {
+          "review_id": "b06b52af-4bba-4c93-ae15-410077f19c01",
+          "severity": 2,
+          "quote": "STOP PUTTING SUGGESTED SONGS IN MY PLAYLISTS I KNOW WHAT I LIKE other than that the app's fine"
+        }
+      ]
+    },
+    {
+      "issue_id": "ISS-ACCESS",
+      "name": "Cannot log in across phone, email, Facebook",
+      "summary": "Reviewers report being unable to log in with mobile number, email/password, or Facebook, often seeing errors, crashes, or lockouts even after reinstalling.",
+      "quotes": [
+        {
+          "review_id": "2e180a5d-df8e-4376-8776-53c7d2fbb319",
+          "severity": 4,
+          "quote": "Not able to login"
+        },
+        {
+          "review_id": "99562c32-e01e-4975-9a0c-2aade4a73cd2",
+          "severity": 4,
+          "quote": "I'm facing some problems regarding login through my phone number. It is always showing something went wrong and try again...Pls do something..."
+        },
+        {
+          "review_id": "dc0503a5-30f9-44fa-8c2e-c81087565e7a",
+          "severity": 4,
+          "quote": "I am having constant problems logging in, and it is not recognizing my email/password."
+        }
+      ]
+    }
+  ]
+}
