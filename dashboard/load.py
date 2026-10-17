@@ -122,6 +122,8 @@ def _csv(path):
 
 
 def main():
+    from dotenv import load_dotenv
+    load_dotenv(Path(__file__).resolve().parent.parent / ".env")
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--db", required=True, help="pipeline state database")
     ap.add_argument("--outputs", required=True, help="pipeline output folder (ranking.csv, issues.json, memo.md ...)")
