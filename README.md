@@ -3,7 +3,7 @@
 Turns 660,622 public Google Play reviews of Spotify (May 2022 – Nov 2023) into a product-priority
 recommendation where every number traces to saved records. MBA 290T Assignment 5.
 
-> **Live dashboard:** _URL added after deployment_ · **Grading export:** [`grading/`](grading/) ·
+> **Live dashboard:** https://spotify-review-insights-pstb.onrender.com (no login; Render free tier sleeps when idle, so the first load can take ~50 s) · **Grading export:** [`grading/`](grading/) ·
 > **Memo:** [`outputs/full/memo.md`](outputs/full/memo.md) · **Cost calculator:** [`cost/`](cost/)
 
 <!-- RESULTS:START -->
@@ -109,8 +109,10 @@ python -m dashboard.load --db work/full.sqlite --outputs outputs/full --database
 uvicorn dashboard.app:app                                  # http://localhost:8000
 ```
 
-Deployed on Render ([`render.yaml`](render.yaml)) with a Neon Postgres database. The backend only reads
-the database; it makes no model calls.
+Deployed at **https://spotify-review-insights-pstb.onrender.com** on Render ([`render.yaml`](render.yaml)) with a Neon
+Postgres database holding all 660,622 processed records, the ranking, issues, claims, memo and monthly trends.
+The backend only reads the database; it makes no model calls. API: `/api/summary`, `/api/ranking`,
+`/api/issues/{issue_id}`, `/api/reviews?issue_id=…`, `/api/reviews/{review_id}`, `/api/recommendation`, `/api/trends`.
 
 ## Design choices
 
