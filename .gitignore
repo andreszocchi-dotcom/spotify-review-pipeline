@@ -21,3 +21,4 @@ local-reference.json
 
 # editor settings
 .vscode/
+outputs/rerank/

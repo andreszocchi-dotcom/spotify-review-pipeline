@@ -56,7 +56,7 @@ Traceability: [docs/trace.md](docs/trace.md) follows review `962280d7…` from s
 | **T3** 100-review cold/warm pilot, offline calculator, controls | [cost/README.md](cost/README.md), [cost/report.md](cost/report.md), `python -m cost.calculator` |
 | **W1** Full ingestion, coverage, classification | [`grading/ingestion.json`](grading/ingestion.json), [`grading/records.jsonl.gz`](grading/), [`outputs/full/run_summary.json`](outputs/full/run_summary.json) |
 | **W2** Runnable staged program, bounded calls, handoffs, resume | `python -m pipeline.run --input <csv>`; [`grading/calls.jsonl.gz`](grading/); [`grading/checkpoint_before.json`](grading/checkpoint_before.json) → [`checkpoint_after.json`](grading/checkpoint_after.json); recording _(link)_ |
-| **W3** Reproducible ranking + deployed dashboard with DB backend | `python -m pipeline.rank --db work/full.sqlite --out outputs/full` (no model calls); [dashboard/](dashboard/) (FastAPI + Postgres); live URL above |
+| **W3** Reproducible ranking + deployed dashboard with DB backend | `python -m pipeline.rank --from-grading grading --out outputs/rerank` (no model calls, identical to `grading/ranking.csv`); [dashboard/](dashboard/) (FastAPI + Postgres); live URL above |
 
 ## Setup
 
@@ -92,15 +92,15 @@ for completed texts under the same `label_config`.
 
 ```sh
 python -m cost.calculator                                  # offline cost/runtime replay
-python -m pipeline.rank --db work/full.sqlite --out outputs/full     # regenerate ranking + claims
+python -m pipeline.rank --from-grading grading --out outputs/rerank   # regenerate ranking + claims from the committed export
 python -m pipeline.export --db work/full.sqlite --out grading --gzip --ingestion-json grading/ingestion.json
 python -m evals.golden_eval --db work/full.sqlite          # golden-50 comparison
 python -m evals.system_tests                               # offline stub tests
 python data/check_submission.py check --reference local-reference.json --submission grading --out self-check.json
 ```
 
-The ranking and checker need the saved state (`work/full.sqlite`, ~1 GB, published as a release asset) or
-the exported `grading/` folder; neither calls a model.
+Ranking regeneration and the checker work from the committed `grading/` folder alone - no database, no key,
+no model call. Commands that take `--db` need the local pipeline state (`work/full.sqlite`, ~1 GB, not committed).
 
 **Dashboard**
 
