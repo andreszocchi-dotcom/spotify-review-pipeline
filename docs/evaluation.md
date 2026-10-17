@@ -22,8 +22,42 @@ sentiment agrees when |pred − human| ≤ 0.25, plus MAE; `evidence_quote` must
 count as wrong.
 
 <!-- GOLDEN:START -->
-_Pending: human labels not yet exported. Run `python -m evals.golden_eval --db work/full.sqlite` once
-`evals/golden_50_human.csv` exists._
+Result (`python -m evals.golden_eval --db work/full.sqlite`, label config `jev-1.13.0+labels-v3+schema-v1`;
+50/50 golden reviews have completed predictions):
+
+| Field | Agreement | Other metrics |
+|---|---|---|
+| Topic | **82%** (41/50) | macro F1 0.61 (8 classes; most are rare in 50 reviews) |
+| Intent | **72%** (36/50) | macro F1 0.53 |
+| Severity | **76% exact**, 98% within ±1 | MAE 0.26 |
+| Sentiment | 74% within ±0.25 (predeclared) | MAE 0.19 |
+| Evidence quote is an exact substring | 100% | quotes are code-extracted slices |
+| `needs_review` vs human "ambiguous" flag | 76% | human flagged 10, model 8, both 3 |
+
+Ambiguous cases: the human labeller flagged **10 of 50** as genuinely ambiguous. On the 40 clear cases the
+pipeline agrees on topic 85%, intent 77.5%, severity 72.5%; on the 10 ambiguous ones topic 70%, intent 50%,
+severity 90%. Fifty cases give a small diagnostic sample (±~12 points at these rates), not a precise
+population estimate.
+
+### Error analysis (27 reviews with at least one disagreement; all in `evals/golden_eval.json`)
+
+| Pattern | Count | Example (ID prefix) | Reading |
+|---|---|---|---|
+| Intent `request` ↔ `complaint` | 5 | `991b6b3a` "Ads were okay, but limited functionality..it's just too much" (human request, model complaint) | Mixed criticism + wish. The contract's precedence (complaint before request) favours the model on several; the human read them as requests. A genuine boundary case, not a single-sided error. |
+| Intent `unclear` → `praise` on one-word reviews | 3 | `8fd3dd72` "Good", `a972945c` "Phenomenal" | Human marked bare one-word reviews unclear (and ambiguous); Jev calls them praise. The contract treats general positivity as praise, so this is a definition-interpretation gap. |
+| Topic `other` → `catalog` on non-English / vague text | 3 | `46842184` "asem, lirik nya kdang gaada kek mana??" (Indonesian: lyrics sometimes missing) | Human chose `other`/unclear and flagged it; Jev read "lirik" as lyrics → catalog. Unsupported-language text is the main source of topic disagreement. |
+| Severity 3 ↔ 4 | 6 (4 model higher, 2 lower) | `ac4e860a` "paying … but unable to play in offline mode" (human 3, model 4) | Whether a failure "blocks a core task" depends on context the text rarely gives. 98% of severities are within one level. |
+| Severity 2 ↔ 1 | 3 | `2aa566c6` "Nice app, very less advertising" (human request/2, model praise/1) | Follows from the intent disagreement. |
+| Boycott / cancellation | 2 | `5de7f95b` "We are boycotting Swedish app…" (human cancellation, model unclear) | The contract makes bare boycott slogans `unclear` unless a personal departure is explicit; the human read "we are boycotting" as departure. |
+
+What this means for the conclusions: topic — the field the ranking is built on — is the most reliable (82%,
+85% on clear cases), and most topic errors involve `other`, which is not a recommended priority. Severity is
+within one level 98% of the time, so mean severities are directionally sound but individual 3-vs-4 calls are
+noisy. `needs_review` catches only 3 of the 10 human-ambiguous cases: Jev's confidence is high on short
+one-word reviews that humans find ambiguous, so the flag should be read as "model uncertain", not "review is
+ambiguous".
+
+No labels or prompts were changed after seeing these results.
 <!-- GOLDEN:END -->
 
 ## 2. Independent verification

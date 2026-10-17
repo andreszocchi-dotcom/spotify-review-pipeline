@@ -24,7 +24,7 @@ the alternative track. See the [memo](outputs/full/memo.md).
 | Intent mix | complaint 263,616 · praise 274,629 · unclear 67,310 · cancellation 31,529 · request 23,525 |
 | `needs_review` flagged | 100,316 (15.2%) — low Jev confidence on topic, intent or severity |
 | Independent verifier (968-text random sample) | topic 85.0% · intent 90.5% · severity exact 77.7% (MAE 0.25) |
-| Golden 50 (human) | see [docs/evaluation.md](docs/evaluation.md) |
+| Golden 50 (human labels) | topic 82% · intent 72% · severity 76% exact / 98% within ±1 · sentiment 74% within ±0.25 ([details](docs/evaluation.md)) |
 | Claude spend (verify, group, memo) | **$0.135** measured (64 calls, incl. 6 failed attempts and the superseded group-v1 + memo-v1 calls) |
 | Jev usage | 522.7M input + 95.2M output tokens; **price unpublished — reconciled against console balance in [cost/README.md](cost/README.md)** |
 | Enrichment wall clock | 4 h 50 min elapsed (≈2 h 20 min active at 8 workers, ~63 texts/s; ≈2.5 h host network outage) |
