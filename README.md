@@ -26,7 +26,7 @@ the alternative track. See the [memo](outputs/full/memo.md).
 | Independent verifier (968-text random sample) | topic 85.0% · intent 90.5% · severity exact 77.7% (MAE 0.25) |
 | Golden 50 (human labels) | topic 82% · intent 72% · severity 76% exact / 98% within ±1 · sentiment 74% within ±0.25 ([details](docs/evaluation.md)) |
 | Claude spend (verify, group, memo) | **$0.135** measured (64 calls, incl. 6 failed attempts and the superseded group-v1 + memo-v1 calls) |
-| Jev usage | 522.7M input + 95.2M output tokens; **price unpublished — reconciled against console balance in [cost/README.md](cost/README.md)** |
+| Jev spend (full run) | **$21.96** — 522.7M input tokens at $0.042/1M (output free); console total $22.37 matches logs ($22.38) across all runs; exceeded the $20 Jev budget ([cost/README.md](cost/README.md#jev-reconciliation-2026-10-19)) |
 | Enrichment wall clock | 4 h 50 min elapsed (≈2 h 20 min active at 8 workers, ~63 texts/s; ≈2.5 h host network outage) |
 
 | Rank | Issue | Complaints | Severity sum | Mean severity | Priority |
@@ -137,8 +137,8 @@ The backend only reads the database; it makes no model calls. API: `/api/summary
 * Non-English and unintelligible reviews are classified like others; low-confidence cases are flagged
   `needs_review` rather than dropped.
 * Jev does not publish prices and its console balance updates with a delay, so the full run started before
-  Jev's cost was known; Jev spend is reported in tokens and reconciled against the console balance
-  ([cost/README.md](cost/README.md)). Failed connection-error calls returned no usage; they are exported as 0
+  Jev's rate was known; it cost $21.96 against a $20 Jev budget (reconciled afterwards with the console,
+  [cost/README.md](cost/README.md#jev-reconciliation-2026-10-19)). Failed connection-error calls returned no usage; they are exported as 0
   tokens with an explicit `usage_source` note.
 * ISS-USABILITY and ISS-BILLING overlap in theme (ads and premium-only controls); one issue per record keeps
   totals non-overlapping, but the boundary is a judgment the classifier makes per review.

@@ -49,5 +49,22 @@
   "refresh_from": {
     "checkpoint_500": "outputs/dev500/run_summary.json",
     "analysis_10000": "outputs/dev10k/run_summary.json"
+  },
+  "typesafe_console_reconciliation": {
+    "read_on": "2026-10-19T19:29Z",
+    "console_rate": "$0.042 per 1M input tokens, output free (console estimate)",
+    "console_7_day": {
+      "spend_usd": 22.37,
+      "tokens": 629527976,
+      "requests": 493319
+    },
+    "pipeline_logged_all_runs": {
+      "calls": 493725,
+      "input_tokens": 532975795,
+      "output_tokens": 97055732,
+      "usd_at_console_rate": 22.38
+    },
+    "note": "Console stats may be delayed; the ~0.5M-token / ~400-request gap matches the demo run recorded minutes before the reading. Ad hoc prompt-iteration calls (60) are in the console but not in the pipeline logs.",
+    "available_credits_after_usd": 8.01
   }
 }

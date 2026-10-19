@@ -19,20 +19,20 @@ Rate multiplier: 1.0
 | claude-haiku-5-5:output_tokens | 0.50 USD per 1,000,000 tokens | 2026-10-16 | https://platform.claude.com/docs/en/about-claude/pricing |
 | claude-sonnet-5-5:input_tokens | 2.00 USD per 1,000,000 tokens | 2026-10-16 | https://platform.claude.com/docs/en/about-claude/pricing |
 | claude-sonnet-5-5:output_tokens | 10.00 USD per 1,000,000 tokens | 2026-10-16 | https://platform.claude.com/docs/en/about-claude/pricing |
-| jev-1.13.0:input_tokens | unknown USD per 1,000,000 tokens | 2026-10-16 | https://docs.typesafe.ai/primitives/choice |
-| jev-1.13.0:output_tokens | unknown USD per 1,000,000 tokens | 2026-10-16 | https://docs.typesafe.ai/primitives/choice |
+| jev-1.13.0:input_tokens | 0.042 USD per 1,000,000 tokens | 2026-10-19 | https://console.typesafe.ai (Usage page: 'Estimated at $0.042/MTok input - Free output'; not on public docs) |
+| jev-1.13.0:output_tokens | 0 USD per 1,000,000 tokens | 2026-10-19 | https://console.typesafe.ai (Usage page: 'Estimated at $0.042/MTok input - Free output'; not on public docs) |
 
 ## Measured cold run
 
 - End-to-end wall clock **44.511 s** · throughput 2.25 rows/s
 - Stage seconds: {'ingest': 0.205, 'enrich': 13.251, 'verify': 6.414, 'group': 10.406, 'rank': 0.006, 'memo': 13.996}
 - Result-cache hits: 0 · enrichment calls: 100
-- Known API spend **$0.0343** + unknown-rate items ['jev-1.13.0:input_tokens', 'jev-1.13.0:output_tokens']
-- Known cost per 1,000 rows $0.3432 · per completed record $0.000343
+- Known API spend **$0.0386**
+- Known cost per 1,000 rows $0.3864 · per completed record $0.000386
 
 | stage | provider | model | attempts | failed | input | cache read | cache write | output | cost |
 |---|---|---|---|---|---|---|---|---|---|
-| enrich | typesafe | jev-1.13.0 | 100 | 0 | 102,887 | 0 | 0 | 19,655 | unknown |
+| enrich | typesafe | jev-1.13.0 | 100 | 0 | 102,887 | 0 | 0 | 19,655 | $0.0043 |
 | group | anthropic | claude-haiku-5-5 | 7 | 0 | 5,486 | 0 | 0 | 721 | $0.0009 |
 | memo | anthropic | claude-sonnet-5-5 | 1 | 0 | 6,078 | 0 | 0 | 2,078 | $0.0329 |
 | verify | anthropic | claude-haiku-5-5 | 1 | 0 | 2,044 | 0 | 0 | 547 | $0.0005 |
@@ -58,64 +58,64 @@ Full run: 660,622 rows · 660,609 nonempty · 13 empty-text quarantines · 484,1
 
 | stage | model | input | output | cost |
 |---|---|---|---|---|
-| enrich | jev-1.13.0 | 503,149,212 | 96,119,021 | unknown |
+| enrich | jev-1.13.0 | 503,149,212 | 96,119,021 | $21.13 |
 | verify | claude-haiku-5-5 | 107,310 | 28,718 | $0.03 |
 | group | claude-haiku-5-5 | 6,583 | 865 | $0.00 |
 | memo | claude-sonnet-5-5 | 6,382 | 2,182 | $0.03 |
 
-- Known API cost by provider: {'anthropic': 0.06}
-- Unknown-cost providers: ['typesafe']
+- Known API cost by provider: {'typesafe': 21.13, 'anthropic': 0.06}
+- Unknown-cost providers: none
 - Enrichment time (modeled, 8 workers): **2.81 h**
-- ⚠ typesafe: cost unknown (no published rate) - cannot confirm it fits the $20.00 budget
+- ⚠ OVER BUDGET: typesafe projected $21.13 > budget $20.00
 
 ### base no reuse (660,609 texts classified)
 
 | stage | model | input | output | cost |
 |---|---|---|---|---|
-| enrich | jev-1.13.0 | 686,477,590 | 131,141,126 | unknown |
+| enrich | jev-1.13.0 | 686,477,590 | 131,141,126 | $28.83 |
 | verify | claude-haiku-5-5 | 107,310 | 28,718 | $0.03 |
 | group | claude-haiku-5-5 | 6,583 | 865 | $0.00 |
 | memo | claude-sonnet-5-5 | 6,382 | 2,182 | $0.03 |
 
-- Known API cost by provider: {'anthropic': 0.06}
-- Unknown-cost providers: ['typesafe']
+- Known API cost by provider: {'typesafe': 28.83, 'anthropic': 0.06}
+- Unknown-cost providers: none
 - Enrichment time (modeled, 8 workers): **3.84 h**
-- ⚠ typesafe: cost unknown (no published rate) - cannot confirm it fits the $20.00 budget
+- ⚠ OVER BUDGET: typesafe projected $28.83 > budget $20.00
 
 ### conservative reuse (484,189 texts classified)
 
 | stage | model | input | output | cost |
 |---|---|---|---|---|
-| enrich | jev-1.13.0 | 523,075,913 | 99,925,715 | unknown |
+| enrich | jev-1.13.0 | 523,075,913 | 99,925,715 | $21.97 |
 | verify | claude-haiku-5-5 | 127,750 | 34,188 | $0.03 |
 | group | claude-haiku-5-5 | 7,837 | 1,030 | $0.00 |
 | memo | claude-sonnet-5-5 | 7,598 | 2,598 | $0.04 |
 
-- Known API cost by provider: {'anthropic': 0.07}
-- Unknown-cost providers: ['typesafe']
+- Known API cost by provider: {'typesafe': 21.97, 'anthropic': 0.07}
+- Unknown-cost providers: none
 - Enrichment time (modeled, 8 workers): **2.92 h**
-- ⚠ typesafe: cost unknown (no published rate) - cannot confirm it fits the $20.00 budget
+- ⚠ OVER BUDGET: typesafe projected $21.97 > budget $20.00
 
 ### conservative no reuse (660,609 texts classified)
 
 | stage | model | input | output | cost |
 |---|---|---|---|---|
-| enrich | jev-1.13.0 | 713,664,821 | 136,334,834 | unknown |
+| enrich | jev-1.13.0 | 713,664,821 | 136,334,834 | $29.97 |
 | verify | claude-haiku-5-5 | 127,750 | 34,188 | $0.03 |
 | group | claude-haiku-5-5 | 7,837 | 1,030 | $0.00 |
 | memo | claude-sonnet-5-5 | 7,598 | 2,598 | $0.04 |
 
-- Known API cost by provider: {'anthropic': 0.07}
-- Unknown-cost providers: ['typesafe']
+- Known API cost by provider: {'typesafe': 29.97, 'anthropic': 0.07}
+- Unknown-cost providers: none
 - Enrichment time (modeled, 8 workers): **3.99 h**
-- ⚠ typesafe: cost unknown (no published rate) - cannot confirm it fits the $20.00 budget
+- ⚠ OVER BUDGET: typesafe projected $29.97 > budget $20.00
 
 ## Refreshed estimates from later checkpoints
 
 | checkpoint | texts | workers | texts/s | failed calls | in/text | out/text | full-run Jev tokens (in / out) | hours at same workers | Jev cost |
 |---|---|---|---|---|---|---|---|---|---|
-| checkpoint_500 | 279 | 2 | 15.81 | 0 | 1029.1 | 196.5 | 498,258,248 / 95,147,477 | 8.51 | unknown |
-| analysis_10000 | 8,448 | 4 | 32.51 | 0 | 1077.1 | 196.5 | 521,535,344 / 95,156,378 | 4.14 | unknown |
+| checkpoint_500 | 279 | 2 | 15.81 | 0 | 1029.1 | 196.5 | 498,258,248 / 95,147,477 | 8.51 | $20.93 |
+| analysis_10000 | 8,448 | 4 | 32.51 | 0 | 1077.1 | 196.5 | 521,535,344 / 95,156,378 | 4.14 | $21.90 |
 
 ## Controls
 

@@ -14,7 +14,7 @@
         "output": 95147477
       },
       "full_run_hours_same_workers": 8.51,
-      "full_run_jev_usd": null
+      "full_run_jev_usd": 20.92684642066667
     },
     {
       "checkpoint": "analysis_10000",
@@ -29,7 +29,7 @@
         "output": 95156378
       },
       "full_run_hours_same_workers": 4.14,
-      "full_run_jev_usd": null
+      "full_run_jev_usd": 21.904484428058954
     }
   ],
   "pilot": {
@@ -93,17 +93,17 @@
     },
     "jev-1.13.0:input_tokens": {
       "provider": "typesafe",
-      "checked_on": "2026-10-16",
-      "source": "https://docs.typesafe.ai/primitives/choice",
-      "quoted": "unknown USD per 1,000,000 tokens",
-      "usd_per_unit": null
+      "checked_on": "2026-10-19",
+      "source": "https://console.typesafe.ai (Usage page: 'Estimated at $0.042/MTok input - Free output'; not on public docs)",
+      "quoted": "0.042 USD per 1,000,000 tokens",
+      "usd_per_unit": 4.2000000000000006e-08
     },
     "jev-1.13.0:output_tokens": {
       "provider": "typesafe",
-      "checked_on": "2026-10-16",
-      "source": "https://docs.typesafe.ai/primitives/choice",
-      "quoted": "unknown USD per 1,000,000 tokens",
-      "usd_per_unit": null
+      "checked_on": "2026-10-19",
+      "source": "https://console.typesafe.ai (Usage page: 'Estimated at $0.042/MTok input - Free output'; not on public docs)",
+      "quoted": "0 USD per 1,000,000 tokens",
+      "usd_per_unit": 0.0
     }
   },
   "measured": {
@@ -119,11 +119,8 @@
           "cache_read_input_tokens": 0,
           "cache_creation_input_tokens": 0,
           "output_tokens": 19655,
-          "usd": null,
-          "unknown_rate_items": [
-            "input_tokens",
-            "output_tokens"
-          ]
+          "usd": 0.004321254000000001,
+          "unknown_rate_items": []
         },
         {
           "stage": "group",
@@ -165,11 +162,8 @@
           "unknown_rate_items": []
         }
       ],
-      "api_usd_known": 0.03432300000000001,
-      "api_usd_unknown_items": [
-        "jev-1.13.0:input_tokens",
-        "jev-1.13.0:output_tokens"
-      ],
+      "api_usd_known": 0.03864425400000001,
+      "api_usd_unknown_items": [],
       "wall_seconds": 44.511,
       "stage_seconds": {
         "ingest": 0.205,
@@ -180,8 +174,8 @@
         "memo": 13.996
       },
       "throughput_rows_per_sec": 2.25,
-      "usd_per_1000_rows_known": 0.34323000000000015,
-      "usd_per_completed_known": 0.00034323000000000014,
+      "usd_per_1000_rows_known": 0.3864425400000001,
+      "usd_per_completed_known": 0.0003864425400000001,
       "result_cache_hits": 0,
       "enrich_calls": 100
     },
@@ -267,6 +261,23 @@
     "refresh_from": {
       "checkpoint_500": "outputs/dev500/run_summary.json",
       "analysis_10000": "outputs/dev10k/run_summary.json"
+    },
+    "typesafe_console_reconciliation": {
+      "read_on": "2026-10-19T19:29Z",
+      "console_rate": "$0.042 per 1M input tokens, output free (console estimate)",
+      "console_7_day": {
+        "spend_usd": 22.37,
+        "tokens": 629527976,
+        "requests": 493319
+      },
+      "pipeline_logged_all_runs": {
+        "calls": 493725,
+        "input_tokens": 532975795,
+        "output_tokens": 97055732,
+        "usd_at_console_rate": 22.38
+      },
+      "note": "Console stats may be delayed; the ~0.5M-token / ~400-request gap matches the demo run recorded minutes before the reading. Ad hoc prompt-iteration calls (60) are in the console but not in the pipeline logs.",
+      "available_credits_after_usd": 8.01
     }
   },
   "projections": {
@@ -281,7 +292,7 @@
           "cache_read_input_tokens": 0,
           "cache_creation_input_tokens": 0,
           "output_tokens": 96119021,
-          "usd": null
+          "usd": 21.1322668953606
         },
         {
           "stage": "verify",
@@ -315,15 +326,14 @@
         }
       ],
       "usd_by_provider": {
+        "typesafe": 21.1322668953606,
         "anthropic": 0.06076347
       },
-      "unknown_cost_providers": [
-        "typesafe"
-      ],
+      "unknown_cost_providers": [],
       "enrich_hours_modeled": 2.81,
       "workers_modeled": 8,
       "warnings": [
-        "typesafe: cost unknown (no published rate) - cannot confirm it fits the $20.00 budget"
+        "OVER BUDGET: typesafe projected $21.13 > budget $20.00"
       ]
     },
     "base_no_reuse": {
@@ -337,7 +347,7 @@
           "cache_read_input_tokens": 0,
           "cache_creation_input_tokens": 0,
           "output_tokens": 131141126,
-          "usd": null
+          "usd": 28.832058765228602
         },
         {
           "stage": "verify",
@@ -371,15 +381,14 @@
         }
       ],
       "usd_by_provider": {
+        "typesafe": 28.832058765228602,
         "anthropic": 0.06076347
       },
-      "unknown_cost_providers": [
-        "typesafe"
-      ],
+      "unknown_cost_providers": [],
       "enrich_hours_modeled": 3.84,
       "workers_modeled": 8,
       "warnings": [
-        "typesafe: cost unknown (no published rate) - cannot confirm it fits the $20.00 budget"
+        "OVER BUDGET: typesafe projected $28.83 > budget $20.00"
       ]
     },
     "conservative_reuse": {
@@ -393,7 +402,7 @@
           "cache_read_input_tokens": 0,
           "cache_creation_input_tokens": 0,
           "output_tokens": 99925715,
-          "usd": null
+          "usd": 21.969188356563002
         },
         {
           "stage": "verify",
@@ -427,15 +436,14 @@
         }
       ],
       "usd_by_provider": {
+        "typesafe": 21.969188356563002,
         "anthropic": 0.07233746428571428
       },
-      "unknown_cost_providers": [
-        "typesafe"
-      ],
+      "unknown_cost_providers": [],
       "enrich_hours_modeled": 2.92,
       "workers_modeled": 8,
       "warnings": [
-        "typesafe: cost unknown (no published rate) - cannot confirm it fits the $20.00 budget"
+        "OVER BUDGET: typesafe projected $21.97 > budget $20.00"
       ]
     },
     "conservative_no_reuse": {
@@ -449,7 +457,7 @@
           "cache_read_input_tokens": 0,
           "cache_creation_input_tokens": 0,
           "output_tokens": 136334834,
-          "usd": null
+          "usd": 29.973922478703003
         },
         {
           "stage": "verify",
@@ -483,15 +491,14 @@
         }
       ],
       "usd_by_provider": {
+        "typesafe": 29.973922478703003,
         "anthropic": 0.07233746428571428
       },
-      "unknown_cost_providers": [
-        "typesafe"
-      ],
+      "unknown_cost_providers": [],
       "enrich_hours_modeled": 3.99,
       "workers_modeled": 8,
       "warnings": [
-        "typesafe: cost unknown (no published rate) - cannot confirm it fits the $20.00 budget"
+        "OVER BUDGET: typesafe projected $29.97 > budget $20.00"
       ]
     }
   },

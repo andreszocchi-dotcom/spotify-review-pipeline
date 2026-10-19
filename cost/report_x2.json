@@ -1,5 +1,37 @@
 {
   "rate_multiplier": 2.0,
+  "refresh": [
+    {
+      "checkpoint": "checkpoint_500",
+      "texts": 279,
+      "workers": 2,
+      "texts_per_second": 15.81,
+      "failed_calls": 0,
+      "input_per_text": 1029.1,
+      "output_per_text": 196.5,
+      "full_run_tokens": {
+        "input": 498258248,
+        "output": 95147477
+      },
+      "full_run_hours_same_workers": 8.51,
+      "full_run_jev_usd": 41.85369284133334
+    },
+    {
+      "checkpoint": "analysis_10000",
+      "texts": 8448,
+      "workers": 4,
+      "texts_per_second": 32.51,
+      "failed_calls": 0,
+      "input_per_text": 1077.1,
+      "output_per_text": 196.5,
+      "full_run_tokens": {
+        "input": 521535344,
+        "output": 95156378
+      },
+      "full_run_hours_same_workers": 4.14,
+      "full_run_jev_usd": 43.80896885611791
+    }
+  ],
   "pilot": {
     "input": "data/cost_100.csv",
     "input_sha256": "c884ac3b9be5066995d5063f96ad9af6e5e082975788c1684c4f6b6ea661dd0e",
@@ -61,17 +93,17 @@
     },
     "jev-1.13.0:input_tokens": {
       "provider": "typesafe",
-      "checked_on": "2026-10-16",
-      "source": "https://docs.typesafe.ai/primitives/choice",
-      "quoted": "unknown USD per 1,000,000 tokens",
-      "usd_per_unit": null
+      "checked_on": "2026-10-19",
+      "source": "https://console.typesafe.ai (Usage page: 'Estimated at $0.042/MTok input - Free output'; not on public docs)",
+      "quoted": "0.042 USD per 1,000,000 tokens",
+      "usd_per_unit": 8.400000000000001e-08
     },
     "jev-1.13.0:output_tokens": {
       "provider": "typesafe",
-      "checked_on": "2026-10-16",
-      "source": "https://docs.typesafe.ai/primitives/choice",
-      "quoted": "unknown USD per 1,000,000 tokens",
-      "usd_per_unit": null
+      "checked_on": "2026-10-19",
+      "source": "https://console.typesafe.ai (Usage page: 'Estimated at $0.042/MTok input - Free output'; not on public docs)",
+      "quoted": "0 USD per 1,000,000 tokens",
+      "usd_per_unit": 0.0
     }
   },
   "measured": {
@@ -87,11 +119,8 @@
           "cache_read_input_tokens": 0,
           "cache_creation_input_tokens": 0,
           "output_tokens": 19655,
-          "usd": null,
-          "unknown_rate_items": [
-            "input_tokens",
-            "output_tokens"
-          ]
+          "usd": 0.008642508000000002,
+          "unknown_rate_items": []
         },
         {
           "stage": "group",
@@ -133,11 +162,8 @@
           "unknown_rate_items": []
         }
       ],
-      "api_usd_known": 0.06864600000000003,
-      "api_usd_unknown_items": [
-        "jev-1.13.0:input_tokens",
-        "jev-1.13.0:output_tokens"
-      ],
+      "api_usd_known": 0.07728850800000002,
+      "api_usd_unknown_items": [],
       "wall_seconds": 44.511,
       "stage_seconds": {
         "ingest": 0.205,
@@ -148,8 +174,8 @@
         "memo": 13.996
       },
       "throughput_rows_per_sec": 2.25,
-      "usd_per_1000_rows_known": 0.6864600000000003,
-      "usd_per_completed_known": 0.0006864600000000003,
+      "usd_per_1000_rows_known": 0.7728850800000002,
+      "usd_per_completed_known": 0.0007728850800000002,
       "result_cache_hits": 0,
       "enrich_calls": 100
     },
@@ -231,6 +257,27 @@
     "local_compute": {
       "usd_per_hour": null,
       "_note": "Laptop running the orchestrator; electricity not metered -> unknown, not zero."
+    },
+    "refresh_from": {
+      "checkpoint_500": "outputs/dev500/run_summary.json",
+      "analysis_10000": "outputs/dev10k/run_summary.json"
+    },
+    "typesafe_console_reconciliation": {
+      "read_on": "2026-10-19T19:29Z",
+      "console_rate": "$0.042 per 1M input tokens, output free (console estimate)",
+      "console_7_day": {
+        "spend_usd": 22.37,
+        "tokens": 629527976,
+        "requests": 493319
+      },
+      "pipeline_logged_all_runs": {
+        "calls": 493725,
+        "input_tokens": 532975795,
+        "output_tokens": 97055732,
+        "usd_at_console_rate": 22.38
+      },
+      "note": "Console stats may be delayed; the ~0.5M-token / ~400-request gap matches the demo run recorded minutes before the reading. Ad hoc prompt-iteration calls (60) are in the console but not in the pipeline logs.",
+      "available_credits_after_usd": 8.01
     }
   },
   "projections": {
@@ -245,7 +292,7 @@
           "cache_read_input_tokens": 0,
           "cache_creation_input_tokens": 0,
           "output_tokens": 96119021,
-          "usd": null
+          "usd": 42.2645337907212
         },
         {
           "stage": "verify",
@@ -279,15 +326,14 @@
         }
       ],
       "usd_by_provider": {
+        "typesafe": 42.2645337907212,
         "anthropic": 0.12152694
       },
-      "unknown_cost_providers": [
-        "typesafe"
-      ],
+      "unknown_cost_providers": [],
       "enrich_hours_modeled": 2.81,
       "workers_modeled": 8,
       "warnings": [
-        "typesafe: cost unknown (no published rate) - cannot confirm it fits the $20.00 budget"
+        "OVER BUDGET: typesafe projected $42.26 > budget $20.00"
       ]
     },
     "base_no_reuse": {
@@ -301,7 +347,7 @@
           "cache_read_input_tokens": 0,
           "cache_creation_input_tokens": 0,
           "output_tokens": 131141126,
-          "usd": null
+          "usd": 57.664117530457204
         },
         {
           "stage": "verify",
@@ -335,15 +381,14 @@
         }
       ],
       "usd_by_provider": {
+        "typesafe": 57.664117530457204,
         "anthropic": 0.12152694
       },
-      "unknown_cost_providers": [
-        "typesafe"
-      ],
+      "unknown_cost_providers": [],
       "enrich_hours_modeled": 3.84,
       "workers_modeled": 8,
       "warnings": [
-        "typesafe: cost unknown (no published rate) - cannot confirm it fits the $20.00 budget"
+        "OVER BUDGET: typesafe projected $57.66 > budget $20.00"
       ]
     },
     "conservative_reuse": {
@@ -357,7 +402,7 @@
           "cache_read_input_tokens": 0,
           "cache_creation_input_tokens": 0,
           "output_tokens": 99925715,
-          "usd": null
+          "usd": 43.938376713126004
         },
         {
           "stage": "verify",
@@ -391,15 +436,14 @@
         }
       ],
       "usd_by_provider": {
+        "typesafe": 43.938376713126004,
         "anthropic": 0.14467492857142855
       },
-      "unknown_cost_providers": [
-        "typesafe"
-      ],
+      "unknown_cost_providers": [],
       "enrich_hours_modeled": 2.92,
       "workers_modeled": 8,
       "warnings": [
-        "typesafe: cost unknown (no published rate) - cannot confirm it fits the $20.00 budget"
+        "OVER BUDGET: typesafe projected $43.94 > budget $20.00"
       ]
     },
     "conservative_no_reuse": {
@@ -413,7 +457,7 @@
           "cache_read_input_tokens": 0,
           "cache_creation_input_tokens": 0,
           "output_tokens": 136334834,
-          "usd": null
+          "usd": 59.947844957406005
         },
         {
           "stage": "verify",
@@ -447,15 +491,14 @@
         }
       ],
       "usd_by_provider": {
+        "typesafe": 59.947844957406005,
         "anthropic": 0.14467492857142855
       },
-      "unknown_cost_providers": [
-        "typesafe"
-      ],
+      "unknown_cost_providers": [],
       "enrich_hours_modeled": 3.99,
       "workers_modeled": 8,
       "warnings": [
-        "typesafe: cost unknown (no published rate) - cannot confirm it fits the $20.00 budget"
+        "OVER BUDGET: typesafe projected $59.95 > budget $20.00"
       ]
     }
   },
