@@ -1,0 +1,428 @@
+{
+  "input_sha256": "f643435e855bec9a49c23047c3bd816e6be4c0ddba9727c7d4d30bd2a2a32687",
+  "config": "claude-sonnet-5-5+medium+memo-v2",
+  "ranking": [
+    {
+      "rank": 1,
+      "issue_id": "ISS-USABILITY",
+      "complaint_count": 66,
+      "severity_sum": 187,
+      "mean_severity": "2.833333",
+      "priority_score": 187
+    },
+    {
+      "rank": 2,
+      "issue_id": "ISS-OTHER",
+      "complaint_count": 72,
+      "severity_sum": 142,
+      "mean_severity": "1.972222",
+      "priority_score": 142
+    },
+    {
+      "rank": 3,
+      "issue_id": "ISS-PLAYBACK",
+      "complaint_count": 36,
+      "severity_sum": 123,
+      "mean_severity": "3.416667",
+      "priority_score": 123
+    },
+    {
+      "rank": 4,
+      "issue_id": "ISS-BILLING",
+      "complaint_count": 35,
+      "severity_sum": 102,
+      "mean_severity": "2.914286",
+      "priority_score": 102
+    },
+    {
+      "rank": 5,
+      "issue_id": "ISS-CATALOG",
+      "complaint_count": 15,
+      "severity_sum": 41,
+      "mean_severity": "2.733333",
+      "priority_score": 41
+    },
+    {
+      "rank": 6,
+      "issue_id": "ISS-ACCESS",
+      "complaint_count": 9,
+      "severity_sum": 36,
+      "mean_severity": "4.000000",
+      "priority_score": 36
+    },
+    {
+      "rank": 7,
+      "issue_id": "ISS-DOWNLOADS",
+      "complaint_count": 7,
+      "severity_sum": 29,
+      "mean_severity": "4.142857",
+      "priority_score": 29
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "ISS-USABILITY.complaint_count",
+      "issue_id": "ISS-USABILITY",
+      "metric": "complaint_count",
+      "value": "66"
+    },
+    {
+      "claim_id": "ISS-USABILITY.severity_sum",
+      "issue_id": "ISS-USABILITY",
+      "metric": "severity_sum",
+      "value": "187"
+    },
+    {
+      "claim_id": "ISS-USABILITY.mean_severity",
+      "issue_id": "ISS-USABILITY",
+      "metric": "mean_severity",
+      "value": "2.833333"
+    },
+    {
+      "claim_id": "ISS-USABILITY.priority_score",
+      "issue_id": "ISS-USABILITY",
+      "metric": "priority_score",
+      "value": "187"
+    },
+    {
+      "claim_id": "ISS-OTHER.complaint_count",
+      "issue_id": "ISS-OTHER",
+      "metric": "complaint_count",
+      "value": "72"
+    },
+    {
+      "claim_id": "ISS-OTHER.severity_sum",
+      "issue_id": "ISS-OTHER",
+      "metric": "severity_sum",
+      "value": "142"
+    },
+    {
+      "claim_id": "ISS-OTHER.mean_severity",
+      "issue_id": "ISS-OTHER",
+      "metric": "mean_severity",
+      "value": "1.972222"
+    },
+    {
+      "claim_id": "ISS-OTHER.priority_score",
+      "issue_id": "ISS-OTHER",
+      "metric": "priority_score",
+      "value": "142"
+    },
+    {
+      "claim_id": "ISS-PLAYBACK.complaint_count",
+      "issue_id": "ISS-PLAYBACK",
+      "metric": "complaint_count",
+      "value": "36"
+    },
+    {
+      "claim_id": "ISS-PLAYBACK.severity_sum",
+      "issue_id": "ISS-PLAYBACK",
+      "metric": "severity_sum",
+      "value": "123"
+    },
+    {
+      "claim_id": "ISS-PLAYBACK.mean_severity",
+      "issue_id": "ISS-PLAYBACK",
+      "metric": "mean_severity",
+      "value": "3.416667"
+    },
+    {
+      "claim_id": "ISS-PLAYBACK.priority_score",
+      "issue_id": "ISS-PLAYBACK",
+      "metric": "priority_score",
+      "value": "123"
+    },
+    {
+      "claim_id": "ISS-BILLING.complaint_count",
+      "issue_id": "ISS-BILLING",
+      "metric": "complaint_count",
+      "value": "35"
+    },
+    {
+      "claim_id": "ISS-BILLING.severity_sum",
+      "issue_id": "ISS-BILLING",
+      "metric": "severity_sum",
+      "value": "102"
+    },
+    {
+      "claim_id": "ISS-BILLING.mean_severity",
+      "issue_id": "ISS-BILLING",
+      "metric": "mean_severity",
+      "value": "2.914286"
+    },
+    {
+      "claim_id": "ISS-BILLING.priority_score",
+      "issue_id": "ISS-BILLING",
+      "metric": "priority_score",
+      "value": "102"
+    },
+    {
+      "claim_id": "ISS-CATALOG.complaint_count",
+      "issue_id": "ISS-CATALOG",
+      "metric": "complaint_count",
+      "value": "15"
+    },
+    {
+      "claim_id": "ISS-CATALOG.severity_sum",
+      "issue_id": "ISS-CATALOG",
+      "metric": "severity_sum",
+      "value": "41"
+    },
+    {
+      "claim_id": "ISS-CATALOG.mean_severity",
+      "issue_id": "ISS-CATALOG",
+      "metric": "mean_severity",
+      "value": "2.733333"
+    },
+    {
+      "claim_id": "ISS-CATALOG.priority_score",
+      "issue_id": "ISS-CATALOG",
+      "metric": "priority_score",
+      "value": "41"
+    },
+    {
+      "claim_id": "ISS-ACCESS.complaint_count",
+      "issue_id": "ISS-ACCESS",
+      "metric": "complaint_count",
+      "value": "9"
+    },
+    {
+      "claim_id": "ISS-ACCESS.severity_sum",
+      "issue_id": "ISS-ACCESS",
+      "metric": "severity_sum",
+      "value": "36"
+    },
+    {
+      "claim_id": "ISS-ACCESS.mean_severity",
+      "issue_id": "ISS-ACCESS",
+      "metric": "mean_severity",
+      "value": "4.000000"
+    },
+    {
+      "claim_id": "ISS-ACCESS.priority_score",
+      "issue_id": "ISS-ACCESS",
+      "metric": "priority_score",
+      "value": "36"
+    },
+    {
+      "claim_id": "ISS-DOWNLOADS.complaint_count",
+      "issue_id": "ISS-DOWNLOADS",
+      "metric": "complaint_count",
+      "value": "7"
+    },
+    {
+      "claim_id": "ISS-DOWNLOADS.severity_sum",
+      "issue_id": "ISS-DOWNLOADS",
+      "metric": "severity_sum",
+      "value": "29"
+    },
+    {
+      "claim_id": "ISS-DOWNLOADS.mean_severity",
+      "issue_id": "ISS-DOWNLOADS",
+      "metric": "mean_severity",
+      "value": "4.142857"
+    },
+    {
+      "claim_id": "ISS-DOWNLOADS.priority_score",
+      "issue_id": "ISS-DOWNLOADS",
+      "metric": "priority_score",
+      "value": "29"
+    }
+  ],
+  "facts": [
+    {
+      "fact_id": "F.total_reviews",
+      "value": 500
+    },
+    {
+      "fact_id": "F.completed",
+      "value": 500
+    },
+    {
+      "fact_id": "F.quarantined",
+      "value": 0
+    },
+    {
+      "fact_id": "F.complaint_or_cancellation",
+      "value": 240
+    },
+    {
+      "fact_id": "F.cancellation_intent",
+      "value": 29
+    },
+    {
+      "fact_id": "F.praise",
+      "value": 210
+    },
+    {
+      "fact_id": "F.request",
+      "value": 12
+    },
+    {
+      "fact_id": "F.needs_review",
+      "value": 70
+    },
+    {
+      "fact_id": "F.ISS-USABILITY.share_of_complaints_pct",
+      "value": 27.5
+    },
+    {
+      "fact_id": "F.ISS-OTHER.share_of_complaints_pct",
+      "value": 30.0
+    },
+    {
+      "fact_id": "F.ISS-PLAYBACK.share_of_complaints_pct",
+      "value": 15.0
+    },
+    {
+      "fact_id": "F.ISS-BILLING.share_of_complaints_pct",
+      "value": 14.6
+    },
+    {
+      "fact_id": "F.ISS-CATALOG.share_of_complaints_pct",
+      "value": 6.2
+    },
+    {
+      "fact_id": "F.ISS-ACCESS.share_of_complaints_pct",
+      "value": 3.8
+    },
+    {
+      "fact_id": "F.ISS-DOWNLOADS.share_of_complaints_pct",
+      "value": 2.9
+    }
+  ],
+  "evidence": [
+    {
+      "issue_id": "ISS-USABILITY",
+      "name": "Unwanted shuffling, ads and layout changes",
+      "summary": "Reviewers report that recent updates auto-shuffle or play unrequested songs, restrict skips and rewinds, add frequent ads between tracks, and make navigation and layout harder to use.",
+      "quotes": [
+        {
+          "review_id": "0e5a2a0d-7f67-48a5-9edd-27064f670656",
+          "severity": 3,
+          "quote": "I press a song but it automatically played another song out of nowhere most of the time..it's irritating"
+        },
+        {
+          "review_id": "af53cf35-c680-4ccb-b30c-cfd85bb61c57",
+          "severity": 3,
+          "quote": "This new update is not good because I don't agree to to auto shuffle and I want in order in free."
+        },
+        {
+          "review_id": "2aae0ce4-ae4a-46ce-b2fe-0d901eb23c06",
+          "severity": 3,
+          "quote": "The new layout is awful. I have oversized icons and I have to scroll forever to get to my daily mixes, please go back."
+        }
+      ]
+    },
+    {
+      "issue_id": "ISS-OTHER",
+      "name": "Generic negative app rejection without specific feature",
+      "summary": "Reviewers give short, general complaints such as hating the app, calling it useless or buggy, or saying it is hard to use, without naming any specific feature or problem.",
+      "quotes": [
+        {
+          "review_id": "1db044db-d184-4335-877c-d8fc364b282e",
+          "severity": 2,
+          "quote": "I hate application"
+        },
+        {
+          "review_id": "91755919-64e7-4613-94f9-4cfb44976c44",
+          "severity": 2,
+          "quote": "A lot of bugs, not very user friendly"
+        },
+        {
+          "review_id": "1ee942bb-a3de-4380-8c08-a15949687c6c",
+          "severity": 2,
+          "quote": "Uninstall this all"
+        }
+      ]
+    },
+    {
+      "issue_id": "ISS-PLAYBACK",
+      "name": "App stops playback, crashes, or fails to connect",
+      "summary": "Reviewers say playback stops or never starts, the app crashes after updates, connections fail on Wi-Fi or mobile data, and casting to other devices is unreliable.",
+      "quotes": [
+        {
+          "review_id": "4a806587-0dde-4fb4-b4f1-f5c7d197c927",
+          "severity": 4,
+          "quote": "Have been using Spotify for a very long time but now the app is just crashing since the latest update."
+        },
+        {
+          "review_id": "1cdc5bb2-8e8d-4267-8853-6c1dd4c7ef13",
+          "severity": 3,
+          "quote": "It stops randomly."
+        },
+        {
+          "review_id": "4ab2089a-ffa8-49e7-a8a3-aeb583a96796",
+          "severity": 4,
+          "quote": "Iam a premium user. But this app if i using wifi not able to connect Internet. But if using mobile data it will work. Some songs quality also very poor comparing to the YouTube music."
+        }
+      ]
+    },
+    {
+      "issue_id": "ISS-BILLING",
+      "name": "Free users forced toward premium paywalls",
+      "summary": "Many reviewers say recent updates locked basic features like repeat, skip, and song choice behind Spotify Premium, and they feel pushed to pay or leave the app.",
+      "quotes": [
+        {
+          "review_id": "d146397f-4a94-4980-be00-ae9212eca3a7",
+          "severity": 3,
+          "quote": "This was fine till the last update, now you can't even pick a certain song without Spotify premium, and now you can only skip 6 songs, like please just let the songs fit my mood!"
+        },
+        {
+          "review_id": "61e0ddbb-6ec4-4d3a-acd3-41eb5f64afb7",
+          "severity": 3,
+          "quote": "Eyy fodey, charge me for breathing also. You mad or something? Now I need premium to repeat and skip the song to a certain part."
+        },
+        {
+          "review_id": "4a2ba740-231c-406e-a7a1-c31349e99c44",
+          "severity": 3,
+          "quote": "Latest policy adds too much restriction for free users. Its like either you should be a premium user or you need to switch to different music app"
+        }
+      ]
+    },
+    {
+      "issue_id": "ISS-CATALOG",
+      "name": "Missing songs, lyrics, and unwanted recommendations",
+      "summary": "Reviewers report songs missing from the catalog, lyrics that fail to load or appear inconsistently, and recommendations that appear despite being turned off or feel unwanted. Some also mention lost playlist search.",
+      "quotes": [
+        {
+          "review_id": "d218ffde-42f9-48f8-a793-832507454b35",
+          "severity": 3,
+          "quote": "Some of the song lyrics couldn't load, even if I updated it and refresh the app."
+        },
+        {
+          "review_id": "ed8efdfe-43e3-4baa-bbed-317807663531",
+          "severity": 3,
+          "quote": "Is good but it always recommends songs on my playlist even when I turn that setting off and remove all recommendations."
+        },
+        {
+          "review_id": "0658feaa-5bec-416e-b6b0-3de2a4c14580",
+          "severity": 3,
+          "quote": "Nice app! But many songs are not present here!"
+        }
+      ]
+    },
+    {
+      "issue_id": "ISS-ACCESS",
+      "name": "Unable to log in or access account",
+      "summary": "Reviewers report being unable to log in or getting logged out, with errors like no internet connection, rejected passwords, phone number mismatch, and missing token messages.",
+      "quotes": [
+        {
+          "review_id": "12efd15d-4d4f-4a71-8e71-69d03b6f983a",
+          "severity": 4,
+          "quote": "I can't login to the app, it keep saying that there's no internet connection, whereas everything else on my phone is connected to the internet."
+        },
+        {
+          "review_id": "f6f9c680-0970-443f-b422-b1a6ad85e7ce",
+          "severity": 4,
+          "quote": "@spotifyindia worst one ever my premium account got logged out automatically which was linked with my phone number now when I try to log in using my phone number it shows check your number and try again even though my number is correct."
+        },
+        {
+          "review_id": "0a7f2420-1b49-41fa-8cfc-0b2e178bea6b",
+          "severity": 4,
+          "quote": "I was using the app normally with the phone in my pocket, and out of nowhere log me out, and now I'm not able to log in, it's appearing some kind of error all the time, and the up is up to date, and also I can still loogin in the PC 🙃"
+        }
+      ]
+    }
+  ]
+}

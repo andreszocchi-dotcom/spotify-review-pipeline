@@ -55,7 +55,7 @@ Traceability: [docs/trace.md](docs/trace.md) follows review `962280d7…` from s
 | **T2** Independent verification, planted-error and injection tests | [`outputs/full/verify_report.json`](outputs/full/verify_report.json), [`evals/system_tests.json`](evals/system_tests.json), [docs/evaluation.md](docs/evaluation.md) |
 | **T3** 100-review cold/warm pilot, offline calculator, controls | [cost/README.md](cost/README.md), [cost/report.md](cost/report.md), `python -m cost.calculator` |
 | **W1** Full ingestion, coverage, classification | [`grading/ingestion.json`](grading/ingestion.json), [`grading/records.jsonl.gz`](grading/), [`outputs/full/run_summary.json`](outputs/full/run_summary.json) |
-| **W2** Runnable staged program, bounded calls, handoffs, resume | `python -m pipeline.run --input <csv>`; [`grading/calls.jsonl.gz`](grading/); [`grading/checkpoint_before.json`](grading/checkpoint_before.json) → [`checkpoint_after.json`](grading/checkpoint_after.json); recording _(link)_ |
+| **W2** Runnable staged program, bounded calls, handoffs, resume | `python -m pipeline.run --input <csv>`; [`grading/calls.jsonl.gz`](grading/); [`grading/checkpoint_before.json`](grading/checkpoint_before.json) → [`checkpoint_after.json`](grading/checkpoint_after.json) (full run); [**interrupt/resume recording**](https://drive.google.com/file/d/1Y7EDgW87FhbgRnsjVhWM63MuH46EAkJO/view?usp=sharing) with its saved evidence in [`outputs/demo/`](outputs/demo/) |
 | **W3** Reproducible ranking + deployed dashboard with DB backend | `python -m pipeline.rank --from-grading grading --out outputs/rerank` (no model calls, identical to `grading/ranking.csv`); [dashboard/](dashboard/) (FastAPI + Postgres); live URL above |
 
 ## Setup

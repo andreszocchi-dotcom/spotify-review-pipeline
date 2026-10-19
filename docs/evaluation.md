@@ -111,3 +111,16 @@ The run also survived an unplanned stall: the host lost network/slept for ~2.5 h
 11 calls failed with `TypeSafeAPIConnectionError` (DNS), were retried with backoff, and the run continued
 without quarantining anything once connectivity returned (visible in `grading/calls.jsonl.gz` as
 `outcome: "failed"` attempts followed by successes).
+
+### Recorded demonstration
+
+[Screen recording](https://drive.google.com/file/d/1Y7EDgW87FhbgRnsjVhWM63MuH46EAkJO/view?usp=sharing) of a fresh run on `data/checkpoint_500.csv` (2 workers, new database `work/demo.sqlite`):
+
+| Step | Command | Result (saved in [`outputs/demo/`](../outputs/demo/)) |
+|---|---|---|
+| 1 | `pipeline.run … --stop-after-batches 3` | 150 distinct texts enriched (`phase=initial`), then *simulated interruption after 3 batches*; later stages not run |
+| 2 | `pipeline.export --checkpoint before` | `checkpoint_before.json`: **154** completed IDs (150 texts + 4 exact-duplicate reuses) |
+| 3 | same `pipeline.run` without the stop flag | `phase=resume`, `already_completed=150`, `pending=329`; 329 calls, 0 failed; then verify → group → rank → memo |
+| 4 | `pipeline.export --checkpoint after` | `checkpoint_after.json`: **500** completed IDs; every "before" ID retained |
+
+The resume issued **0** enrichment calls for texts already completed under the same `label_config`.

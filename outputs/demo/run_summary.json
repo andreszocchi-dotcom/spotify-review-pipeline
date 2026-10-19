@@ -1,0 +1,76 @@
+{
+  "run_id": "run-20261019T192339Z",
+  "input": "data/checkpoint_500.csv",
+  "db": "work/demo.sqlite",
+  "wall_seconds": 68.735,
+  "stages": {
+    "ingest": {
+      "seconds": 0.089
+    },
+    "enrich": {
+      "seconds": 23.632,
+      "completed": 329,
+      "quarantined": 0,
+      "calls": 329,
+      "failed_calls": 0,
+      "input_tokens": 353761,
+      "output_tokens": 64650,
+      "pending_at_start": 329,
+      "stop_reason": "done",
+      "wall_seconds": 23.59
+    },
+    "verify": {
+      "seconds": 16.868,
+      "sampled": 96,
+      "sent_to_model": 96,
+      "failures": 0
+    },
+    "group": {
+      "seconds": 13.102,
+      "issues": 7,
+      "model_calls": 7
+    },
+    "rank": {
+      "seconds": 0.021,
+      "issues_ranked": 7
+    },
+    "memo": {
+      "seconds": 14.886,
+      "model_calls": 1,
+      "recommended_issue_id": "ISS-USABILITY"
+    }
+  },
+  "calls_by_role": {
+    "enrich": {
+      "attempts": 329,
+      "failed": 0,
+      "input_tokens": 353761,
+      "output_tokens": 64650
+    },
+    "group": {
+      "attempts": 7,
+      "failed": 0,
+      "input_tokens": 7736,
+      "output_tokens": 714
+    },
+    "memo": {
+      "attempts": 1,
+      "failed": 0,
+      "input_tokens": 6253,
+      "output_tokens": 1953
+    },
+    "verify": {
+      "attempts": 4,
+      "failed": 0,
+      "input_tokens": 9290,
+      "output_tokens": 2637
+    }
+  },
+  "limits": {
+    "jev_token_cap": null,
+    "usd_cap": 0.5,
+    "workers": 2,
+    "verify_rate": 0.2,
+    "verify_max": 2000
+  }
+}
